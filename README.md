@@ -1,4 +1,4 @@
-## JPK Edytor
+# JPK Edytor
 **JPK Edytor** jest aplikacją umożliwiającą podgląd, tworzenie oraz edycję Jednolitych Plików Kontrolnych.
 Obsługiwane są następujące typy plików:
  - JPK_VAT *(wersja 3)*
@@ -16,12 +16,12 @@ Obsługiwane są następujące typy plików:
 ## Instrukcja obsługi
 
 ### Tworzenie pliku JPK
-Z głównego menu aplikacji należy wybrać kolejno: 
+Z głównego menu aplikacji należy wybrać kolejno:\
 **Plik** &rightarrow; **Nowy** &rightarrow; **Typ pliku JPK**
 
 ### Otwieranie pliku JPK
-Z głównego menu aplikacji należy wybrać kolejno: 
-**Plik** &rightarrow; **Otwórz** &rightarrow; **Typ pliku JPK**
+Z głównego menu aplikacji należy wybrać kolejno:\
+**Plik** &rightarrow; **Otwórz** &rightarrow; **Typ pliku JPK**\
 W oknie *„Otwieranie”* najeży wybrać plik JPK oraz nacisnąć przycisk *„Otwórz”*.
 
 ### Podgląd pliku JPK
@@ -44,8 +44,8 @@ Aby aplikacja poprawnie wczytała plik CSV, powinien on:
  - posiadać daty zapisane w formacie „**rrrr-mm-dd**”, na przykład: *2019-04-27*
 > Możliwość zapisu oraz edycji plików CSV posiada na przykład program Microsoft Excel.
 
-Aby zaimportować plik CSV do arkusza w aplikacji należy z głównego menu aplikacji należy wybrać kolejno:
-**Plik** &rightarrow; **Importuj CSV** &rightarrow; **Nazwa karty widoku pliku JPK, która zawiera arkusz**
+Aby zaimportować plik CSV do arkusza w aplikacji należy z głównego menu aplikacji należy wybrać kolejno:\
+**Plik** &rightarrow; **Importuj CSV** &rightarrow; **Nazwa karty widoku pliku JPK, która zawiera arkusz**\
 W oknie *„Otwieranie”* najeży wybrać plik CSV oraz nacisnąć przycisk *„Otwórz”*.
 
 > Przykładowa zawartość pliku CSV, który może zostać zaimportowany do arkusza „*Spis z natury*” pliku JPK_PKPiR *(wersja 2)*:
@@ -54,12 +54,12 @@ W oknie *„Otwieranie”* najeży wybrać plik CSV oraz nacisnąć przycisk *�
 >     "2019-11-29";"-4442,27"
 
 ### Walidacja pliku JPK
-Aby przeprowadzić walidację nowo utworzonego bądź otwartego pliku JPK pod kątem poprawności merytorycznej z głównego menu aplikacji należy wybrać kolejno: 
-**Plik** &rightarrow; **Otwórz** &rightarrow; **Waliduj**
+Aby przeprowadzić walidację nowo utworzonego bądź otwartego pliku JPK pod kątem poprawności merytorycznej z głównego menu aplikacji należy wybrać kolejno:\
+**Plik** &rightarrow; **Otwórz** &rightarrow; **Waliduj**\
 W przypadku wykrycia błędów walidacji zostanie wyświetlone okno „Błędy walidacji” zawierające wszystkie błędy walidacji pliku JPK.
 W przypadku pomyślnej walidacji stosowny komunikat również zostanie wyświetlony.
 
 ### Zapisywanie pliku JPK
-Z głównego menu aplikacji należy wybrać kolejno: 
-**Plik** &rightarrow; **Zapisz**
+Z głównego menu aplikacji należy wybrać kolejno:\
+**Plik** &rightarrow; **Zapisz**\
 W oknie *„Zapisywanie jako”* należy wybrać plik JPK do nadpisania bądź podać nazwę nowego pliku, następnie nacisnąć przycisk *„Zapisz”*.
