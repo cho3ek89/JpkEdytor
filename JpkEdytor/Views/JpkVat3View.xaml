@@ -1,0 +1,249 @@
+﻿<UserControl x:Class="JpkEdytor.Views.JpkVat3View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl>
+        <TabItem Header="Nagłówek">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Cel złożenia:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Width="27"
+                            Style="{StaticResource TextBoxDefaultStyle}"
+                            Text="{Binding Jpk.Naglowek.CelZlozenia, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Data od:"/>
+                    <DatePicker Grid.Row="1" Grid.Column="1"
+                            Style="{StaticResource DatePickerStyle}"
+                            Text="{Binding Jpk.Naglowek.DataOd, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Data do:"/>
+                    <DatePicker Grid.Row="2" Grid.Column="1" 
+                            Style="{StaticResource DatePickerStyle}"
+                            Text="{Binding Jpk.Naglowek.DataDo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Podmiot">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="NIP:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Width="72"
+                            Style="{StaticResource TextBoxDefaultStyle}"
+                            Text="{Binding Jpk.Podmiot.Nip, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                            Content="Pełna nazwa:"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Width="230"
+                            Style="{StaticResource TextBoxDefaultStyle}"
+                            Text="{Binding Jpk.Podmiot.PelnaNazwa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                            Content="Email:"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Width="230"
+                            Style="{StaticResource TextBoxDefaultStyle}"
+                            Text="{Binding Jpk.Podmiot.Email, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Sprzedaż">
+            <DataGrid
+                Style="{StaticResource DataGridStyle}"
+                ItemsSource="{Binding Path=Jpk.SprzedazWiersz, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTextColumn Header="Numer kontrahenta" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.NrKontrahenta}" 
+                                        Binding="{Binding NrKontrahenta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" CanUserReorder="False"/>
+                    <DataGridTextColumn Header="Nazwa kontrahenta" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.NazwaKontrahenta}" 
+                                        Binding="{Binding NazwaKontrahenta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Adres kontrahenta" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.AdresKontrahenta}" 
+                                        Binding="{Binding AdresKontrahenta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Dowód sprzedaży" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.DowodSprzedazy}" 
+                                        Binding="{Binding DowodSprzedazy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="Data wystawienia" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.DataWystawienia}" SortMemberPath="DataWystawienia">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DataWystawienia, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding DataWystawienia, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Data sprzedaży" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.DataSprzedazy}" SortMemberPath="DataSprzedazy" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DataSprzedazy, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding DataSprzedazy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K10}" 
+                                        Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K11}" 
+                                        Binding="{Binding K11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K12}"
+                                        Binding="{Binding K12, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K13}" 
+                                        Binding="{Binding K13, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K14}" 
+                                        Binding="{Binding K14, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K15}" 
+                                        Binding="{Binding K15, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 16" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K16}" 
+                                        Binding="{Binding K16, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K17}" 
+                                        Binding="{Binding K17, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 18" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K18}" 
+                                        Binding="{Binding K18, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 19" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K19}" 
+                                        Binding="{Binding K19, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 20" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K20}" 
+                                        Binding="{Binding K20, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 21" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K21}" 
+                                        Binding="{Binding K21, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 22" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K22}" 
+                                        Binding="{Binding K22, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 23" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K23}" 
+                                        Binding="{Binding K23, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 24" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K24}" 
+                                        Binding="{Binding K24, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 25" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K25}" 
+                                        Binding="{Binding K25, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 26" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K26}" 
+                                        Binding="{Binding K26, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 27" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K27}" 
+                                        Binding="{Binding K27, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 28" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K28}" 
+                                        Binding="{Binding K28, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 29" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K29}" 
+                                        Binding="{Binding K29, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 30" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K30}" 
+                                        Binding="{Binding K30, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 31" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K31}" 
+                                        Binding="{Binding K31, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 32" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K32}" 
+                                        Binding="{Binding K32, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 33" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K33}" 
+                                        Binding="{Binding K33, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 34" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K34}" 
+                                        Binding="{Binding K34, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 35" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K35}" 
+                                        Binding="{Binding K35, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 36" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K36}" 
+                                        Binding="{Binding K36, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 37" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K37}" 
+                                        Binding="{Binding K37, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 38" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K38}" 
+                                        Binding="{Binding K38, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 39" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.SprzedazWiersz.K39}"
+                                        Binding="{Binding K39, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Zakupy">
+            <DataGrid
+                Style="{StaticResource DataGridStyle}"
+                ItemsSource="{Binding Path=Jpk.ZakupWiersz, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTextColumn Header="Numer dostawcy" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.NrDostawcy}"
+                                        Binding="{Binding NrDostawcy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Nazwa dostawcy" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.NazwaDostawcy}" 
+                                        Binding="{Binding NazwaDostawcy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Adres dostawcy" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.AdresDostawcy}" 
+                                        Binding="{Binding AdresDostawcy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Dowód zakupu" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.DowodZakupu}" 
+                                        Binding="{Binding DowodZakupu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="Data zakupu" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.DataZakupu}" SortMemberPath="DataZakupu" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DataZakupu, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding DataZakupu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Data wpływu" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.DataWplywu}" SortMemberPath="DataWplywu" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DataWplywu, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding DataWplywu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="K 43" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K43}" 
+                                        Binding="{Binding K43, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 44" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K44}" 
+                                        Binding="{Binding K44, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 45" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K45}" 
+                                        Binding="{Binding K45, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 46" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K46}" 
+                                        Binding="{Binding K46, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 47" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K47}" 
+                                        Binding="{Binding K47, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 48" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K48}" 
+                                        Binding="{Binding K48, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 49" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K49}" 
+                                        Binding="{Binding K49, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 50" local:DataGridExtensions.HeaderToolTip="{StaticResource Vat3.ZakupWiersz.K50}"
+                                        Binding="{Binding K50, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+    </TabControl>
+
+</UserControl>

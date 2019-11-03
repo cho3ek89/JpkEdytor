@@ -1,0 +1,314 @@
+﻿<UserControl x:Class="JpkEdytor.Views.JpkFa2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             xmlns:models="clr-namespace:JpkEdytor.Models.Fa2"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl>
+        <TabItem Header="Nagłówek">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ContentControl Content="{Binding Jpk.Naglowek}" ContentTemplate="{StaticResource NaglowekTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Podmiot">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ContentControl Grid.Row="0" Content="{Binding Jpk.Podmiot.IdentyfikatorPodmiotu}" ContentTemplate="{StaticResource IdOsobyNiefizycznejTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,15"/>
+                    <ContentControl Grid.Row="1" Content="{Binding Jpk.Podmiot.AdresPodmiotu}" ContentTemplate="{StaticResource AdresTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Stawki podatku">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Stawka 1:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.StawkiPodatku.Stawka1, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Stawka 2:"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.StawkiPodatku.Stawka2, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Stawka 3:"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.StawkiPodatku.Stawka3, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Stawka 4:"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.StawkiPodatku.Stawka4, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Stawka 5:"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.StawkiPodatku.Stawka5, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Faktura (dane syntetyczne)">
+            <DataGrid
+				Style="{StaticResource DataGridStyle}"
+				ItemsSource="{Binding Path=Jpk.Faktura, Mode=TwoWay}">
+                <DataGrid.Resources>
+                    <ObjectDataProvider x:Key="RodzajFakturyEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+                        <ObjectDataProvider.MethodParameters>
+                            <x:Type TypeName="models:RodzajFaktury"/>
+                        </ObjectDataProvider.MethodParameters>
+                    </ObjectDataProvider>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTemplateColumn Header="P 1" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P1}" SortMemberPath="P1" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P1, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding P1, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="P 2A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P2A}" 
+                                        Binding="{Binding P2A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 3A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P3A}" 
+                                        Binding="{Binding P3A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 3B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P3B}" 
+                                        Binding="{Binding P3B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 3C" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P3C}" 
+                                        Binding="{Binding P3C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 3D" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P3D}" 
+                                        Binding="{Binding P3D, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="P 4A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P4A}" SortMemberPath="P4A" Width="{StaticResource KodKrajuColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P4A, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox SelectedItem="{Binding P4A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource KodKrajuUeV30Enum}}" 
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="P 4B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P4B}" 
+                                        Binding="{Binding P4B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="P 5A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P5A}" SortMemberPath="P5A" Width="{StaticResource KodKrajuColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P5A, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox SelectedItem="{Binding P5A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource KodKrajuUeV30Enum}}" 
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="P 5B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P5B}" 
+                                        Binding="{Binding P5B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="P 6" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P6}" SortMemberPath="P6" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P6, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding P6, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="P 13 1" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_1}" 
+                                        Binding="{Binding P13_1, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_2}" 
+                                        Binding="{Binding P13_2, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 14 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_2}" 
+                                        Binding="{Binding P14_2, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 3" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_3}" 
+                                        Binding="{Binding P13_3, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 14 3" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_3}" 
+                                        Binding="{Binding P14_3, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 4" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_4}" 
+                                        Binding="{Binding P13_4, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 14 4" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_4}" 
+                                        Binding="{Binding P14_4, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 5" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_5}" 
+                                        Binding="{Binding P13_5, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 14 5" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_5}" 
+                                        Binding="{Binding P14_5, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 6" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_6}" 
+                                        Binding="{Binding P13_6, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 13 7" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_7}" 
+                                        Binding="{Binding P13_7, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 15" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P15}" 
+                                        Binding="{Binding P15, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 16" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P16}" 
+                                            Binding="{Binding P16, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 17" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P17}" 
+                                            Binding="{Binding P17, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 18" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P18}" 
+                                            Binding="{Binding P18, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 19" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P19}" 
+                                            Binding="{Binding P19, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 19A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P19A}" 
+                                        Binding="{Binding P19A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 19B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P19B}" 
+                                        Binding="{Binding P19B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 19C" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P19C}" 
+                                        Binding="{Binding P19C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 20" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P20}" 
+                                            Binding="{Binding P20, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 20A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P20A}" 
+                                        Binding="{Binding P20A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 20B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P20B}" 
+                                        Binding="{Binding P20B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 21" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P21}" 
+                                            Binding="{Binding P21, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 21A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P21A}" 
+                                        Binding="{Binding P21A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 21B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P21B}" 
+                                        Binding="{Binding P21B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 21C" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P21C}"  
+                                        Binding="{Binding P21C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="P 22A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P22A}" SortMemberPath="P22A" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P22A, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding P22A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="P 22B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P22B}" 
+                                        Binding="{Binding P22B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 22C" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P22C}"  
+                                        Binding="{Binding P22C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 23" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E3A}" 
+                                            Binding="{Binding P23, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 106 E2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E2}"  
+                                            Binding="{Binding P106E2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridCheckBoxColumn Header="P 106 E3" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E3}"  
+                                            Binding="{Binding P106E3, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 106 E3A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E3A}" 
+                                        Binding="{Binding P106E3A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="Rodzaj faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.RodzajFaktury}" SortMemberPath="RodzajFaktury">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding RodzajFaktury, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox SelectedItem="{Binding RodzajFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource RodzajFakturyEnum}}" 
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Przyczyna korekty" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.PrzyczynaKorekty}" 
+                                        Binding="{Binding PrzyczynaKorekty, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Numer faktury korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.NrFaKorygowanej}" 
+                                        Binding="{Binding NrFaKorygowanej, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Okres faktury Korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.OkresFaKorygowanej}" 
+                                        Binding="{Binding OkresFaKorygowanej, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Zaliczka (zaplata)" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.ZalZaplata}" 
+                                        Binding="{Binding ZalZaplata, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="Zaliczka (podatek)" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.ZalPodatek}" 
+                                        Binding="{Binding ZalPodatek, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Faktura (dane analityczne)">
+            <DataGrid
+				Style="{StaticResource DataGridStyle}"
+				ItemsSource="{Binding Path=Jpk.FakturaWiersz, Mode=TwoWay}">
+                <DataGrid.Resources>
+                    <ObjectDataProvider x:Key="StawkaPodatkuEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+                        <ObjectDataProvider.MethodParameters>
+                            <x:Type TypeName="models:StawkaPodatku"/>
+                        </ObjectDataProvider.MethodParameters>
+                    </ObjectDataProvider>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTextColumn Header="P 2B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P2B}" 
+                                        Binding="{Binding P2B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 7" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P7}" 
+                                        Binding="{Binding P7, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 8A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P8A}" 
+                                        Binding="{Binding P8A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 8B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P8B}" 
+                                        Binding="{Binding P8B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 9A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P9A}"
+                                        Binding="{Binding P9A, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 9B" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P9B}"
+                                        Binding="{Binding P9B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 10" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P10}" 
+                                        Binding="{Binding P10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 11" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P11}" 
+                                        Binding="{Binding P11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 11A" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P11A}"
+                                        Binding="{Binding P11A, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTemplateColumn Header="P 12" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.FakturaWiersz.P12}" SortMemberPath="P12" Width="50.4">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P12, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox SelectedItem="{Binding P12, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource StawkaPodatkuEnum}}"
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+    </TabControl>
+    
+</UserControl>

@@ -1,0 +1,154 @@
+﻿<UserControl x:Class="JpkEdytor.Views.JpkPkpir2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <TabControl>
+        <TabItem Header="Nagłówek">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ContentControl Content="{Binding Jpk.Naglowek}" ContentTemplate="{StaticResource NaglowekTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Podmiot">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ContentControl Grid.Row="0" Content="{Binding Jpk.Podmiot.IdentyfikatorPodmiotu}" ContentTemplate="{StaticResource IdOsobyNiefizycznejTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,15"/>
+                    <ContentControl Grid.Row="1" Content="{Binding Jpk.Podmiot.AdresPodmiotu}" ContentTemplate="{StaticResource AdresTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Dochody">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="P 1:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.PkpirInfo.P1, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="P 2:"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.PkpirInfo.P2, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="P 3:"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.PkpirInfo.P3, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="P 4:"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Width="80"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.PkpirInfo.P4, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Spis z natury">
+            <DataGrid
+			    Style="{StaticResource DataGridStyle}"
+			    ItemsSource="{Binding Path=Jpk.PkpirSpis, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTemplateColumn Header="Data spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirSpis.P5A}" SortMemberPath="P5A" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding P5A, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding P5A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Wartość spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirSpis.P5B}" 
+                                        Binding="{Binding P5B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Przychody i rozchody">
+            <DataGrid
+				Style="{StaticResource DataGridStyle}"
+				ItemsSource="{Binding Path=Jpk.PkpirWiersze, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                    <DataGridTemplateColumn Header="K 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K2}" SortMemberPath="K2" Width="{StaticResource DateTimeColFixedWidth}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding K2, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding K2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="K 3" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K3}" 
+                                        Binding="{Binding K3, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 4" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K4}" 
+                                        Binding="{Binding K4, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 5" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K5}" 
+                                        Binding="{Binding K5, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 6" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K6}" 
+                                        Binding="{Binding K6, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 7" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K7}" 
+                                        Binding="{Binding K7, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 8" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K8}" 
+                                        Binding="{Binding K8, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 9" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K9}" 
+                                        Binding="{Binding K9, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K10}" 
+                                        Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K11}" 
+                                        Binding="{Binding K11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K12}" 
+                                        Binding="{Binding K12, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K13}" 
+                                        Binding="{Binding K13, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K14}" 
+                                        Binding="{Binding K14, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K15}" 
+                                        Binding="{Binding K15, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 16A" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K16A}" 
+                                        Binding="{Binding K16A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 16B" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K16B}" 
+                                        Binding="{Binding K16B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K17}" 
+                                        Binding="{Binding K17, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+    </TabControl>
+</UserControl>

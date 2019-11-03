@@ -1,0 +1,440 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:JpkEdytor.Converters"
+                    xmlns:models="clr-namespace:JpkEdytor.Models.Common"
+                    xmlns:local="clr-namespace:JpkEdytor.Helpers"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <converters:EnumValToDescConverter x:Key="EnumValToDescConverter"/>
+
+    <!--#region Control Styles and Templates-->
+
+    <HorizontalAlignment x:Key="HorizontalAlignmentDefault">Left</HorizontalAlignment>
+    <VerticalAlignment x:Key="VerticalAlignmentDefault">Center</VerticalAlignment>
+    <Thickness x:Key="MarginDefault" Left="0" Right="0" Top="1" Bottom="1"/>
+
+    <Style TargetType="ToolTip">
+        <Style.Resources>
+            <Style TargetType="ContentPresenter">
+                <Style.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="TextWrapping" Value="Wrap" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </Style.Resources>
+        <Setter Property="MaxWidth" Value="350" />
+    </Style>
+
+    <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+        <Style.Resources>
+            <Style x:Key="CalendarStyle" TargetType="Calendar">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Calendar}">
+                            <Grid HorizontalAlignment="Center" Name="PART_Root">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <CalendarItem Grid.Row="0" Grid.ColumnSpan="2" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" Name="PART_CalendarItem" Style="{TemplateBinding Calendar.CalendarItemStyle}" />
+                                <Button Grid.Row="1" Content="Dzisiaj" Command="local:DateUtils.Today" CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}" Margin="0,0,1,2" />
+                                <Button Grid.Row="1" Grid.Column="1" Content="Wyzeruj" Command="local:DateUtils.Default" CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}" Margin="1,0,0,2"/>
+                                <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Początek miesiąca" Command="local:DateUtils.BeginningOfCurrentMonth" CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}" Margin="0,0,0,2"/>
+                                <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Koniec miesiąca" Command="local:DateUtils.EndOfCurrentMonth" CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}" Margin="0,0,0,2"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="DatePickerTextBox">
+                <Setter Property="Margin" Value="0,1,0,0"/>
+                <Setter Property="IsTabStop" Value="False"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <TextBox x:Name="PART_TextBox" BorderBrush="{x:Null}" BorderThickness="0" IsTabStop="False" Background="White" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                     Text="{Binding Path=SelectedDate, StringFormat='yyyy-MM-dd', RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+        <Setter Property="CalendarStyle" Value="{StaticResource CalendarStyle}"/>
+        <Setter Property="Margin" Value="{StaticResource MarginDefault}"/>
+        <Setter Property="VerticalContentAlignment" Value="{StaticResource VerticalAlignmentDefault}"/>
+        <Setter Property="HorizontalAlignment" Value="{StaticResource HorizontalAlignmentDefault}"/>
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="LightSlateGray"/>
+    </Style>
+
+    <Style x:Key="ComboBoxDefaultStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="VerticalContentAlignment" Value="{StaticResource VerticalAlignmentDefault}"/>
+        <Setter Property="HorizontalAlignment" Value="{StaticResource HorizontalAlignmentDefault}"/>
+        <Setter Property="Margin" Value="{StaticResource MarginDefault}"/>
+    </Style>
+
+    <DataTemplate x:Key="ComboBoxItemTemplate" DataType="{x:Type ComboBoxItem}">
+        <TextBlock Text="{Binding}" ToolTip="{Binding Converter={StaticResource EnumValToDescConverter}}"/>
+    </DataTemplate>
+
+    <Style x:Key="TextBoxDefaultStyle" TargetType="{x:Type TextBox}">
+        <Setter Property="VerticalContentAlignment" Value="{StaticResource VerticalAlignmentDefault}"/>
+        <Setter Property="HorizontalAlignment" Value="{StaticResource HorizontalAlignmentDefault}"/>
+        <Setter Property="Margin" Value="{StaticResource MarginDefault}"/>
+    </Style>
+
+    <Style x:Key="LabelDefaultStyle" TargetType="{x:Type Label}">
+        <Setter Property="VerticalContentAlignment" Value="{StaticResource VerticalAlignmentDefault}"/>
+        <Setter Property="HorizontalAlignment" Value="{StaticResource HorizontalAlignmentDefault}"/>
+        <Setter Property="Margin" Value="{StaticResource MarginDefault}"/>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region DataGrid Styles and Templates-->
+
+    <DataGridLength x:Key="DateTimeColFixedWidth">96</DataGridLength>
+    <DataGridLength x:Key="KodKrajuColFixedWidth">47.2</DataGridLength>
+    
+    <SolidColorBrush x:Key="GridLinesBrush" Color="LightGray" Opacity=".3" />
+
+    <Style x:Key="DataGridRowStyle" TargetType="{x:Type DataGridRow}">
+        <Style.Resources>
+            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray" Opacity=".4"/>
+            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+        </Style.Resources>
+        <Setter Property="Height" Value="22"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding}" Value="{x:Static CollectionView.NewItemPlaceholder}">
+                <Setter Property="DetailsVisibility" Value="Visible"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridRow}">
+                            <Border Background="White" BorderThickness="0,0,1,1" Width="22" Height="22" BorderBrush="{StaticResource GridLinesBrush}" HorizontalAlignment="Left">
+                                <Button Content="+" Foreground="Green" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0" 
+                                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" IsTabStop="False"
+                                        Command="{x:Static local:DataGridExtensions.AddCommand}"
+                                        CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DataGridCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        <Setter Property="Template">    
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataGridStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource GridLinesBrush}"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{StaticResource GridLinesBrush}"/>
+        <Setter Property="CanUserAddRows" Value="True"/>
+        <Setter Property="CanUserDeleteRows" Value="True"/>
+        <Setter Property="CanUserResizeRows" Value="False"/>
+        <Setter Property="CanUserReorderColumns" Value="True"/>
+        <Setter Property="CanUserResizeColumns" Value="True"/>
+        <Setter Property="CanUserSortColumns" Value="True"/>
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="SelectionMode" Value="Single"/>
+        <Setter Property="SelectionUnit" Value="Cell"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HeadersVisibility" Value="Column"/>
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+        <Setter Property="EnableColumnVirtualization" Value="True"/>
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="VirtualizingStackPanel.ScrollUnit" Value="Pixel"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="local:DataGridExtensions.RegisterAddCommand" Value="True"/>
+        <Setter Property="local:DataGridExtensions.RegisterDeleteCommand" Value="True"/>
+        <Setter Property="RowStyle" Value="{StaticResource DataGridRowStyle}"/>
+        <Setter Property="CellStyle" Value="{StaticResource DataGridCellStyle}"/>
+    </Style>
+
+    <Style x:Key="DeleteRowCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="KeyboardNavigation.IsTabStop" Value="False"/>
+    </Style>
+
+    <DataTemplate x:Key="DeleteRowCellTemplate" DataType="{x:Type DataGridCell}">
+        <Button Content="-" Foreground="Red" Width="22" Height="22" BorderThickness="0" IsTabStop="False"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                Command="{x:Static local:DataGridExtensions.DeleteCommand}"
+                CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+    </DataTemplate>
+
+    <Style x:Key="TextBlockCellStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="Padding" Value="2,0,2,0"/>
+    </Style>
+
+    <Style x:Key="DatePickerCellStyle" TargetType="DatePicker" BasedOn="{StaticResource DatePickerStyle}">
+        <Style.Setters>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style.Setters>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Naglowek i Podmiot Styles and Templates-->
+    
+    <ObjectDataProvider x:Key="KodKrajuUeV30Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodKrajuUeV30"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodKrajuV41Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodKrajuV41"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodKrajuV50Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodKrajuV50"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodUsV40Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodUsV40"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodUsV50Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodUsV50"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodWalutyV30Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodWalutyV30"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+    <DataTemplate x:Key="AdresTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Kod kraju:"/>
+
+            <ContentControl Grid.Row="0" Grid.Column="1" Content="{Binding KodKraju, Mode=TwoWay}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type models:KodKrajuV41}">
+                        <ComboBox Width="50" Style="{StaticResource ComboBoxDefaultStyle}"
+                                  ItemsSource="{Binding Source={StaticResource KodKrajuV41Enum}}"
+                                  SelectedItem="{Binding Path=., Mode=TwoWay, UpdateSourceTrigger=LostFocus}" 
+                                  ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type models:KodKrajuV50}">
+                        <ComboBox Width="50"
+                                  Style="{StaticResource ComboBoxDefaultStyle}"
+                                  ItemsSource="{Binding Source={StaticResource KodKrajuV50Enum}}"
+                                  SelectedItem="{Binding Path=., Mode=TwoWay, UpdateSourceTrigger=LostFocus}" 
+                                  ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+
+            <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Województwo:"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Wojewodztwo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Powiat:"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Powiat, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Gmina:"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Gmina, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Ulica:"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Ulica, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Numer domu:"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Width="25"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding NrDomu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Numer lokalu:"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Width="25"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding NrLokalu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Miejscowość:"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Miejscowosc, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                    Content="Kod pocztowy:"/>
+            <TextBox Grid.Row="8" Grid.Column="1" Width="70"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding KodPocztowy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="9" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Poczta:"/>
+            <TextBox Grid.Row="9" Grid.Column="1" Width="100" 
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Poczta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="IdOsobyNiefizycznejTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="NIP:"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Width="72"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Nip, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                    Content="Pełna nazwa:"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Width="230"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding PelnaNazwa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                    Content="Regon:"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Width="100"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding Regon, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NaglowekTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Cel złożenia:"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Width="27"
+                    Style="{StaticResource TextBoxDefaultStyle}"
+                    Text="{Binding CelZlozenia, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Data od:"/>
+            <DatePicker Grid.Row="1" Grid.Column="1"
+                    Style="{StaticResource DatePickerStyle}"
+                    Text="{Binding DataOd, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Data do:"/>
+            <DatePicker Grid.Row="2" Grid.Column="1"
+                    Style="{StaticResource DatePickerStyle}"
+                    Text="{Binding DataDo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                    Content="Domyślny kod waluty:"/>
+            <ComboBox Grid.Row="3" Grid.Column="1" Width="60"
+                      Style="{StaticResource ComboBoxDefaultStyle}"
+                      ItemsSource="{Binding Source={StaticResource KodWalutyV30Enum}}"
+                      SelectedItem="{Binding DomyslnyKodWaluty, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" 
+                      ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                    Content="Kod urzędu skarbowego:"/>
+
+            <ContentControl Grid.Row="4" Grid.Column="1" Content="{Binding KodUrzedu, Mode=TwoWay}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type models:KodUsV40}">
+                        <ComboBox Width="352"
+                            Style="{StaticResource ComboBoxDefaultStyle}"
+                            ItemsSource="{Binding Source={StaticResource KodUsV40Enum}}"
+                            SelectedItem="{Binding Path=., Mode=TwoWay, UpdateSourceTrigger=LostFocus}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumValToDescConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type models:KodUsV50}">
+                        <ComboBox Width="352"
+                            Style="{StaticResource ComboBoxDefaultStyle}"
+                            ItemsSource="{Binding Source={StaticResource KodUsV50Enum}}"
+                            SelectedItem="{Binding Path=., Mode=TwoWay, UpdateSourceTrigger=LostFocus}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumValToDescConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+
+        </Grid>
+    </DataTemplate>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

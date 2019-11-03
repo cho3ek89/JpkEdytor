@@ -1,0 +1,350 @@
+﻿<UserControl x:Class="JpkEdytor.Views.JpkMag1View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl>
+        <TabItem Header="Nagłówek">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ContentControl Content="{Binding Jpk.Naglowek}" ContentTemplate="{StaticResource NaglowekTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Podmiot">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ContentControl Grid.Row="0" Content="{Binding Jpk.Podmiot.IdentyfikatorPodmiotu}" ContentTemplate="{StaticResource IdOsobyNiefizycznejTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,15"/>
+                    <ContentControl Grid.Row="1" Content="{Binding Jpk.Podmiot.AdresPodmiotu}" ContentTemplate="{StaticResource AdresTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Magazyn">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                            Content="Magazyn:"/>
+                    <TextBox Grid.Column="1" Width="300"
+                            Style="{StaticResource TextBoxDefaultStyle}" 
+                            Text="{Binding Jpk.Magazyn, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Przyjęcie z zewnątrz">
+            <TabControl>
+                <TabItem Header="Zestawienie dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Pz.PzWartosc, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.Numer}" 
+                                        Binding="{Binding Numer, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.Data}" SortMemberPath="Data" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Data, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Wartość" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.Wartosc}" 
+                                        Binding="{Binding Wartosc, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data otrzymania" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.DataOtrzymania}" SortMemberPath="DataOtrzymania">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataOtrzymania, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataOtrzymania, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Dostawca" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.Dostawca}" 
+                                        Binding="{Binding Dostawca, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Numer faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.NumerFaktury}" 
+                                        Binding="{Binding NumerFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataFaktury, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Szczegółowe pozycje dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Pz.PzWiersz, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.Numer2}" 
+                                        Binding="{Binding Numer2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Kod towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.KodTowaru}" 
+                                        Binding="{Binding KodTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Nazwa towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.NazwaTowaru}" 
+                                        Binding="{Binding NazwaTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Ilość przyjęta" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.IloscPrzyjeta}" 
+                                        Binding="{Binding IloscPrzyjeta, StringFormat='F6', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Jednostka miary" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.JednostkaMiary}" 
+                                        Binding="{Binding JednostkaMiary, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Cena jednostkowa" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.CenaJednostkowa}" 
+                                        Binding="{Binding CenaJednostkowa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Wartość pozycji" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Pz.PzWiersz.WartoscPozycji}" 
+                                        Binding="{Binding WartoscPozycji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Wydanie na zewnątrz">
+            <TabControl>
+                <TabItem Header="Zestawienie dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Wz.WzWartosc, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.Numer}" 
+                                        Binding="{Binding Numer, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.Data}" SortMemberPath="Data" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Data, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Wartość" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.Wartosc}" 
+                                        Binding="{Binding Wartosc, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data wydania" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.DataWydania}" SortMemberPath="DataWydania" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataWydania, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataWydania, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Odbiorca" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.Odbiorca}" 
+                                        Binding="{Binding Odbiorca, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Numer faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.NumerFaktury}" 
+                                        Binding="{Binding NumerFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataFaktury, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Szczegółowe pozycje dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Wz.WzWiersz, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.Numer2}" 
+                                        Binding="{Binding Numer2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Kod towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.KodTowaru}" 
+                                        Binding="{Binding KodTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Nazwa towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.NazwaTowaru}" 
+                                        Binding="{Binding NazwaTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Ilość wydana" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.IloscWydana}" 
+                                        Binding="{Binding IloscWydana, StringFormat='F6', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Jednostka miary" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.JednostkaMiary}" 
+                                        Binding="{Binding JednostkaMiary, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Cena jednostkowa" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.CenaJednostkowa}" 
+                                        Binding="{Binding CenaJednostkowa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Wartość pozycji" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Wz.WzWiersz.WartoscPozycji}" 
+                                        Binding="{Binding WartoscPozycji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Rozchód wewnętrzny">
+            <TabControl>
+                <TabItem Header="Zestawienie dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Rw.RwWartosc, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.Numer}" 
+                                        Binding="{Binding Numer, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.Data}" SortMemberPath="Data" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Data, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Wartość" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.Wartosc}" 
+                                        Binding="{Binding Wartosc, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data wydania" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.DataWydania}" SortMemberPath="DataWydania" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataWydania, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataWydania, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Skąd" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.Skad}" 
+                                        Binding="{Binding Skad, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Dokąd" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWartosc.Dokad}" 
+                                        Binding="{Binding Dokad, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Szczegółowe pozycje dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Rw.RwWiersz, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.Numer2}" 
+                                        Binding="{Binding Numer2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Kod towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.KodTowaru}" 
+                                        Binding="{Binding KodTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Nazwa towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.NazwaTowaru}" 
+                                        Binding="{Binding NazwaTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Ilość wydana" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.IloscWydana}" 
+                                        Binding="{Binding IloscWydana, StringFormat='F6', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Jednostka miary" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.JednostkaMiary}" 
+                                        Binding="{Binding JednostkaMiary, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Cena jednostkowa" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.CenaJednostkowa}" 
+                                        Binding="{Binding CenaJednostkowa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Wartość pozycji" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Rw.RwWiersz.WartoscPozycji}" 
+                                        Binding="{Binding WartoscPozycji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Przesunięcia międzymagazynowe">
+            <TabControl>
+                <TabItem Header="Zestawienie dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Mm.MmWartosc, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.Numer}" 
+                                        Binding="{Binding Numer, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.Data}" SortMemberPath="Data" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Data, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Wartość" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.Wartosc}" 
+                                        Binding="{Binding Wartosc, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTemplateColumn Header="Data wydania" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.DataWydania}" SortMemberPath="DataWydania" Width="{StaticResource DateTimeColFixedWidth}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataWydania, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding DataWydania, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Style="{StaticResource DatePickerCellStyle}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Skąd" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.Skad}" 
+                                        Binding="{Binding Skad, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Dokąd" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWartosc.Dokad}" 
+                                        Binding="{Binding Dokad, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Szczegółowe pozycje dowodów">
+                    <DataGrid
+			            Style="{StaticResource DataGridStyle}"
+			            ItemsSource="{Binding Path=Jpk.Mm.MmWiersz, Mode=TwoWay}">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
+                            <DataGridTextColumn Header="Numer" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.Numer2}" 
+                                        Binding="{Binding Numer2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Kod towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.KodTowaru}" 
+                                        Binding="{Binding KodTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Nazwa towaru" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.NazwaTowaru}" 
+                                        Binding="{Binding NazwaTowaru, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Ilość wydana" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.IloscWydana}" 
+                                        Binding="{Binding IloscWydana, StringFormat='F6', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Jednostka miary" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.JednostkaMiary}" 
+                                        Binding="{Binding JednostkaMiary, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Cena jednostkowa" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.CenaJednostkowa}" 
+                                        Binding="{Binding CenaJednostkowa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                            <DataGridTextColumn Header="Wartość pozycji" local:DataGridExtensions.HeaderToolTip="{StaticResource Mag1.Mm.MmWiersz.WartoscPozycji}" 
+                                        Binding="{Binding WartoscPozycji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+    </TabControl>
+</UserControl>

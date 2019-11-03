@@ -1,0 +1,176 @@
+﻿<Window x:Class="JpkEdytor.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
+        xmlns:views="clr-namespace:JpkEdytor.Views"
+        xmlns:resources="clr-namespace:JpkEdytor.Resources"
+        mc:Ignorable="d"
+        Title="JPK Edytor" Height="468" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <Menu.Resources>
+                <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type MenuItem}">
+                    <Grid Margin="0,0,-45,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=Header}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=Tag}" Foreground="Gray"/>
+                    </Grid>
+                </DataTemplate>
+                <Style TargetType="{x:Type MenuItem}">
+                    <Setter Property="Height" Value="22.4"/>
+                </Style>
+            </Menu.Resources>
+            <MenuItem Header="Plik">
+                <MenuItem Header="Nowy">
+                    <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="0"/>
+                    <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="1"/>
+                    <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="2"/>
+                    <MenuItem Header="JPK KR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="3"/>
+                    <MenuItem Header="JPK MAG" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="4"/>
+                    <MenuItem Header="JPK PKPIR" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="5"/>
+                    <MenuItem Header="JPK WB" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="6"/>
+                </MenuItem>
+                <MenuItem Header="Otwórz">
+                    <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="0"/>
+                    <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="1"/>
+                    <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="2"/>
+                    <MenuItem Header="JPK KR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="3"/>
+                    <MenuItem Header="JPK MAG" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="4"/>
+                    <MenuItem Header="JPK PKPIR" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="5" />
+                    <MenuItem Header="JPK WB" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="6" />
+                </MenuItem>
+                <MenuItem Header="Importuj CSV">
+                    <MenuItem.Style>
+                        <Style TargetType="{x:Type MenuItem}">
+                            <Setter Property="IsEnabled" Value="True"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding JpkViewModel, Mode=OneWay}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsBusy, Mode=OneWay}" Value="True">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </MenuItem.Style>
+                    
+                    <MenuItem Header="Sprzedaż" Command="{Binding ImportJpkVat3, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Zakupy" Command="{Binding ImportJpkVat3, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="Ewidencja" Command="{Binding ImportJpkEwp1, Mode=OneWay}" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="Faktura (dane syntetyczne)" Command="{Binding ImportJpkFa2, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Faktura (dane analityczne)" Command="{Binding ImportJpkFa2, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="ZOiS" Command="{Binding ImportJpkKr1, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Dziennik" Command="{Binding ImportJpkKr1, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Konto - zapisy" Command="{Binding ImportJpkKr1, Mode=OneWay}" CommandParameter="2" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="PZ - Zestawienie dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="PZ - Szczegółowe pozycje dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="WZ - Zestawienie dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="2" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="WZ - Szczegółowe pozycje dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="3" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="RW - Zestawienie dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="4" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="RW - Szczegółowe pozycje dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="5" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="MM - Zestawienie dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="6" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="MM - Szczegółowe pozycje dowodów" Command="{Binding ImportJpkMag1, Mode=OneWay}" CommandParameter="7" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="Spis z natury" Command="{Binding ImportJpkPkpir2, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Przychody i rozchody" Command="{Binding ImportJpkPkpir2, Mode=OneWay}" CommandParameter="1"
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="Wyciąg" Command="{Binding ImportJpkWb1, Mode=OneWay}" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </MenuItem>
+                <MenuItem Header="Waliduj" Command="{Binding ValidateJpk, Mode=OneWay}"/>
+                <MenuItem Header="Zapisz" Command="{Binding SaveJpk, Mode=OneWay}"/>
+                <Separator/>
+                <MenuItem Header="Zamknij" Command="{Binding Exit, Mode=OneWay}"/>
+            </MenuItem>
+        </Menu>
+
+        <ContentControl Grid.Row="1" Content="{Binding JpkViewModel, Mode=TwoWay}">
+            <ContentControl.Style>
+                <Style TargetType="{x:Type ContentControl}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsBusy, Mode=OneWay}" Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                            <Setter Property="Opacity" Value="0.2"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewModels:JpkVat3ViewModel}">
+                    <views:JpkVat3View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkEwp1ViewModel}">
+                    <views:JpkEwp1View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkFa2ViewModel}">
+                    <views:JpkFa2View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkKr1ViewModel}">
+                    <views:JpkKr1View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkMag1ViewModel}">
+                    <views:JpkMag1View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkPkpir2ViewModel}">
+                    <views:JpkPkpir2View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkWb1ViewModel}">
+                    <views:JpkWb1View />
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+
+        <resources:BusySpinner Grid.Row="0" Grid.RowSpan="2" IsEnabled="{Binding IsBusy, Mode=OneWay}"/>
+
+    </Grid>
+</Window>
