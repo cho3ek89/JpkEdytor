@@ -1,11 +1,10 @@
 ﻿namespace JpkEdytor.ViewModels
 {
-    using System;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using Helpers;
+    using Helpers.CsvImporter;
     using Models.Common;
     using Models.Pkpir2;
 

@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -45,7 +44,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataOperacji
         {
@@ -60,7 +58,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NazwaPodmiotu
         {
@@ -75,7 +72,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisOperacji
         {
@@ -90,7 +86,6 @@
             }
         }
 
-        [CsvField]
         public decimal KwotaOperacji
         {
             get
@@ -104,7 +99,6 @@
             }
         }
 
-        [CsvField]
         public decimal SaldoOperacji
         {
             get

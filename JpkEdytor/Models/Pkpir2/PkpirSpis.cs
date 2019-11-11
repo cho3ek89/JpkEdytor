@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -23,7 +22,6 @@
             Typ = "G";
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_5A", DataType = "date")]
         public DateTime P5A
         {
@@ -38,7 +36,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_5B", DataType = "decimal")]
         public decimal P5B
         {

@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -55,7 +54,6 @@
             Typ = "G";
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_1", DataType = "nonNegativeInteger")]
         public string K1
         {
@@ -70,7 +68,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_2", DataType = "date")]
         public DateTime K2
         {
@@ -85,7 +82,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_3", DataType = "token")]
         public string K3
         {
@@ -100,7 +96,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_4", DataType = "token")]
         public string K4
         {
@@ -115,7 +110,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_5", DataType = "token")]
         public string K5
         {
@@ -130,7 +124,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_6", DataType = "token")]
         public string K6
         {
@@ -145,7 +138,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_7", DataType = "decimal")]
         public decimal K7
         {
@@ -160,7 +152,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_8", DataType = "decimal")]
         public decimal K8
         {
@@ -175,7 +166,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_9", DataType = "decimal")]
         public decimal K9
         {
@@ -190,7 +180,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_10", DataType = "decimal")]
         public decimal K10
         {
@@ -205,7 +194,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_11", DataType = "decimal")]
         public decimal K11
         {
@@ -220,7 +208,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_12", DataType = "decimal")]
         public decimal K12
         {
@@ -235,7 +222,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_13", DataType = "decimal")]
         public decimal K13
         {
@@ -250,7 +236,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_14", DataType = "decimal")]
         public decimal K14
         {
@@ -265,7 +250,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_15", DataType = "decimal")]
         public decimal K15
         {
@@ -280,7 +264,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_16A", DataType = "token")]
         public string K16A
         {
@@ -295,7 +278,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_16B", DataType = "decimal")]
         public decimal K16B
         {
@@ -310,7 +292,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_17", DataType = "token")]
         public string K17
         {

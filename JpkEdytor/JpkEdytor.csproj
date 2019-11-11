@@ -61,9 +61,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Helpers\CsvImporter.cs" />
+    <Compile Include="Helpers\CsvImporter\CsvImporter.cs" />
+    <Compile Include="Helpers\CsvImporter\CsvImporterColumnMap.cs" />
+    <Compile Include="Helpers\CsvImporter\CsvImporterColumnMapFactory.cs" />
     <Compile Include="Helpers\DateUtils.cs" />
-    <Compile Include="Models\Attributes\CsvField.cs" />
+    <Compile Include="Models\Common\AdresPolski1V50.cs" />
+    <Compile Include="Models\Common\IdentyfikatorOsobyNiefizycznej1V50.cs" />
+    <Compile Include="Models\FaRr1\FakturaRr.cs" />
+    <Compile Include="Models\FaRr1\FakturaRrCtrl.cs" />
+    <Compile Include="Models\FaRr1\FakturaRrWiersz.cs" />
+    <Compile Include="Models\FaRr1\FakturaRrWierszCtrl.cs" />
+    <Compile Include="Models\FaRr1\Jpk.cs" />
+    <Compile Include="Models\FaRr1\JpkNaglowek.cs" />
+    <Compile Include="Models\FaRr1\Naglowek.cs" />
+    <Compile Include="Models\FaRr1\NaglowekKodFormularza.cs" />
+    <Compile Include="Models\FaRr1\Oswiadczenie.cs" />
+    <Compile Include="Models\FaRr1\OswiadczenieCtrl.cs" />
+    <Compile Include="Models\FaRr1\Podmiot.cs" />
+    <Compile Include="Models\FaRr1\Podpis.cs" />
+    <Compile Include="Models\FaRr1\RodzajFaktury.cs" />
     <Compile Include="Models\Mag1\Jpk.cs" />
     <Compile Include="Models\Mag1\Mm.cs" />
     <Compile Include="Models\Mag1\MmCtrl.cs" />
@@ -88,11 +104,15 @@
       <DependentUpon>BusySpinner.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\JpkFa2ViewModel.cs" />
+    <Compile Include="ViewModels\JpkFaRr1ViewModel.cs" />
     <Compile Include="ViewModels\JpkMag1ViewModel.cs" />
     <Compile Include="ViewModels\JpkPkpir2ViewModel.cs" />
     <Compile Include="ViewModels\MessageViewModel.cs" />
     <Compile Include="Views\JpkFa2View.xaml.cs">
       <DependentUpon>JpkFa2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JpkFaRr1View.xaml.cs">
+      <DependentUpon>JpkFaRr1View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\JpkMag1View.xaml.cs">
       <DependentUpon>JpkMag1View.xaml</DependentUpon>
@@ -129,6 +149,10 @@
     <Page Include="Views\JpkFa2View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\JpkFaRr1View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\JpkKr1View.xaml">
       <SubType>Designer</SubType>
@@ -337,6 +361,9 @@
     <EmbeddedResource Include="Resources\XmlSchemas\StrukturyDanych_v5-0E.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_FA_RR%281%29_v1-0.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -344,5 +371,6 @@
   <ItemGroup>
     <Resource Include="Resources\Images\AppIcon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -53,7 +52,6 @@
             Typ = "G";
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodKonta
         {
@@ -68,7 +66,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisKonta
         {
@@ -83,7 +80,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string TypKonta
         {
@@ -98,7 +94,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodZespolu
         {
@@ -113,7 +108,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisZespolu
         {
@@ -128,7 +122,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodKategorii
         {
@@ -143,7 +136,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisKategorii
         {
@@ -158,7 +150,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodPodkategorii
         {
@@ -173,7 +164,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisPodkategorii
         {
@@ -188,7 +178,6 @@
             }
         }
 
-        [CsvField]
         public decimal BilansOtwarciaWinien
         {
             get
@@ -202,7 +191,6 @@
             }
         }
 
-        [CsvField]
         public decimal BilansOtwarciaMa
         {
             get
@@ -216,7 +204,6 @@
             }
         }
 
-        [CsvField]
         public decimal ObrotyWinien
         {
             get
@@ -230,7 +217,6 @@
             }
         }
 
-        [CsvField]
         public decimal ObrotyMa
         {
             get
@@ -244,7 +230,6 @@
             }
         }
 
-        [CsvField]
         public decimal ObrotyWinienNarast
         {
             get
@@ -258,7 +243,6 @@
             }
         }
 
-        [CsvField]
         public decimal ObrotyMaNarast
         {
             get
@@ -272,7 +256,6 @@
             }
         }
 
-        [CsvField]
         public decimal SaldoWinien
         {
             get
@@ -286,7 +269,6 @@
             }
         }
 
-        [CsvField]
         public decimal SaldoMa
         {
             get

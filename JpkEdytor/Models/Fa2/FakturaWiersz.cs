@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -53,7 +52,6 @@
             Typ = "G";
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_2B", DataType = "token")]
         public string P2B
         {
@@ -68,7 +66,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_7", DataType = "token")]
         public string P7
         {
@@ -83,7 +80,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_8A", DataType = "token")]
         public string P8A
         {
@@ -98,7 +94,6 @@
             }
         }
 
-        [CsvField]
         public decimal P8B
         {
             get
@@ -128,7 +123,6 @@
             }
         }
 
-        [CsvField]
         public decimal P9A
         {
             get
@@ -158,7 +152,6 @@
             }
         }
 
-        [CsvField]
         public decimal P9B
         {
             get
@@ -188,7 +181,6 @@
             }
         }
 
-        [CsvField]
         public decimal P10
         {
             get
@@ -218,7 +210,6 @@
             }
         }
 
-        [CsvField]
         public decimal P11
         {
             get
@@ -248,7 +239,6 @@
             }
         }
 
-        [CsvField]
         public decimal P11A
         {
             get
@@ -278,7 +268,6 @@
             }
         }
 
-        [CsvField]
         public StawkaPodatku P12
         {
             get

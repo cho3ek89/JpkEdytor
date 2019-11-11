@@ -1,0 +1,4 @@
+*.suo
+/.vs/
+/JpkEdytor/bin/
+/JpkEdytor/obj/

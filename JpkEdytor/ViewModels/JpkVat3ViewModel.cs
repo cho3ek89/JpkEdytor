@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using Helpers;
+    using Helpers.CsvImporter;
     using Models.Vat3;
 
     public sealed class JpkVat3ViewModel : JpkViewModelBase<Jpk>

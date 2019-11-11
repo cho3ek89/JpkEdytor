@@ -1,12 +1,12 @@
 ﻿namespace JpkEdytor.ViewModels
 {
-    using Helpers;
-    using Models.Common;
-    using Models.Mag1;
-    using System;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Threading.Tasks;
+
+    using Helpers.CsvImporter;
+    using Models.Common;
+    using Models.Mag1;
 
     public sealed class JpkMag1ViewModel : JpkViewModelBase<Jpk>
     {

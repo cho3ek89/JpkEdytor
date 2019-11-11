@@ -162,6 +162,8 @@
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Header="P 13 1" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_1}" 
                                         Binding="{Binding P13_1, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                    <DataGridTextColumn Header="P 14 1" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_1}" 
+                                        Binding="{Binding P14_1, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="P 13 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P13_2}" 
                                         Binding="{Binding P13_2, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="P 14 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P14_2}" 
@@ -228,7 +230,7 @@
                                         Binding="{Binding P22B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="P 22C" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P22C}"  
                                         Binding="{Binding P22C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridCheckBoxColumn Header="P 23" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E3A}" 
+                    <DataGridCheckBoxColumn Header="P 23" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P23}" 
                                             Binding="{Binding P23, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridCheckBoxColumn Header="P 106 E2" local:DataGridExtensions.HeaderToolTip="{StaticResource Fa2.Faktura.P106E2}"  
                                             Binding="{Binding P106E2, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>

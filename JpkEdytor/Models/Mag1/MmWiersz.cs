@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -26,7 +25,6 @@
 
         private decimal wartoscPozycji;
 
-        [CsvField]
         [XmlElement(ElementName = "Numer2MM", DataType = "token")]
         public string Numer2
         {
@@ -41,7 +39,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "KodTowaruMM", DataType = "token")]
         public string KodTowaru
         {
@@ -56,7 +53,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "NazwaTowaruMM", DataType = "token")]
         public string NazwaTowaru
         {
@@ -71,7 +67,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "IloscWydanaMM")]
         public decimal IloscWydana
         {
@@ -86,7 +81,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "JednostkaMiaryMM", DataType = "token")]
         public string JednostkaMiary
         {
@@ -101,7 +95,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "CenaJednMM")]
         public decimal CenaJednostkowa
         {
@@ -116,7 +109,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "WartoscPozycjiMM")]
         public decimal WartoscPozycji
         {

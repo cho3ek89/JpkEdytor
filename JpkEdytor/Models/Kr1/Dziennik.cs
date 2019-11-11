@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -55,7 +54,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NrZapisuDziennika
         {
@@ -70,7 +68,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisDziennika
         {
@@ -85,7 +82,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NrDowoduKsiegowego
         {
@@ -100,7 +96,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string RodzajDowodu
         {
@@ -115,7 +110,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataOperacji
         {
@@ -130,7 +124,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataDowodu
         {
@@ -145,7 +138,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataKsiegowania
         {
@@ -160,7 +152,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodOperatora
         {
@@ -175,7 +166,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisOperacji
         {
@@ -190,7 +180,6 @@
             }
         }
 
-        [CsvField]
         public decimal DziennikKwotaOperacji
         {
             get

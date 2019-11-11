@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/" xmlns:kck="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2013/05/23/eD/KodyCECHKRAJOW/" xmlns:tns="http://jpk.mf.gov.pl/wzor/2019/08/12/08121/" targetNamespace="http://jpk.mf.gov.pl/wzor/2019/08/12/08121/" elementFormDefault="qualified" attributeFormDefault="unqualified" xml:lang="pl">
+	<xsd:import namespace="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/" schemaLocation="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/StrukturyDanych_v5-0E.xsd"/>
+	<xsd:import namespace="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2013/05/23/eD/KodyCECHKRAJOW/" schemaLocation="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2013/05/23/eD/KodyCECHKRAJOW/KodyCechKrajow_v3-0E.xsd"/>
+	<xsd:simpleType name="TKodFormularza">
+		<xsd:annotation>
+			<xsd:documentation>Symbol wzoru formularza</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="JPK_FA_RR"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TCelZlozenia">
+		<xsd:annotation>
+			<xsd:documentation>Określenie celu złożenia JPK</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:byte">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>złożenie JPK po raz pierwszy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="TNaglowek">
+		<xsd:annotation>
+			<xsd:documentation>Nagłówek JPK_FA_RR</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="KodFormularza">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="tns:TKodFormularza">
+							<xsd:attribute name="kodSystemowy" type="xsd:string" use="required" fixed="JPK_FA_RR (1)"/>
+							<xsd:attribute name="wersjaSchemy" type="xsd:string" use="required" fixed="1-0"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="WariantFormularza">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:byte">
+						<xsd:enumeration value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="CelZlozenia" type="tns:TCelZlozenia"/>
+			<xsd:element name="DataWytworzeniaJPK" type="etd:TDataCzas">
+				<xsd:annotation>
+					<xsd:documentation>Data i czas wytworzenia JPK_FA_RR</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DataOd" type="tns:TData">
+				<xsd:annotation>
+					<xsd:documentation>Data początkowa okresu, którego dotyczy JPK_FA_RR</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DataDo" type="tns:TData">
+				<xsd:annotation>
+					<xsd:documentation>Data końcowa okresu, którego dotyczy JPK_FA_RR</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DomyslnyKodWaluty" type="kck:currCode_Type">
+				<xsd:annotation>
+					<xsd:documentation>Trzyliterowy kod lokalnej waluty (ISO-4217), domyślny dla wytworzonego JPK_FA_RR</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="KodUrzedu" type="etd:TKodUS"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="TKwotowy">
+		<xsd:annotation>
+			<xsd:documentation>Wartość numeryczna 18 znaków max, w tym 2 znaki po przecinku</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="18"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TNaturalnyJPK">
+		<xsd:annotation>
+			<xsd:documentation>Liczby naturalne większe od zera</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="etd:TNaturalny">
+			<xsd:minExclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TZnakowyJPK">
+		<xsd:annotation>
+			<xsd:documentation>Typ znakowy ograniczony do 256 znaków</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="256"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TIlosciJPK">
+		<xsd:annotation>
+			<xsd:documentation>Wykorzystywany do określenia ilości. Wartość numeryczna 22 znaki max, w tym 6 po przecinku.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="22"/>
+			<xsd:fractionDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="TPodpis">
+		<xsd:annotation>
+			<xsd:documentation>Elementy identyfikujące elektroniczny podpis kwalifikowany</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="NumerSeryjny">
+				<xsd:annotation>
+					<xsd:documentation>Numer seryjny certyfikatu</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:whiteSpace value="collapse"/>
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="64"/>
+						<xsd:pattern value="[1-9][0-9]*"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Wystawca">
+				<xsd:annotation>
+					<xsd:documentation>Wystawca certyfikatu (dane opisujące podmiot wystawiający certyfikat rozdzielone przecinkiem)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="512"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Posiadacz">
+				<xsd:annotation>
+					<xsd:documentation>Podmiot - posiadacz certyfikatu (dane opisujące posiadacza certyfikatu rozdzielone przecinkiem; w tym informacja o nazwisku, imieniu, identyfikatorze podmiotu)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="512"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="TData">
+		<xsd:restriction base="etd:TData">
+			<xsd:minInclusive value="2016-07-01"/>
+			<xsd:maxInclusive value="2030-01-01"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TDataT">
+		<xsd:annotation>
+			<xsd:documentation>Data transakcji lub zdarzenia</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="etd:TData">
+			<xsd:minInclusive value="2006-01-01"/>
+			<xsd:maxInclusive value="2030-01-01"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="JPK">
+		<xsd:annotation>
+			<xsd:documentation>Jednolity plik kontrolny dla faktur VAT RR</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Naglowek">
+					<xsd:annotation>
+						<xsd:documentation>Nagłówek JPK_FA_RR</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:extension base="tns:TNaglowek"/>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Podmiot1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="IdentyfikatorPodmiotu" type="etd:TIdentyfikatorOsobyNiefizycznej1">
+								<xsd:annotation>
+									<xsd:documentation>Dane identyfikujące podmiot</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="AdresPodmiotu" type="etd:TAdresPolski1">
+								<xsd:annotation>
+									<xsd:documentation>Adres podmiotu</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="FakturaRR" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Na podstawie art. 116 ustawy z 11 marca 2004 r. o podatku od towarów i usług /Dz. U. z 2018 r. poz. 2174 z późn. zm./</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="P_1A" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Imię i nazwisko lub nazwa albo nazwa skrócona dostawcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_1B" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Adres dostawcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_1C" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Imię i nazwisko lub nazwa albo nazwa skrócona nabywcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_1D" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Adres nabywcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_2A" type="etd:TNrIdentyfikacjiPodatkowej">
+								<xsd:annotation>
+									<xsd:documentation>Numer identyfikacji podatkowej lub numer PESEL dostawcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_2B" type="etd:TNrNIP">
+								<xsd:annotation>
+									<xsd:documentation>Numer identyfikacji podatkowej nabywcy</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_3A" type="tns:TPodpis">
+								<xsd:annotation>
+									<xsd:documentation>Kwalifikowany podpis elektroniczny dostawcy lub osoby uprawnionej do otrzymania faktury</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_3B" type="tns:TPodpis">
+								<xsd:annotation>
+									<xsd:documentation>Kwalifikowany podpis elektroniczny nabywcy lub osoby uprawnionej do wystawienia faktury</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_4A" type="tns:TDataT">
+								<xsd:annotation>
+									<xsd:documentation>Data dokonania nabycia</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_4B" type="tns:TDataT">
+								<xsd:annotation>
+									<xsd:documentation>Data wystawienia faktury</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_4C1" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Kolejny numer faktury</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:sequence>
+								<xsd:element name="P_11_1" type="tns:TKwotowy">
+									<xsd:annotation>
+										<xsd:documentation>Wartość nabytych produktów rolnych</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_11_2" type="tns:TKwotowy">
+									<xsd:annotation>
+										<xsd:documentation>Kwota zryczałtowanego zwrotu podatku</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+							<xsd:element name="P_12_1" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Kwota należności ogółem wraz z kwotą zryczałtowanego zwrotu podatku, wyrażona cyfrowo</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_12_2" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Kwota należności ogółem wraz z kwotą zryczałtowanego zwrotu podatku, wyrażona słownie</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_116_3" type="xsd:boolean" default="false">
+								<xsd:annotation>
+									<xsd:documentation>Oświadczenie dostawcy produktów rolnych w brzmieniu: ,,Oświadczam, że jestem rolnikiem ryczałtowym zwolnionym od podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 3 ustawy o podatku od towarów i usług. W przypadku, gdy faktura zawiera oświadczenie, należy podać wartość "true"; w przeciwnym przypadku - wartość - "false"</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="RodzajFaktury">
+								<xsd:annotation>
+									<xsd:documentation>Rodzaj faktury: VAT_RR - podstawowa; KOREKTA_RR - korygująca</xsd:documentation>
+								</xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="tns:TZnakowyJPK">
+										<xsd:enumeration value="VAT_RR"/>
+										<xsd:enumeration value="KOREKTA_RR"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:sequence minOccurs="0">
+								<xsd:element name="PrzyczynaKorekty" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Przyczyna korekty dla faktur korygujących</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="NrFaKorygowanej" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Numer faktury korygowanej</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="OkresFaKorygowanej" type="tns:TZnakowyJPK" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Dla faktury korygującej - okres, do którego odnosi się udzielany opust lub obniżka, w przypadku gdy podatnik udziela opustu lub obniżki ceny w odniesieniu do wszystkich dostaw towarów lub usług dokonanych lub świadczonych na rzecz jednego odbiorcy w danym okresie</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+							<xsd:element name="Dokument" type="tns:TZnakowyJPK" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>Dane identyfikacyjne dokumentu potwierdzającego dokonanie zapłaty zaliczki, o którym mowa w art. 116 ust. 9 pkt 1 i ust. 9b ustawy o VAT</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="typ" use="required" fixed="G"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="FakturaRRCtrl">
+					<xsd:annotation>
+						<xsd:documentation>Sumy kontrolne dla faktur VAT RR</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="LiczbaFakturRR" type="tns:TNaturalnyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Liczba faktur, w okresie którego dotyczy JPK_FA_RR</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="WartoscFakturRR" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Łączna wartość kolumny P_12_1 w okresie, którego dotyczy JPK_FA_RR</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="FakturaRRWiersz" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Szczegółowe pozycje faktur VAT RR</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="P_4C2" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Kolejny numer faktury, identyczny jak w polu P_4C1</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_5" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Nazwa nabytego produktu rolnego</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_6A" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Jednostka miary nabytego produktu rolnego</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_6B" type="tns:TIlosciJPK">
+								<xsd:annotation>
+									<xsd:documentation>Ilość nabytego produktu rolnego</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_6C" type="tns:TZnakowyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Oznaczenie (opis) klasy lub jakości tego produktu</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_7" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Cena jednostkowa nabytego produktu rolnego bez kwoty zryczałtowanego zwrotu podatku</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_8" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Wartość nabytego produktu rolnego bez kwoty zryczałtowanego zwrotu podatku</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_9" type="etd:TProcentowy">
+								<xsd:annotation>
+									<xsd:documentation>Stawka zryczałtowanego zwrotu podatku</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="P_10" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Kwota zryczałtowanego zwrotu podatku od wartości nabytego produktu rolnego</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="typ" use="required" fixed="G"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="FakturaRRWierszCtrl">
+					<xsd:annotation>
+						<xsd:documentation>Sumy kontrolne dla wierszy faktur VAT RR</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="LiczbaWierszyFakturRR" type="tns:TNaturalnyJPK">
+								<xsd:annotation>
+									<xsd:documentation>Liczba wierszy faktur, w okresie którego dotyczy JPK_FA_RR</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="WartoscWierszyFakturRR" type="tns:TKwotowy">
+								<xsd:annotation>
+									<xsd:documentation>Łączna wartość kolumny P_8 tabeli FakturaRRWiersz w okresie, którego dotyczy JPK_FA_RR</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="Oswiadczenie" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Zestawienie oświadczeń, o których mowa w art. 116 ust. 4 i 4a ustawy o podatku od towarów i usług</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="P_1A2" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Imię i nazwisko lub nazwa albo nazwa skrócona dostawcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_1B2" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Adres dostawcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_1C2" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Imię i nazwisko lub nazwa albo nazwa skrócona nabywcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_1D2" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Adres nabywcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_2A2" type="etd:TNrIdentyfikacjiPodatkowej">
+									<xsd:annotation>
+										<xsd:documentation>Numer identyfikacji podatkowej lub numer PESEL dostawcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_2B2" type="etd:TNrNIP">
+									<xsd:annotation>
+										<xsd:documentation>Numer identyfikacji podatkowej nabywcy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_116_4_1" type="tns:TDataT">
+									<xsd:annotation>
+										<xsd:documentation>Data zawarcia umowy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_116_4_2" type="tns:TZnakowyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Określenie przedmiotu umowy</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_116_4_3" type="tns:TDataT">
+									<xsd:annotation>
+										<xsd:documentation>Data sporządzenia dokumentu</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="P_3A2" type="tns:TPodpis">
+									<xsd:annotation>
+										<xsd:documentation>Kwalifikowany podpis elektroniczny składającego oświadczenie</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="OswiadczenieCtrl">
+						<xsd:annotation>
+							<xsd:documentation>Suma kontrolna dla tabeli Oswiadczenie</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="LiczbaOswiadczen" type="tns:TNaturalnyJPK">
+									<xsd:annotation>
+										<xsd:documentation>Liczba oświadczeń w tabeli Oswiadczenie</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

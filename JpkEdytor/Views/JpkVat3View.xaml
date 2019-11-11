@@ -18,71 +18,29 @@
     <TabControl>
         <TabItem Header="Nagłówek">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                <Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
-
-                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
-                            Content="Cel złożenia:"/>
-                    <TextBox Grid.Row="0" Grid.Column="1" Width="27"
-                            Style="{StaticResource TextBoxDefaultStyle}"
-                            Text="{Binding Jpk.Naglowek.CelZlozenia, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
-                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
-                            Content="Data od:"/>
-                    <DatePicker Grid.Row="1" Grid.Column="1"
-                            Style="{StaticResource DatePickerStyle}"
-                            Text="{Binding Jpk.Naglowek.DataOd, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
-                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
-                            Content="Data do:"/>
-                    <DatePicker Grid.Row="2" Grid.Column="1" 
-                            Style="{StaticResource DatePickerStyle}"
-                            Text="{Binding Jpk.Naglowek.DataDo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    
+                    <ContentControl Grid.Row="0" Content="{Binding Jpk.Naglowek.CelZlozenia, Mode=TwoWay}" ContentTemplate="{StaticResource CelZlozenia}"/>
+                    <ContentControl Grid.Row="1" Content="{Binding Jpk.Naglowek.DataOd, Mode=TwoWay}" ContentTemplate="{StaticResource DataOd}"/>
+                    <ContentControl Grid.Row="2" Content="{Binding Jpk.Naglowek.DataDo, Mode=TwoWay}" ContentTemplate="{StaticResource DataDo}"/>
                 </Grid>
             </ScrollViewer>
         </TabItem>
         <TabItem Header="Podmiot">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                <Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Top" HorizontalAlignment="Left" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
-
-                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
-                            Content="NIP:"/>
-                    <TextBox Grid.Row="0" Grid.Column="1" Width="72"
-                            Style="{StaticResource TextBoxDefaultStyle}"
-                            Text="{Binding Jpk.Podmiot.Nip, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
-                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
-                            Content="Pełna nazwa:"/>
-                    <TextBox Grid.Row="1" Grid.Column="1" Width="230"
-                            Style="{StaticResource TextBoxDefaultStyle}"
-                            Text="{Binding Jpk.Podmiot.PelnaNazwa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
-                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
-                            Content="Email:"/>
-                    <TextBox Grid.Row="2" Grid.Column="1" Width="230"
-                            Style="{StaticResource TextBoxDefaultStyle}"
-                            Text="{Binding Jpk.Podmiot.Email, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
+                    <ContentControl Grid.Row="0" Content="{Binding Jpk.Podmiot.Nip, Mode=TwoWay}" ContentTemplate="{StaticResource Nip}"/>
+                    <ContentControl Grid.Row="1" Content="{Binding Jpk.Podmiot.PelnaNazwa, Mode=TwoWay}" ContentTemplate="{StaticResource PelnaNazwa}"/>
+                    <ContentControl Grid.Row="2" Content="{Binding Jpk.Podmiot.Email, Mode=TwoWay}" ContentTemplate="{StaticResource Email}"/>
                 </Grid>
             </ScrollViewer>
         </TabItem>

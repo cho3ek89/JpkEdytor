@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Common;
     using Framework;
 
@@ -68,7 +67,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NrZapisu
         {
@@ -83,7 +81,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodKontaWinien
         {
@@ -98,7 +95,6 @@
             }
         }
 
-        [CsvField]
         public decimal KwotaWinien
         {
             get
@@ -112,7 +108,6 @@
             }
         }
 
-        [CsvField]
         public decimal KwotaWinienWaluta
         {
             get
@@ -141,7 +136,6 @@
             }
         }
 
-        [CsvField]
         public KodWalutyV30 KodWalutyWinien
         {
             get
@@ -170,7 +164,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisZapisuWinien
         {
@@ -185,7 +178,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string KodKontaMa
         {
@@ -200,7 +192,6 @@
             }
         }
 
-        [CsvField]
         public decimal KwotaMa
         {
             get
@@ -214,7 +205,6 @@
             }
         }
 
-        [CsvField]
         public decimal KwotaMaWaluta
         {
             get
@@ -243,7 +233,6 @@
             }
         }
 
-        [CsvField]
         public KodWalutyV30 KodWalutyMa
         {
             get
@@ -272,7 +261,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OpisZapisuMa
         {

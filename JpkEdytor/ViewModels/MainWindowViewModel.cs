@@ -1,6 +1,7 @@
 ﻿namespace JpkEdytor.ViewModels
 {
     using System;
+    using System.Linq;
     using System.Windows.Input;
 
     using Framework;
@@ -162,6 +163,41 @@
                 }
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.Fa2.Jpk> && !IsBusy; });
+
+        public ICommand ImportJpkFaRr1 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkFaRr1ViewModel)?.ImportFakturaRrFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkFaRr1ViewModel)?.ImportFakturaRrWierszFromCsv(openFileDialog.FileName);
+                            break;
+                        case "2":
+                            await (JpkViewModel as JpkFaRr1ViewModel)?.ImportOswiadczenieFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.FaRr1.Jpk> && !IsBusy; });
 
         public ICommand ImportJpkKr1 => new RelayCommand<string>(async obj =>
         {
@@ -352,10 +388,6 @@
 
         public ICommand Exit => new RelayCommand(obj => Environment.Exit(0));
 
-        public MainWindowViewModel()
-        {
-        }
-
         private IJpkViewModel<IJpk> GetJpkViewModel(object index)
         {
             switch (index)
@@ -367,12 +399,14 @@
                 case "2":
                     return new JpkFa2ViewModel();
                 case "3":
-                    return new JpkKr1ViewModel();
+                    return new JpkFaRr1ViewModel();
                 case "4":
-                    return new JpkMag1ViewModel();
+                    return new JpkKr1ViewModel();
                 case "5":
-                    return new JpkPkpir2ViewModel();
+                    return new JpkMag1ViewModel();
                 case "6":
+                    return new JpkPkpir2ViewModel();
+                case "7":
                     return new JpkWb1ViewModel();
                 default:
                     throw new NotImplementedException();

@@ -5,7 +5,6 @@
     using System.ComponentModel;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Common;
     using Framework;
 
@@ -149,7 +148,6 @@
             Typ = "G";
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_1", DataType = "date")]
         public DateTime P1
         {
@@ -164,7 +162,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_2A", DataType = "token")]
         public string P2A
         {
@@ -179,7 +176,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_3A", DataType = "token")]
         public string P3A
         {
@@ -194,7 +190,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_3B", DataType = "token")]
         public string P3B
         {
@@ -209,7 +204,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_3C", DataType = "token")]
         public string P3C
         {
@@ -224,7 +218,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_3D", DataType = "token")]
         public string P3D
         {
@@ -239,7 +232,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_4A")]
         public KodKrajuUeV30 P4A
         {
@@ -270,7 +262,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_4B")]
         public string P4B
         {
@@ -285,7 +276,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_5A")]
         public KodKrajuUeV30 P5A
         {
@@ -316,7 +306,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_5B")]
         public string P5B
         {
@@ -331,7 +320,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_6", DataType = "date")]
         public DateTime P6
         {
@@ -362,7 +350,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_1", DataType = "decimal")]
         public decimal P13_1
         {
@@ -377,7 +364,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_14_1", DataType = "decimal")]
         public decimal P14_1
         {
@@ -392,7 +378,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_2", DataType = "decimal")]
         public decimal P13_2
         {
@@ -407,7 +392,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_14_2", DataType = "decimal")]
         public decimal P14_2
         {
@@ -422,7 +406,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_3", DataType = "decimal")]
         public decimal P13_3
         {
@@ -437,7 +420,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_14_3", DataType = "decimal")]
         public decimal P14_3
         {
@@ -452,7 +434,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_4", DataType = "decimal")]
         public decimal P13_4
         {
@@ -467,7 +448,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_14_4", DataType = "decimal")]
         public decimal P14_4
         {
@@ -482,7 +462,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_5", DataType = "decimal")]
         public decimal P13_5
         {
@@ -497,7 +476,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_14_5", DataType = "decimal")]
         public decimal P14_5
         {
@@ -512,7 +490,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_6", DataType = "decimal")]
         public decimal P13_6
         {
@@ -543,7 +520,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_13_7", DataType = "decimal")]
         public decimal P13_7
         {
@@ -574,7 +550,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_15", DataType = "decimal")]
         public decimal P15
         {
@@ -589,7 +564,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_16", DataType = "boolean")]
         public bool P16
         {
@@ -604,7 +578,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_17", DataType = "boolean")]
         public bool P17
         {
@@ -619,7 +592,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_18", DataType = "boolean")]
         public bool P18
         {
@@ -634,7 +606,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_19", DataType = "boolean")]
         public bool P19
         {
@@ -649,7 +620,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_19A", DataType = "token")]
         [DefaultValue("false")]
         public string P19A
@@ -665,7 +635,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_19B", DataType = "token")]
         [DefaultValue("false")]
         public string P19B
@@ -681,7 +650,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_19C", DataType = "token")]
         [DefaultValue("false")]
         public string P19C
@@ -697,7 +665,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_20", DataType = "boolean")]
         public bool P20
         {
@@ -712,7 +679,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_20A", DataType = "token")]
         public string P20A
         {
@@ -727,7 +693,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_20B", DataType = "token")]
         public string P20B
         {
@@ -742,7 +707,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_21", DataType = "boolean")]
         public bool P21
         {
@@ -757,7 +721,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_21A", DataType = "token")]
         public string P21A
         {
@@ -772,7 +735,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_21B", DataType = "token")]
         public string P21B
         {
@@ -787,7 +749,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_21C", DataType = "token")]
         public string P21C
         {
@@ -802,7 +763,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_22A", DataType = "date")]
         public DateTime P22A
         {
@@ -817,7 +777,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_22B", DataType = "token")]
         public string P22B
         {
@@ -832,7 +791,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_22C", DataType = "token")]
         public string P22C
         {
@@ -847,7 +805,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_23", DataType = "boolean")]
         public bool P23
         {
@@ -862,7 +819,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_106E_2", DataType = "boolean")]
         public bool P106E2
         {
@@ -877,7 +833,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_106E_3", DataType = "boolean")]
         public bool P106E3
         {
@@ -892,7 +847,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "P_106E_3A", DataType = "token")]
         [DefaultValue("false")]
         public string P106E3A
@@ -908,7 +862,6 @@
             }
         }
 
-        [CsvField]
         public RodzajFaktury RodzajFaktury
         {
             get
@@ -922,7 +875,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string PrzyczynaKorekty
         {
@@ -937,7 +889,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NrFaKorygowanej
         {
@@ -952,7 +903,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string OkresFaKorygowanej
         {
@@ -967,7 +917,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "ZALZaplata", DataType = "decimal")]
         public decimal ZalZaplata
         {
@@ -982,7 +931,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "ZALPodatek", DataType = "decimal")]
         public decimal ZalPodatek
         {

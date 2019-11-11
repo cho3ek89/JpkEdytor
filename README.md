@@ -4,6 +4,7 @@ Obsługiwane są następujące typy plików:
  - JPK_VAT *(wersja 3)*
  - JPK_EWP *(wersja 1)*
  - JPK_FA *(wersja 2)*
+ - JPK_FA_RR *(wersja 1)*
  - JPK_KR *(wersja 1)*
  - JPK_MAG *(wersja 1)*
  - PK_PKPiR *(wersja 2)*
@@ -41,7 +42,8 @@ Aby aplikacja poprawnie wczytała plik CSV, powinien on:
  - być zgodny ze specyfikacją standardu pliku CSV
  - posiadać liczbę i kolejność kolumn odpowiadającą liczbie i kolejności kolumn w arkuszu, do którego ten plik ma być zaimportowany
  - zawierać tylko dane (wiersz z nazwami kolumn nie powinien być obecny)
- - posiadać daty zapisane w formacie „**rrrr-mm-dd**”, na przykład: *2019-04-27*
+ - posiadać daty zapisane w formacie „*rrrr-mm-dd*”, na przykład: **2019-04-27**
+ - wartości typu &#9746;/&#9744; powinny być zapisane jako "**true**"/"**false**"
 > Możliwość zapisu oraz edycji plików CSV posiada na przykład program Microsoft Excel.
 
 Aby zaimportować plik CSV do arkusza w aplikacji należy z głównego menu aplikacji należy wybrać kolejno:\

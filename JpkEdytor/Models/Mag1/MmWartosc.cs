@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -24,7 +23,6 @@
 
         private string dokad;
 
-        [CsvField]
         [XmlElement(ElementName = "NumerMM", DataType = "token")]
         public string Numer
         {
@@ -39,7 +37,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DataMM", DataType = "date")]
         public DateTime Data
         {
@@ -54,7 +51,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "WartoscMM")]
         public decimal Wartosc
         {
@@ -69,7 +65,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DataWydaniaMM", DataType = "date")]
         public DateTime DataWydania
         {
@@ -84,7 +79,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "SkadMM", DataType = "token")]
         public string Skad
         {
@@ -99,7 +93,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DokadMM", DataType = "token")]
         public string Dokad
         {

@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -28,7 +27,6 @@
 
         private bool dataFakturySpecified;
 
-        [CsvField]
         [XmlElement(ElementName = "NumerPZ", DataType = "token")]
         public string Numer
         {
@@ -43,7 +41,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DataPZ", DataType = "date")]
         public DateTime Data
         {
@@ -58,7 +55,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "WartoscPZ")]
         public decimal Wartosc
         {
@@ -73,7 +69,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DataOtrzymaniaPZ", DataType = "date")]
         public DateTime DataOtrzymania
         {
@@ -88,7 +83,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string Dostawca
         {
@@ -103,7 +97,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "NumerFaPZ", DataType = "token")]
         public string NumerFaktury
         {
@@ -118,7 +111,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "DataFaPZ", DataType = "date")]
         public DateTime DataFaktury
         {

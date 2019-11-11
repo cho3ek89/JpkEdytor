@@ -4,7 +4,6 @@
     using System.CodeDom.Compiler;
     using System.Xml.Serialization;
 
-    using Attributes;
     using Framework;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
@@ -66,7 +65,6 @@
             }
         }
 
-        [CsvField]
         public string NrDostawcy
         {
             get
@@ -80,7 +78,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string NazwaDostawcy
         {
@@ -95,7 +92,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string AdresDostawcy
         {
@@ -110,7 +106,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "token")]
         public string DowodZakupu
         {
@@ -125,7 +120,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataZakupu
         {
@@ -140,7 +134,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(DataType = "date")]
         public DateTime DataWplywu
         {
@@ -170,7 +163,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_43", DataType = "decimal")]
         public decimal K43
         {
@@ -185,7 +177,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_44", DataType = "decimal")]
         public decimal K44
         {
@@ -200,7 +191,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_45", DataType = "decimal")]
         public decimal K45
         {
@@ -215,7 +205,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_46", DataType = "decimal")]
         public decimal K46
         {
@@ -230,7 +219,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_47", DataType = "decimal")]
         public decimal K47
         {
@@ -261,7 +249,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_48", DataType = "decimal")]
         public decimal K48
         {
@@ -292,7 +279,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_49", DataType = "decimal")]
         public decimal K49
         {
@@ -323,7 +309,6 @@
             }
         }
 
-        [CsvField]
         [XmlElement(ElementName = "K_50", DataType = "decimal")]
         public decimal K50
         {
