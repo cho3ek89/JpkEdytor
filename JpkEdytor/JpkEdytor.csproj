@@ -61,12 +61,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ObjectTypeToStringConverter.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporter.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporterColumnMap.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporterColumnMapFactory.cs" />
     <Compile Include="Helpers\DateUtils.cs" />
     <Compile Include="Models\Common\AdresPolski1V50.cs" />
+    <Compile Include="Models\Common\AdresZagranicznyV50.cs" />
     <Compile Include="Models\Common\IdentyfikatorOsobyNiefizycznej1V50.cs" />
+    <Compile Include="Models\Fa3\FakturaCtrl.cs" />
+    <Compile Include="Models\Fa3\FakturaWiersz.cs" />
+    <Compile Include="Models\Fa3\FakturaWierszCtrl.cs" />
+    <Compile Include="Models\Fa3\Jpk.cs" />
+    <Compile Include="Models\Fa3\JpkFaktura.cs" />
+    <Compile Include="Models\Fa3\JpkNaglowek.cs" />
+    <Compile Include="Models\Fa3\Naglowek.cs" />
+    <Compile Include="Models\Fa3\NaglowekKodFormularza.cs" />
+    <Compile Include="Models\Fa3\Podmiot.cs" />
+    <Compile Include="Models\Fa3\RodzajFaktury.cs" />
+    <Compile Include="Models\Fa3\StawkaPodatkuFw.cs" />
+    <Compile Include="Models\Fa3\StawkaPodatkuZw.cs" />
+    <Compile Include="Models\Fa3\Zamowienie.cs" />
+    <Compile Include="Models\Fa3\ZamowienieCtrl.cs" />
+    <Compile Include="Models\Fa3\ZamowienieWiersz.cs" />
     <Compile Include="Models\FaRr1\FakturaRr.cs" />
     <Compile Include="Models\FaRr1\FakturaRrCtrl.cs" />
     <Compile Include="Models\FaRr1\FakturaRrWiersz.cs" />
@@ -104,12 +121,16 @@
       <DependentUpon>BusySpinner.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\JpkFa2ViewModel.cs" />
+    <Compile Include="ViewModels\JpkFa3ViewModel.cs" />
     <Compile Include="ViewModels\JpkFaRr1ViewModel.cs" />
     <Compile Include="ViewModels\JpkMag1ViewModel.cs" />
     <Compile Include="ViewModels\JpkPkpir2ViewModel.cs" />
     <Compile Include="ViewModels\MessageViewModel.cs" />
     <Compile Include="Views\JpkFa2View.xaml.cs">
       <DependentUpon>JpkFa2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JpkFa3View.xaml.cs">
+      <DependentUpon>JpkFa3View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\JpkFaRr1View.xaml.cs">
       <DependentUpon>JpkFaRr1View.xaml</DependentUpon>
@@ -147,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\JpkFa2View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\JpkFa3View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -362,6 +387,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_FA_RR%281%29_v1-0.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_FA%283%29_v1-0.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

@@ -3,7 +3,7 @@
 Obsługiwane są następujące typy plików:
  - JPK_VAT *(wersja 3)*
  - JPK_EWP *(wersja 1)*
- - JPK_FA *(wersja 2)*
+ - JPK_FA *(wersje: 3, 2)*
  - JPK_FA_RR *(wersja 1)*
  - JPK_KR *(wersja 1)*
  - JPK_MAG *(wersja 1)*
@@ -11,7 +11,7 @@ Obsługiwane są następujące typy plików:
  - JPK_WB *(wersja 1)*
 
 ## Wymagania aplikacji
- - Microsoft Windows XP lub nowszy
+ - Microsoft Windows 7 lub nowszy
  - Microsoft .NET Framework 4.5 lub nowszy ([pobierz](https://dotnet.microsoft.com/download/dotnet-framework))
 
 ## Instrukcja obsługi

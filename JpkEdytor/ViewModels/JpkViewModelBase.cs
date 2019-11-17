@@ -16,7 +16,7 @@
     {
         protected T jpk1;
 
-        public T Jpk
+        public virtual T Jpk
         {
             get
             {
@@ -72,7 +72,7 @@
             });
         }
 
-        protected XDocument GetSerializedDocument()
+        protected virtual XDocument GetSerializedDocument()
         {
             UpdateCrtls();
 

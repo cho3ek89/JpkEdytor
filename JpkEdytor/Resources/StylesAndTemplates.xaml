@@ -388,7 +388,51 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="AdresTemplate">
+    <DataTemplate DataType="{x:Type models:AdresPolski1V50}">
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" Content="{Binding KodKraju, Mode=TwoWay}" ContentTemplate="{StaticResource KodKraju}"/>
+            <ContentControl Grid.Row="1" Content="{Binding Wojewodztwo, Mode=TwoWay}" ContentTemplate="{StaticResource Wojewodztwo}"/>
+            <ContentControl Grid.Row="2" Content="{Binding Powiat, Mode=TwoWay}" ContentTemplate="{StaticResource Powiat}"/>
+            <ContentControl Grid.Row="3" Content="{Binding Gmina, Mode=TwoWay}" ContentTemplate="{StaticResource Gmina}"/>
+            <ContentControl Grid.Row="4" Content="{Binding Ulica, Mode=TwoWay}" ContentTemplate="{StaticResource Ulica}"/>
+            <ContentControl Grid.Row="5" Content="{Binding NrDomu, Mode=TwoWay}" ContentTemplate="{StaticResource NrDomu}"/>
+            <ContentControl Grid.Row="6" Content="{Binding NrLokalu, Mode=TwoWay}" ContentTemplate="{StaticResource NrLokalu}"/>
+            <ContentControl Grid.Row="7" Content="{Binding Miejscowosc, Mode=TwoWay}" ContentTemplate="{StaticResource Miejscowosc}"/>
+            <ContentControl Grid.Row="8" Content="{Binding KodPocztowy, Mode=TwoWay}" ContentTemplate="{StaticResource KodPocztowy}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type models:AdresZagranicznyV50}">
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" Content="{Binding KodKraju, Mode=TwoWay}" ContentTemplate="{StaticResource KodKraju}"/>
+            <ContentControl Grid.Row="1" Content="{Binding Ulica, Mode=TwoWay}" ContentTemplate="{StaticResource Ulica}"/>
+            <ContentControl Grid.Row="2" Content="{Binding NrDomu, Mode=TwoWay}" ContentTemplate="{StaticResource NrDomu}"/>
+            <ContentControl Grid.Row="3" Content="{Binding NrLokalu, Mode=TwoWay}" ContentTemplate="{StaticResource NrLokalu}"/>
+            <ContentControl Grid.Row="4" Content="{Binding Miejscowosc, Mode=TwoWay}" ContentTemplate="{StaticResource Miejscowosc}"/>
+            <ContentControl Grid.Row="5" Content="{Binding KodPocztowy, Mode=TwoWay}" ContentTemplate="{StaticResource KodPocztowy}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type models:AdresPolskiV40}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -415,9 +459,10 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="Adres1Template">
+    <DataTemplate DataType="{x:Type models:AdresPolskiV50}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -437,6 +482,7 @@
             <ContentControl Grid.Row="6" Content="{Binding NrLokalu, Mode=TwoWay}" ContentTemplate="{StaticResource NrLokalu}"/>
             <ContentControl Grid.Row="7" Content="{Binding Miejscowosc, Mode=TwoWay}" ContentTemplate="{StaticResource Miejscowosc}"/>
             <ContentControl Grid.Row="8" Content="{Binding KodPocztowy, Mode=TwoWay}" ContentTemplate="{StaticResource KodPocztowy}"/>
+            <ContentControl Grid.Row="9" Content="{Binding Poczta, Mode=TwoWay}" ContentTemplate="{StaticResource Poczta}"/>
         </Grid>
     </DataTemplate>
 
@@ -500,7 +546,7 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="IdOsobyNiefizycznejTemplate">
+    <DataTemplate DataType="{x:Type models:IdentyfikatorOsobyNiefizycznejV40}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -513,7 +559,20 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="IdOsobyNiefizycznej1Template">
+    <DataTemplate DataType="{x:Type models:IdentyfikatorOsobyNiefizycznejV50}">
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" Content="{Binding Nip, Mode=TwoWay}" ContentTemplate="{StaticResource Nip}"/>
+            <ContentControl Grid.Row="1" Content="{Binding PelnaNazwa, Mode=TwoWay}" ContentTemplate="{StaticResource PelnaNazwa}"/>
+            <ContentControl Grid.Row="2" Content="{Binding Regon, Mode=TwoWay}" ContentTemplate="{StaticResource Regon}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type models:IdentyfikatorOsobyNiefizycznej1V50}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>

@@ -2,9 +2,9 @@
 {
     using System.Windows.Controls;
 
-    public partial class JpkMag1View : UserControl
+    public partial class JpkFa3View : UserControl
     {
-        public JpkMag1View()
+        public JpkFa3View()
         {
             InitializeComponent();
         }

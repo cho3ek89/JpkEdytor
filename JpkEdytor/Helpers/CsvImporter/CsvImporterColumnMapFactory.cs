@@ -17,6 +17,10 @@
             var map = new CsvImporterColumnMap();
 
             AddEwp1EwpWierszMapping(map);
+            AddFa3JpkFakturaMapping(map);
+            AddFa3FakturaWierszMapping(map);
+            AddFa3ZamowienieMapping(map);
+            AddFa3ZamowienieWierszMapping(map);
             AddFa2JpkFakturaMapping(map);
             AddFa2FakturaWierszMapping(map);
             AddFaRr1FakturaRrMapping(map);
@@ -51,75 +55,62 @@
         {
             var map = new CsvImporterColumnMap();
 
-            switch(type.Name)
-            {
-                case nameof(Models.Ewp1.EwpWiersz):
-                    AddEwp1EwpWierszMapping(map);
-                    break;
-                case nameof(Models.Fa2.JpkFaktura):
-                    AddFa2JpkFakturaMapping(map);
-                    break;
-                case nameof(Models.Fa2.FakturaWiersz):
-                    AddFa2FakturaWierszMapping(map);
-                    break;
-                case nameof(Models.FaRr1.FakturaRr):
-                    AddFaRr1FakturaRrMapping(map);
-                    break;
-                case nameof(Models.FaRr1.FakturaRrWiersz):
-                    AddFaRr1FakturaRrWierszMapping(map);
-                    break;
-                case nameof(Models.FaRr1.Oswiadczenie):
-                    AddFaRr1OswiadczenieMapping(map);
-                    break;
-                case nameof(Models.Kr1.Zois):
-                    AddKr1ZoisMapping(map);
-                    break;
-                case nameof(Models.Kr1.Dziennik):
-                    AddKr1DziennikMapping(map);
-                    break;
-                case nameof(Models.Kr1.KontoZapis):
-                    AddKr1KontoZapisMapping(map);
-                    break;
-                case nameof(Models.Mag1.PzWartosc):
-                    AddMag1PzWartoscMapping(map);
-                    break;
-                case nameof(Models.Mag1.PzWiersz):
-                    AddMag1PzWierszMapping(map);
-                    break;
-                case nameof(Models.Mag1.WzWartosc):
-                    AddMag1WzWartoscMapping(map);
-                    break;
-                case nameof(Models.Mag1.WzWiersz):
-                    AddMag1WzWierszMapping(map);
-                    break;
-                case nameof(Models.Mag1.RwWartosc):
-                    AddMag1RwWartoscMapping(map);
-                    break;
-                case nameof(Models.Mag1.RwWiersz):
-                    AddMag1RwWierszMapping(map);
-                    break;
-                case nameof(Models.Mag1.MmWartosc):
-                    AddMag1MmWartoscMapping(map);
-                    break;
-                case nameof(Models.Mag1.MmWiersz):
-                    AddMag1MmWierszMapping(map);
-                    break;
-                case nameof(Models.Pkpir2.PkpirSpis):
-                    AddPkpir2PkpirSpisMapping(map);
-                    break;
-                case nameof(Models.Pkpir2.PkpirWiersz):
-                    AddPkpir2PkpirWierszMapping(map);
-                    break;
-                case nameof(Models.Vat3.SprzedazWiersz):
-                    AddVat3SprzedazWierszMapping(map);
-                    break;
-                case nameof(Models.Vat3.ZakupWiersz):
-                    AddVat3ZakupWierszMapping(map);
-                    break;
-                case nameof(Models.Wb1.WyciagWiersz):
-                    AddWb1WyciagWierszMapping(map);
-                    break;
-            }
+            var typeName = type.FullName;
+
+            //TODO: Rewrite below to switch statement when C#7 with pattern matching is used.
+
+            if (typeName == typeof(Models.Ewp1.EwpWiersz).FullName)
+                AddEwp1EwpWierszMapping(map);
+            else if (typeName == typeof(Models.Fa3.JpkFaktura).FullName)
+                AddFa3JpkFakturaMapping(map);
+            else if (typeName == typeof(Models.Fa3.FakturaWiersz).FullName)
+                AddFa3FakturaWierszMapping(map);
+            else if (typeName == typeof(Models.Fa3.Zamowienie).FullName)
+                AddFa3ZamowienieMapping(map);
+            else if (typeName == typeof(Models.Fa3.ZamowienieWiersz).FullName)
+                AddFa3ZamowienieWierszMapping(map);
+            else if (typeName == typeof(Models.Fa2.JpkFaktura).FullName)
+                AddFa2JpkFakturaMapping(map);
+            else if (typeName == typeof(Models.Fa2.FakturaWiersz).FullName)
+                AddFa2FakturaWierszMapping(map);
+            else if (typeName == typeof(Models.FaRr1.FakturaRr).FullName)
+                AddFaRr1FakturaRrMapping(map);
+            else if (typeName == typeof(Models.FaRr1.FakturaRrWiersz).FullName)
+                AddFaRr1FakturaRrWierszMapping(map);
+            else if (typeName == typeof(Models.FaRr1.Oswiadczenie).FullName)
+                AddFaRr1OswiadczenieMapping(map);
+            else if (typeName == typeof(Models.Kr1.Zois).FullName)
+                AddKr1ZoisMapping(map);
+            else if (typeName == typeof(Models.Kr1.Dziennik).FullName)
+                AddKr1DziennikMapping(map);
+            else if (typeName == typeof(Models.Kr1.KontoZapis).FullName)
+                AddKr1KontoZapisMapping(map);
+            else if (typeName == typeof(Models.Mag1.PzWartosc).FullName)
+                AddMag1PzWartoscMapping(map);
+            else if (typeName == typeof(Models.Mag1.PzWiersz).FullName)
+                AddMag1PzWierszMapping(map);
+            else if (typeName == typeof(Models.Mag1.WzWartosc).FullName)
+                AddMag1WzWartoscMapping(map);
+            else if (typeName == typeof(Models.Mag1.WzWiersz).FullName)
+                AddMag1WzWierszMapping(map);
+            else if (typeName == typeof(Models.Mag1.RwWartosc).FullName)
+                AddMag1RwWartoscMapping(map);
+            else if (typeName == typeof(Models.Mag1.RwWiersz).FullName)
+                AddMag1RwWierszMapping(map);
+            else if (typeName == typeof(Models.Mag1.MmWartosc).FullName)
+                AddMag1MmWartoscMapping(map);
+            else if (typeName == typeof(Models.Mag1.MmWiersz).FullName)
+                AddMag1MmWierszMapping(map);
+            else if (typeName == typeof(Models.Pkpir2.PkpirSpis).FullName)
+                AddPkpir2PkpirSpisMapping(map);
+            else if (typeName == typeof(Models.Pkpir2.PkpirWiersz).FullName)
+                AddPkpir2PkpirWierszMapping(map);
+            else if (typeName == typeof(Models.Vat3.SprzedazWiersz).FullName)
+                AddVat3SprzedazWierszMapping(map);
+            else if (typeName == typeof(Models.Vat3.ZakupWiersz).FullName)
+                AddVat3ZakupWierszMapping(map);
+            else if (typeName == typeof(Models.Wb1.WyciagWiersz).FullName)
+                AddWb1WyciagWierszMapping(map);
 
             return map;
         }
@@ -147,6 +138,97 @@
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K10);
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K11);
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K12);
+        }
+
+        private static void AddFa3JpkFakturaMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.KodWaluty);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P1);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P2A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P3A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P3B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P3C);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P3D);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P4A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P4B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P5A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P5B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P6);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_1);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_1);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_1W);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_2);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_2);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_2W);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_3);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_3);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_3W);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_4);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_4);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P14_4W);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_5);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_6);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P13_7);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P15);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P16);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P17);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P18);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P18A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P19);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P19A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P19B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P19C);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P20);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P20A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P20B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P21);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P21A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P21B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P21C);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P22);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P22A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P22B);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P22C);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P23);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P106E2);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P106E3);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.P106E3A);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.RodzajFaktury);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.PrzyczynaKorekty);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.NrFaKorygowanej);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.OkresFaKorygowanej);
+            map.AddCsvColumnMapping((Models.Fa3.JpkFaktura p) => p.NrFaZaliczkowej);
+        }
+
+        private static void AddFa3FakturaWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P2B);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P7);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P8A);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P8B);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P9A);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P9B);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P10);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P11);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P11A);
+            map.AddCsvColumnMapping((Models.Fa3.FakturaWiersz p) => p.P12);
+        }
+
+        private static void AddFa3ZamowienieMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.Fa3.Zamowienie p) => p.P2AZ);
+            map.AddCsvColumnMapping((Models.Fa3.Zamowienie p) => p.WartoscZamowienia);
+        }
+
+        private static void AddFa3ZamowienieWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P7Z);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P8AZ);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P8BZ);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P9AZ);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P11NettoZ);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P11VatZ);
+            map.AddCsvColumnMapping((Models.Fa3.ZamowienieWiersz p) => p.P12Z);
         }
 
         private static void AddFa2JpkFakturaMapping(CsvImporterColumnMap map)

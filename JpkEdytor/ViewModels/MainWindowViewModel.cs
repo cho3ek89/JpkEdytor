@@ -132,6 +132,63 @@
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.Ewp1.Jpk> && !IsBusy; });
 
+        public ICommand ImportJpkFa3 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkFa3ViewModel)?.ImportFakturaFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkFa3ViewModel)?.ImportFakturaWierszFromCsv(openFileDialog.FileName);
+                            break;
+                        case "2":
+                            await (JpkViewModel as JpkFa3ViewModel)?.ImportZamowienieFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.Fa3.Jpk> && !IsBusy; });
+
+        public ICommand ImportJpkFa3ZamowienieWiersz => new RelayCommand(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    await (JpkViewModel as JpkFa3ViewModel)?.ImportZamowienieWierszFromCsv(openFileDialog.FileName);
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is JpkFa3ViewModel && !IsBusy && ((JpkFa3ViewModel)JpkViewModel).SelectedZamowienie != null; });
+
         public ICommand ImportJpkFa2 => new RelayCommand<string>(async obj =>
         {
             var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
@@ -397,7 +454,7 @@
                 case "1":
                     return new JpkEwp1ViewModel();
                 case "2":
-                    return new JpkFa2ViewModel();
+                    return new JpkFa3ViewModel();
                 case "3":
                     return new JpkFaRr1ViewModel();
                 case "4":
@@ -408,6 +465,8 @@
                     return new JpkPkpir2ViewModel();
                 case "7":
                     return new JpkWb1ViewModel();
+                case "8":
+                    return new JpkFa2ViewModel();
                 default:
                     throw new NotImplementedException();
             }
