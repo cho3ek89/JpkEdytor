@@ -175,6 +175,11 @@
     <Style x:Key="DeleteRowCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="KeyboardNavigation.IsTabStop" Value="False"/>
+        <Style.Triggers>
+            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <DataTemplate x:Key="DeleteRowCellTemplate" DataType="{x:Type DataGridCell}">

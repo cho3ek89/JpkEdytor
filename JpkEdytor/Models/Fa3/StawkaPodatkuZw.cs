@@ -42,7 +42,7 @@
         [XmlEnum("0")]
         N00,
 
-        [Description("Zw")]
+        [Description("Zwolnione z opodatkowania")]
         [XmlEnum(Name = "zw")]
         Zw,
 
