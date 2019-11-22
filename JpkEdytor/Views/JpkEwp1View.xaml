@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
              mc:Ignorable="d" 
+             d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkEwp1ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/ColumnDescriptions/Ewp1.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -39,7 +41,7 @@
 				ItemsSource="{Binding Path=Jpk.EwpWiersze, Mode=TwoWay}">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTemplateColumn Header="K 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K2}" SortMemberPath="K2" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="K 2" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K2}" SortMemberPath="K2" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding K2, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -51,7 +53,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="K 3" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K3}" SortMemberPath="K3" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="K 3" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K3}" SortMemberPath="K3" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding K3, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -63,23 +65,23 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="K 4" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K4}"  
+                    <DataGridTextColumn Header="K 4" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K4}"  
                                         Binding="{Binding K4, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 5" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K5}" 
+                    <DataGridTextColumn Header="K 5" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K5}" 
                                         Binding="{Binding K5, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 6" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K6}"   
+                    <DataGridTextColumn Header="K 6" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K6}"   
                                         Binding="{Binding K6, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 7" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K7}"  
+                    <DataGridTextColumn Header="K 7" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K7}"  
                                         Binding="{Binding K7, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 8" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K8}" 
+                    <DataGridTextColumn Header="K 8" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K8}" 
                                         Binding="{Binding K8, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 9" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K9}" 
+                    <DataGridTextColumn Header="K 9" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K9}" 
                                         Binding="{Binding K9, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K10}"
+                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K10}"
                                         Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K11}"
+                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K11}"
                                         Binding="{Binding K11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource Ewp1.EwpWiersz.K12}" SortMemberPath="K12" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource EwpWiersz.K12}" SortMemberPath="K12" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding K12, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>

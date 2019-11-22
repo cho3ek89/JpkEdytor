@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
              mc:Ignorable="d" 
+             d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkKr1ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/ColumnDescriptions/Kr1.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -39,39 +41,39 @@
 				ItemsSource="{Binding Path=Jpk.Zois, Mode=TwoWay}">
 				<DataGrid.Columns>
 					<DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTextColumn Header="Kod konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.KodKonta}" 
+                    <DataGridTextColumn Header="Kod konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.KodKonta}" 
                                         Binding="{Binding KodKonta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.OpisKonta}" 
+                    <DataGridTextColumn Header="Opis konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.OpisKonta}" 
                                         Binding="{Binding OpisKonta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Typ konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.TypKonta}" 
+                    <DataGridTextColumn Header="Typ konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.TypKonta}" 
                                         Binding="{Binding TypKonta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kod zespołu" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.KodZespolu}" 
+                    <DataGridTextColumn Header="Kod zespołu" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.KodZespolu}" 
                                         Binding="{Binding KodZespolu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis zespołu" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.OpisZespolu}" 
+                    <DataGridTextColumn Header="Opis zespołu" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.OpisZespolu}" 
                                         Binding="{Binding OpisZespolu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kod kategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.KodKategorii}" 
+                    <DataGridTextColumn Header="Kod kategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.KodKategorii}" 
                                         Binding="{Binding KodKategorii, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis kategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.OpisKategorii}" 
+                    <DataGridTextColumn Header="Opis kategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.OpisKategorii}" 
                                         Binding="{Binding OpisKategorii, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kod podkategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.KodPodkategorii}" 
+                    <DataGridTextColumn Header="Kod podkategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.KodPodkategorii}" 
                                         Binding="{Binding KodPodkategorii, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis podkategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.OpisPodkategorii}" 
+                    <DataGridTextColumn Header="Opis podkategorii" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.OpisPodkategorii}" 
                                         Binding="{Binding OpisPodkategorii, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Bilans otwarcia (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.BilansOtwarciaWinien}" 
+                    <DataGridTextColumn Header="Bilans otwarcia (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.BilansOtwarciaWinien}" 
                                         Binding="{Binding BilansOtwarciaWinien, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Bilans otwarcia (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.BilansOtwarciaMa}" 
+                    <DataGridTextColumn Header="Bilans otwarcia (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.BilansOtwarciaMa}" 
                                         Binding="{Binding BilansOtwarciaMa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Obroty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.ObrotyWinien}" 
+                    <DataGridTextColumn Header="Obroty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.ObrotyWinien}" 
                                         Binding="{Binding ObrotyWinien, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Obroty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.ObrotyMa}" 
+                    <DataGridTextColumn Header="Obroty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.ObrotyMa}" 
                                         Binding="{Binding ObrotyMa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Obroty (winien narast.)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.ObrotyWinienNarast}" 
+                    <DataGridTextColumn Header="Obroty (winien narast.)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.ObrotyWinienNarast}" 
                                         Binding="{Binding ObrotyWinienNarast, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Obroty (ma narast.)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.ObrotyMaNarast}" 
+                    <DataGridTextColumn Header="Obroty (ma narast.)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.ObrotyMaNarast}" 
                                         Binding="{Binding ObrotyMaNarast, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Saldo (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.SaldoWinien}" 
+                    <DataGridTextColumn Header="Saldo (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.SaldoWinien}" 
                                         Binding="{Binding SaldoWinien, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Saldo (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Zois.SaldoMa}" 
+                    <DataGridTextColumn Header="Saldo (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.SaldoMa}" 
                                         Binding="{Binding SaldoMa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 				</DataGrid.Columns>
 			</DataGrid>
@@ -82,15 +84,15 @@
 				ItemsSource="{Binding Path=Jpk.Dziennik, Mode=TwoWay}">
 				<DataGrid.Columns>
 					<DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTextColumn Header="Numer zapisu dziennika" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.NrZapisuDziennika}" 
+                    <DataGridTextColumn Header="Numer zapisu dziennika" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.NrZapisuDziennika}" 
                                         Binding="{Binding NrZapisuDziennika, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis dziennika" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.OpisDziennika}" 
+                    <DataGridTextColumn Header="Opis dziennika" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.OpisDziennika}" 
                                         Binding="{Binding OpisDziennika, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Numer dowodu księgowego" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.NrDowoduKsiegowego}" 
+                    <DataGridTextColumn Header="Numer dowodu księgowego" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.NrDowoduKsiegowego}" 
                                         Binding="{Binding NrDowoduKsiegowego, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Rodzaj dowodu" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.RodzajDowodu}" 
+                    <DataGridTextColumn Header="Rodzaj dowodu" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.RodzajDowodu}" 
                                         Binding="{Binding RodzajDowodu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Data operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.DataOperacji}" SortMemberPath="DataOperacji" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.DataOperacji}" SortMemberPath="DataOperacji" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataOperacji, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -102,7 +104,7 @@
 							</DataTemplate>
 						</DataGridTemplateColumn.CellEditingTemplate>
 					</DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Data dowodu" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.DataDowodu}" SortMemberPath="DataDowodu" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data dowodu" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.DataDowodu}" SortMemberPath="DataDowodu" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataDowodu, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -114,7 +116,7 @@
 							</DataTemplate>
 						</DataGridTemplateColumn.CellEditingTemplate>
 					</DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Data księgowania" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.DataKsiegowania}" SortMemberPath="DataKsiegowania">
+                    <DataGridTemplateColumn Header="Data księgowania" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.DataKsiegowania}" SortMemberPath="DataKsiegowania">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataKsiegowania, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -126,11 +128,11 @@
 							</DataTemplate>
 						</DataGridTemplateColumn.CellEditingTemplate>
 					</DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Kod operatora" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.KodOperatora}" 
+                    <DataGridTextColumn Header="Kod operatora" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.KodOperatora}" 
                                         Binding="{Binding KodOperatora, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.OpisOperacji}" 
+                    <DataGridTextColumn Header="Opis operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.OpisOperacji}" 
                                         Binding="{Binding OpisOperacji, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.Dziennik.DziennikKwotaOperacji}" 
+                    <DataGridTextColumn Header="Kwota operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Dziennik.DziennikKwotaOperacji}" 
                                         Binding="{Binding DziennikKwotaOperacji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 				</DataGrid.Columns>
 			</DataGrid>
@@ -141,15 +143,15 @@
 				ItemsSource="{Binding Path=Jpk.KontoZapis, Mode=TwoWay}">
 				<DataGrid.Columns>
 					<DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTextColumn Header="Numer zapisu" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.NrZapisu}" 
+                    <DataGridTextColumn Header="Numer zapisu" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.NrZapisu}" 
                                         Binding="{Binding NrZapisu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kod konta (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KodKontaWinien}" 
+                    <DataGridTextColumn Header="Kod konta (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodKontaWinien}" 
                                         Binding="{Binding KodKontaWinien, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KwotaWinien}" 
+                    <DataGridTextColumn Header="Kwota (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaWinien}" 
                                         Binding="{Binding KwotaWinien, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota w walucie obcej (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KwotaWinienWaluta}" 
+                    <DataGridTextColumn Header="Kwota w walucie obcej (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaWinienWaluta}" 
                                         Binding="{Binding KwotaWinienWaluta, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Kod waluty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KodWalutyWinien}" SortMemberPath="KodWalutyWinien">
+                    <DataGridTemplateColumn Header="Kod waluty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyWinien}" SortMemberPath="KodWalutyWinien">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding KodWalutyWinien, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -162,15 +164,15 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Opis zapisu (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.OpisZapisuWinien}" 
+                    <DataGridTextColumn Header="Opis zapisu (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.OpisZapisuWinien}" 
                                         Binding="{Binding OpisZapisuWinien, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kod konta (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KodKontaMa}" 
+                    <DataGridTextColumn Header="Kod konta (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodKontaMa}" 
                                         Binding="{Binding KodKontaMa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KwotaMa}" 
+                    <DataGridTextColumn Header="Kwota (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaMa}" 
                                         Binding="{Binding KwotaMa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota w walucie obcej (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KwotaMaWaluta}" 
+                    <DataGridTextColumn Header="Kwota w walucie obcej (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaMaWaluta}" 
                                         Binding="{Binding KwotaMaWaluta, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Kod waluty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.KodWalutyMa}" SortMemberPath="KodWalutyMa">
+                    <DataGridTemplateColumn Header="Kod waluty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyMa}" SortMemberPath="KodWalutyMa">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding KodWalutyMa, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -183,7 +185,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Opis zapisu (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource Kr1.KontoZapis.OpisZapisuMa}" 
+                    <DataGridTextColumn Header="Opis zapisu (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.OpisZapisuMa}" 
                                         Binding="{Binding OpisZapisuMa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 				</DataGrid.Columns>
 			</DataGrid>

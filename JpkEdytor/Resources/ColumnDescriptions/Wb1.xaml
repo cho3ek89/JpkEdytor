@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="NumerRachunku">Numer IBAN rachunku, którego dotyczy wyciąg</s:String>
+
+    <s:String x:Key="Salda">Numer IBAN rachunku, którego dotyczy wyciąg</s:String>
+    <s:String x:Key="Salda.SaldoPoczatkowe">Saldo początkowe wyciągu</s:String>
+    <s:String x:Key="Salda.SaldoKoncowe">Saldo końcowe wyciągu</s:String>
+
+    <s:String x:Key="WyciagWiersz">Szczegółowe wiersze (zapisy) wyciągu bankowego</s:String>
+    <s:String x:Key="WyciagWiersz.NumerWiersza">Kolejny numer wiersza (zapisu) wyciągu</s:String>
+    <s:String x:Key="WyciagWiersz.DataOperacji">Data operacji</s:String>
+    <s:String x:Key="WyciagWiersz.NazwaPodmiotu">Nazwa podmiotu będącego stroną operacji</s:String>
+    <s:String x:Key="WyciagWiersz.OpisOperacji">Opis operacji/transakcji</s:String>
+    <s:String x:Key="WyciagWiersz.KwotaOperacji">Kwota operacji</s:String>
+    <s:String x:Key="WyciagWiersz.SaldoOperacji">Saldo operacji</s:String>
+
+</ResourceDictionary>

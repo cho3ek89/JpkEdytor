@@ -1,0 +1,83 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="Pz">Przyjęcie z zewnątrz</s:String>
+
+    <s:String x:Key="Pz.PzWartosc">Zestawienie dowodów PZ</s:String>
+    <s:String x:Key="Pz.PzWartosc.Numer">Numer dokumentu PZ</s:String>
+    <s:String x:Key="Pz.PzWartosc.Data">Data dokumentu PZ</s:String>
+    <s:String x:Key="Pz.PzWartosc.Wartosc">Wartość ogólna dokumentu PZ</s:String>
+    <s:String x:Key="Pz.PzWartosc.DataOtrzymania">Data otrzymania towaru/materiału</s:String>
+    <s:String x:Key="Pz.PzWartosc.Dostawca">Dostawca towaru/materiału</s:String>
+    <s:String x:Key="Pz.PzWartosc.NumerFaktury">Numer faktury lub specyfikacji dotyczącej przyjętego towaru/materiału</s:String>
+    <s:String x:Key="Pz.PzWartosc.DataFaktury">Data faktury lub specyfikacji dotyczącej przyjętego towaru/materiału</s:String>
+
+    <s:String x:Key="Pz.PzWiersz">Szczegółowe pozycje dowodów PZ</s:String>
+    <s:String x:Key="Pz.PzWiersz.Numer2">Numer dokumentu PZ</s:String>
+    <s:String x:Key="Pz.PzWiersz.KodTowaru">Kod towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Pz.PzWiersz.NazwaTowaru">Nazwa towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Pz.PzWiersz.IloscPrzyjeta">Ilość przyjęta</s:String>
+    <s:String x:Key="Pz.PzWiersz.JednostkaMiary">Jednostka miary</s:String>
+    <s:String x:Key="Pz.PzWiersz.CenaJednostkowa">Cena towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Pz.PzWiersz.WartoscPozycji">Wartość towaru/materiału/opakowania</s:String>
+
+    <s:String x:Key="Wz">Wydanie na zewnątrz</s:String>
+
+    <s:String x:Key="Wz.WzWartosc">Zestawienie dowodów WZ</s:String>
+    <s:String x:Key="Wz.WzWartosc.Numer">Numer dokumentu WZ</s:String>
+    <s:String x:Key="Wz.WzWartosc.Data">Data dokumentu WZ</s:String>
+    <s:String x:Key="Wz.WzWartosc.Wartosc">Wartość dokumentu WZ</s:String>
+    <s:String x:Key="Wz.WzWartosc.DataWydania">Data wydania towaru/materiału</s:String>
+    <s:String x:Key="Wz.WzWartosc.Odbiorca">Odbiorca towaru/materiału</s:String>
+    <s:String x:Key="Wz.WzWartosc.NumerFaktury">Numer faktury lub specyfikacji dotyczącej wydanego towaru/materiału</s:String>
+    <s:String x:Key="Wz.WzWartosc.DataFaktury">Data faktury lub specyfikacji dotyczącej wydanego towaru/materiału</s:String>
+
+    <s:String x:Key="Wz.WzWiersz">Szczegółowe pozycje dowodów WZ</s:String>
+    <s:String x:Key="Wz.WzWiersz.Numer2">Numer dokumentu WZ</s:String>
+    <s:String x:Key="Wz.WzWiersz.KodTowaru">Kod towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Wz.WzWiersz.NazwaTowaru">Nazwa towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Wz.WzWiersz.IloscWydana">Ilość wydana</s:String>
+    <s:String x:Key="Wz.WzWiersz.JednostkaMiary">Jednostka miary</s:String>
+    <s:String x:Key="Wz.WzWiersz.CenaJednostkowa">Cena towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Wz.WzWiersz.WartoscPozycji">Wartość towaru/materiału/opakowania</s:String>
+
+    <s:String x:Key="Rw">Rozchód wewnętrzny</s:String>
+
+    <s:String x:Key="Rw.RwWartosc">Zestawienie dowodów RW</s:String>
+    <s:String x:Key="Rw.RwWartosc.Numer">Numer dokumentu RW</s:String>
+    <s:String x:Key="Rw.RwWartosc.Data">Data dokumentu RW</s:String>
+    <s:String x:Key="Rw.RwWartosc.Wartosc">Wartość dokumentu RW</s:String>
+    <s:String x:Key="Rw.RwWartosc.DataWydania">Data wydania towaru/materiału</s:String>
+    <s:String x:Key="Rw.RwWartosc.Skad">Miejsce wydania towaru/materiału</s:String>
+    <s:String x:Key="Rw.RwWartosc.Dokad">Miejsce przeznacznienia towaru/materiału</s:String>
+
+    <s:String x:Key="Rw.RwWiersz">Szczegółowe pozycje dowodów RW</s:String>
+    <s:String x:Key="Rw.RwWiersz.Numer2">Numer dokumentu RW</s:String>
+    <s:String x:Key="Rw.RwWiersz.KodTowaru">Kod towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Rw.RwWiersz.NazwaTowaru">Nazwa towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Rw.RwWiersz.IloscWydana">Ilość wydana</s:String>
+    <s:String x:Key="Rw.RwWiersz.JednostkaMiary">Jednostka miary</s:String>
+    <s:String x:Key="Rw.RwWiersz.CenaJednostkowa">Cena towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Rw.RwWiersz.WartoscPozycji">Wartość towaru/materiału/opakowania</s:String>
+
+    <s:String x:Key="Mm">Przesunięcia międzymagazynowe</s:String>
+
+    <s:String x:Key="Mm.MmWartosc">Zestawienie dowodów MM</s:String>
+    <s:String x:Key="Mm.MmWartosc.Numer">Numer dokumentu MM</s:String>
+    <s:String x:Key="Mm.MmWartosc.Data">Data dokumentu MM</s:String>
+    <s:String x:Key="Mm.MmWartosc.Wartosc">Wartość dokumentu MM</s:String>
+    <s:String x:Key="Mm.MmWartosc.DataWydania">Data wydania towaru/materiału</s:String>
+    <s:String x:Key="Mm.MmWartosc.Skad">Miejsce wydania towaru/materiału</s:String>
+    <s:String x:Key="Mm.MmWartosc.Dokad">Miejsce przeznacznienia towaru/materiału</s:String>
+
+    <s:String x:Key="Mm.MmWiersz">Szczegółowe pozycje dowodów MM</s:String>
+    <s:String x:Key="Mm.MmWiersz.Numer2">Numer dokumentu MM</s:String>
+    <s:String x:Key="Mm.MmWiersz.KodTowaru">Kod towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Mm.MmWiersz.NazwaTowaru">Nazwa towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Mm.MmWiersz.IloscWydana">Ilość wydana</s:String>
+    <s:String x:Key="Mm.MmWiersz.JednostkaMiary">Jednostka miary</s:String>
+    <s:String x:Key="Mm.MmWiersz.CenaJednostkowa">Cena towaru/materiału/opakowania</s:String>
+    <s:String x:Key="Mm.MmWiersz.WartoscPozycji">Wartość towaru/materiału/opakowania</s:String>
+
+</ResourceDictionary>

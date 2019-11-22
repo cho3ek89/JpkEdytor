@@ -1,7 +1,6 @@
 ﻿namespace JpkEdytor.ViewModels
 {
     using System;
-    using System.Linq;
     using System.Windows.Input;
 
     using Framework;

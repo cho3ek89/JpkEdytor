@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    
+    <s:String x:Key="SprzedazWiersz">Ewidencja sprzedaży oraz nabyć towarów i usług dla których podmiot obowiązany jest naliczyć podatek należny - tj. wewnątrzwspólnotowe nabycia towarów, import towarów podlegających rozliczeniu zgodnie z art. 33 a ustawy, import usług z wyłączeniem usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28 b ustawy, import usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28 b ustawy, dostawa towarów, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 5 ustawy (wypełnia nabywca), dostawa towarów, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 7 lub 8 ustawy (wypełnia nabywca)</s:String>
+    <s:String x:Key="SprzedazWiersz.LpSprzedazy">Liczba porządkowa wiersza ewidencji sprzedaży VAT</s:String>
+    <s:String x:Key="SprzedazWiersz.NrKontrahenta">Numer, za pomocą którego kontrahent jest zidentyfikowany na potrzeby podatku lub podatku od wartości dodanej</s:String>
+    <s:String x:Key="SprzedazWiersz.NazwaKontrahenta">Imię i nazwisko lub nazwa kontrahenta</s:String>
+    <s:String x:Key="SprzedazWiersz.AdresKontrahenta">Adres kontrahenta</s:String>
+    <s:String x:Key="SprzedazWiersz.DowodSprzedazy">Numer dowodu sprzedaży</s:String>
+    <s:String x:Key="SprzedazWiersz.DataWystawienia">Data wystawienia dowodu sprzedaży</s:String>
+    <s:String x:Key="SprzedazWiersz.DataSprzedazy">Data sprzedaży, o ile jest określona i różni się od daty wystawienia dowodu sprzedaży. W przeciwnym przypadku - 0001-01-01</s:String>
+    <s:String x:Key="SprzedazWiersz.K10">Kwota netto - Dostawa towarów oraz świadczenie usług na terytorium kraju, zwolnione od podatku</s:String>
+    <s:String x:Key="SprzedazWiersz.K11">Kwota netto - Dostawa towarów oraz świadczenie usług poza terytorium kraju</s:String>
+    <s:String x:Key="SprzedazWiersz.K12">Kwota netto - w tym świadczenie usług, o których mowa w art. 100 ust. 1 pkt 4 ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K13">Kwota netto - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 0%</s:String>
+    <s:String x:Key="SprzedazWiersz.K14">Kwota netto - w tym dostawa towarów, o której mowa w art. 129 ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K15">Kwota netto - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 5%</s:String>
+    <s:String x:Key="SprzedazWiersz.K16">Kwota podatku należnego - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 5%</s:String>
+    <s:String x:Key="SprzedazWiersz.K17">Kwota netto - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 7% albo 8%</s:String>
+    <s:String x:Key="SprzedazWiersz.K18">Kwota podatku należnego - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 7% albo 8%</s:String>
+    <s:String x:Key="SprzedazWiersz.K19">Kwota netto - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 22% albo 23%</s:String>
+    <s:String x:Key="SprzedazWiersz.K20">Kwota podatku należnego - Dostawa towarów oraz świadczenie usług na terytorium kraju, opodatkowane stawką 22% albo 23%</s:String>
+    <s:String x:Key="SprzedazWiersz.K21">Kwota netto - Wewnątrzwspólnotowa dostawa towarów</s:String>
+    <s:String x:Key="SprzedazWiersz.K22">Kwota netto - Eksport towarów</s:String>
+    <s:String x:Key="SprzedazWiersz.K23">Kwota netto - Wewnątrzwspólnotowe nabycie towarów</s:String>
+    <s:String x:Key="SprzedazWiersz.K24">Kwota podatku należnego - Wewnątrzwspólnotowe nabycie towarów</s:String>
+    <s:String x:Key="SprzedazWiersz.K25">Kwota netto - Import towarów podlegający rozliczeniu zgodnie z art. 33a ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K26">Kwota podatku należnego - Import towarów podlegający rozliczeniu zgodnie z art. 33a ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K27">Kwota netto - Import usług z wyłączeniem usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28b ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K28">Kwota podatku należnego - Import usług z wyłączeniem usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28b ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K29">Kwota netto - Import usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28b ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K30">Kwota podatku należnego - Import usług nabywanych od podatników podatku od wartości dodanej, do których stosuje się art. 28b ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K31">Kwota netto - Dostawa towarów oraz świadczenie usług, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 7 lub 8 ustawy (wypełnia dostawca)</s:String>
+    <s:String x:Key="SprzedazWiersz.K32">Kwota netto - Dostawa towarów, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 5 ustawy (wypełnia nabywca)</s:String>
+    <s:String x:Key="SprzedazWiersz.K33">Kwota podatku należnego - Dostawa towarów, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 5 ustawy (wypełnia nabywca)</s:String>
+    <s:String x:Key="SprzedazWiersz.K34">Kwota netto - Dostawa towarów oraz świadczenie usług, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 7 lub 8 ustawy (wypełnia nabywca)</s:String>
+    <s:String x:Key="SprzedazWiersz.K35">Kwota podatku należnego - Dostawa towarów oraz świadczenie usług, dla których podatnikiem jest nabywca zgodnie z art. 17 ust. 1 pkt 7 lub 8 ustawy (wypełnia nabywca)</s:String>
+    <s:String x:Key="SprzedazWiersz.K36">Kwota podatku należnego od towarów i usług objętych spisem z natury, o którym mowa w art. 14 ust. 5 ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K37">Zwrot odliczonej lub zwróconej kwoty wydatkowanej na zakup kas rejestrujących, o którym mowa w art. 111 ust. 6 ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K38">Kwota podatku należnego od wewnątrzwspólnotowego nabycia środków transportu, wykazanego w elemencie K24, podlegająca wpłacie w terminie, o którym mowa w art. 103 ust. 3, w związku z ust. 4 ustawy</s:String>
+    <s:String x:Key="SprzedazWiersz.K39">Kwota podatku od wewnątrzwspólnotowego nabycia paliw silnikowych, podlegająca wpłacie w terminach, o których mowa w art. 103 ust. 5a i 5b ustawy</s:String>
+
+    <s:String x:Key="ZakupWiersz">Ewidencja zakupu VAT</s:String>
+    <s:String x:Key="ZakupWiersz.LpZakupu">Liczba porządkowa wiersza ewidencji zakupu VAT</s:String>
+    <s:String x:Key="ZakupWiersz.NrDostawcy">Numer, za pomocą którego dostawca (kontrahent) jest zidentyfikowany na potrzeby podatku lub podatku od wartości dodanej</s:String>
+    <s:String x:Key="ZakupWiersz.NazwaDostawcy">Imię i nazwisko lub nazwa dostawcy (kontrahenta)</s:String>
+    <s:String x:Key="ZakupWiersz.AdresDostawcy">Adres dostawcy (kontrahenta)</s:String>
+    <s:String x:Key="ZakupWiersz.DowodZakupu">Numer dowodu zakupu</s:String>
+    <s:String x:Key="ZakupWiersz.DataZakupu">Data wystawienia dowodu zakupu</s:String>
+    <s:String x:Key="ZakupWiersz.DataWplywu">Data wpływu dowodu zakupu</s:String>
+    <s:String x:Key="ZakupWiersz.K43">Kwota netto - Nabycie towarów i usług zaliczanych u podatnika do środków trwałych</s:String>
+    <s:String x:Key="ZakupWiersz.K44">Kwota podatku naliczonego - Nabycie towarów i usług zaliczanych u podatnika do środków trwałych</s:String>
+    <s:String x:Key="ZakupWiersz.K45">Kwota netto - Nabycie towarów i usług pozostałych</s:String>
+    <s:String x:Key="ZakupWiersz.K46">Kwota podatku naliczonego - Nabycie towarów i usług pozostałych</s:String>
+    <s:String x:Key="ZakupWiersz.K47">Korekta podatku naliczonego od nabycia środków trwałych</s:String>
+    <s:String x:Key="ZakupWiersz.K48">Korekta podatku naliczonego od pozostałych nabyć</s:String>
+    <s:String x:Key="ZakupWiersz.K49">Korekta podatku naliczonego, o której mowa w art. 89b ust. 1 ustawy</s:String>
+    <s:String x:Key="ZakupWiersz.K50">Korekta podatku naliczonego, o której mowa w art. 89b ust. 4 ustawy</s:String>
+
+</ResourceDictionary>

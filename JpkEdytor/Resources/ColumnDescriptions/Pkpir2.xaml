@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="PkpirInfo">Dane dotyczące ustalenia dochodu w roku podatkowym</s:String>
+    <s:String x:Key="PkpirInfo.P1">Wartość spisu z natury na początek roku podatkowego</s:String>
+    <s:String x:Key="PkpirInfo.P2">Wartość spisu z natury na koniec roku podatkowego</s:String>
+    <s:String x:Key="PkpirInfo.P3">Razem koszty uzyskania przychodu, wg objaśnień do podatkowej księgi przychodów i rozchodów</s:String>
+    <s:String x:Key="PkpirInfo.P4">Dochód osiągnięty w roku podatkowym, wg objaśnień do podatkowej księgi przychodów i rozchodów</s:String>
+
+    <s:String x:Key="PkpirSpis">Spisy z natury sporządzone w ciągu roku podatkowego</s:String>
+    <s:String x:Key="PkpirSpis.P5A">Data spisu z natury sporządzonego w ciągu roku podatkowego</s:String>
+    <s:String x:Key="PkpirSpis.P5B">Wartość spisu z natury sporządzonego w ciągu roku podatkowego</s:String>
+
+    <s:String x:Key="PkpirWiersz">Na podstawie załącznika do rozporządzenia Ministra Finansów z dnia 26 sierpnia 2003 r. w sprawie prowadzenia podatkowej księgi przychodów i rozchodów (Dz. U. z 2014 r. poz. 1037, z późn. zm.)</s:String>
+    <s:String x:Key="PkpirWiersz.K1">Liczba porządkowa</s:String>
+    <s:String x:Key="PkpirWiersz.K2">Data zdarzenia gospodarczego</s:String>
+    <s:String x:Key="PkpirWiersz.K3">Nr dowodu księgowego</s:String>
+    <s:String x:Key="PkpirWiersz.K4">Kontrahent - imię i nazwisko (firma)</s:String>
+    <s:String x:Key="PkpirWiersz.K5">Kontrahent- adres</s:String>
+    <s:String x:Key="PkpirWiersz.K6">Opis zdarzenia gospodarczego</s:String>
+    <s:String x:Key="PkpirWiersz.K7">Przychód - wartość sprzedanych towarów i usług</s:String>
+    <s:String x:Key="PkpirWiersz.K8">Przychód - pozostałe przychody</s:String>
+    <s:String x:Key="PkpirWiersz.K9">Przychód - razem przychód (K7 + K8)</s:String>
+    <s:String x:Key="PkpirWiersz.K10">Zakup towarów handlowych i materiałów wg cen zakupu</s:String>
+    <s:String x:Key="PkpirWiersz.K11">Koszty uboczne zakupu</s:String>
+    <s:String x:Key="PkpirWiersz.K12">Wydatki (koszty) - wynagrodzenia w gotówce i w naturze</s:String>
+    <s:String x:Key="PkpirWiersz.K13">Wydatki (koszty) - pozostałe wydatki</s:String>
+    <s:String x:Key="PkpirWiersz.K14">Wydatki (koszty) - razem wydatki (K12 + K13)</s:String>
+    <s:String x:Key="PkpirWiersz.K15">Wydatki (koszty) - pole wolne</s:String>
+    <s:String x:Key="PkpirWiersz.K16A">Koszty działalności badawczo-rozwojowej, o których mowa w art. 26e ustawy o podatku dochodowym - opis kosztu</s:String>
+    <s:String x:Key="PkpirWiersz.K16B">Koszty działalności badawczo-rozwojowej, o których mowa w art. 26e ustawy o podatku dochodowym - wartość</s:String>
+    <s:String x:Key="PkpirWiersz.K17">Uwagi</s:String>
+
+</ResourceDictionary>

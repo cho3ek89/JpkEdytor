@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="EwpWiersz.K1">Liczba porządkowa</s:String>
+    <s:String x:Key="EwpWiersz.K2">Data wpisu</s:String>
+    <s:String x:Key="EwpWiersz.K3">Data uzyskania przychodu</s:String>
+    <s:String x:Key="EwpWiersz.K4">Nr dowodu, na podstawie którego dokonano wpisu</s:String>
+    <s:String x:Key="EwpWiersz.K5">Kwota przychodu opodatkowana wg stawki 20%</s:String>
+    <s:String x:Key="EwpWiersz.K6">Kwota przychodu opodatkowana wg stawki 17%</s:String>
+    <s:String x:Key="EwpWiersz.K7">Kwota przychodu opodatkowana wg stawki 8,5%</s:String>
+    <s:String x:Key="EwpWiersz.K8">Kwota przychodu opodatkowana wg stawki 5,5%</s:String>
+    <s:String x:Key="EwpWiersz.K9">Kwota przychodu opodatkowana wg stawki 3,0%</s:String>
+    <s:String x:Key="EwpWiersz.K10">Ogółem przychody (K5 + K6 + K7 + K8 + K9)</s:String>
+    <s:String x:Key="EwpWiersz.K11">Kwota przychodu opodatkowana wg stawki 10%</s:String>
+    <s:String x:Key="EwpWiersz.K12">Uwagi - Podatnicy, którzy zamierzają skorzystać z przewidzianej w art.21 ust.1a ustawy możliwości kwartalnego wpłacania ryczałtu od przychodów ewidencjonowanych, w kolumnie "Uwagi" mogą wpisywać datę otrzymania przychodu.</s:String>
+
+</ResourceDictionary>

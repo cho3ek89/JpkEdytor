@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
              mc:Ignorable="d" 
+             d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkWb1ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/ColumnDescriptions/Wb1.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -72,7 +74,7 @@
 			    ItemsSource="{Binding Path=Jpk.WyciagWiersze, Mode=TwoWay}">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTemplateColumn Header="Data operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Wb1.WyciagWiersz.DataOperacji}" SortMemberPath="DataOperacji" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource WyciagWiersz.DataOperacji}" SortMemberPath="DataOperacji" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataOperacji, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -84,13 +86,13 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Nazwa podmiotu" local:DataGridExtensions.HeaderToolTip="{StaticResource Wb1.WyciagWiersz.NazwaPodmiotu}" 
+                    <DataGridTextColumn Header="Nazwa podmiotu" local:DataGridExtensions.HeaderToolTip="{StaticResource WyciagWiersz.NazwaPodmiotu}" 
                                         Binding="{Binding NazwaPodmiotu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Opis operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Wb1.WyciagWiersz.OpisOperacji}" 
+                    <DataGridTextColumn Header="Opis operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource WyciagWiersz.OpisOperacji}" 
                                         Binding="{Binding OpisOperacji, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Wb1.WyciagWiersz.KwotaOperacji}" 
+                    <DataGridTextColumn Header="Kwota operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource WyciagWiersz.KwotaOperacji}" 
                                         Binding="{Binding KwotaOperacji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Saldo operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource Wb1.WyciagWiersz.SaldoOperacji}" 
+                    <DataGridTextColumn Header="Saldo operacji" local:DataGridExtensions.HeaderToolTip="{StaticResource WyciagWiersz.SaldoOperacji}" 
                                         Binding="{Binding SaldoOperacji, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 </DataGrid.Columns>
             </DataGrid>

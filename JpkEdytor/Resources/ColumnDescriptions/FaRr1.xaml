@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="FakturaRr">Na podstawie art. 116 ustawy z 11 marca 2004 r. o podatku od towarów i usług /Dz. U. z 2018 r. poz. 2174 z późn. zm.</s:String>
+    <s:String x:Key="FakturaRr.P1A">Imię i nazwisko lub nazwa albo nazwa skrócona dostawcy</s:String>
+    <s:String x:Key="FakturaRr.P1B">Adres dostawcy</s:String>
+    <s:String x:Key="FakturaRr.P1C">Imię i nazwisko lub nazwa albo nazwa skrócona nabywcy</s:String>
+    <s:String x:Key="FakturaRr.P1D">Adres nabywcy</s:String>
+    <s:String x:Key="FakturaRr.P2A">Numer identyfikacji podatkowej lub numer PESEL dostawcy</s:String>
+    <s:String x:Key="FakturaRr.P2B">Numer identyfikacji podatkowej nabywcy</s:String>
+    <s:String x:Key="FakturaRr.P3A">Kwalifikowany podpis elektroniczny dostawcy lub osoby uprawnionej do otrzymania faktury</s:String>
+    <s:String x:Key="FakturaRr.P3A.NumerSeryjny">Numer seryjny certyfikatu kwalifikowanego podpisu elektroniczego dostawcy lub osoby uprawnionej do otrzymania faktury</s:String>
+    <s:String x:Key="FakturaRr.P3A.Wystawca">Wystawca certyfikatu kwalifikowanego podpisu elektroniczego dostawcy lub osoby uprawnionej do otrzymania faktury (dane opisujące podmiot wystawiający certyfikat rozdzielone przecinkiem)</s:String>
+    <s:String x:Key="FakturaRr.P3A.Posiadacz">Posiadacz certyfikatu kwalifikowanego podpisu elektroniczego dostawcy lub osoby uprawnionej do otrzymania faktury (dane opisujące posiadacza certyfikatu rozdzielone przecinkiem; w tym informacja o nazwisku, imieniu, identyfikatorze podmiotu)</s:String>
+    <s:String x:Key="FakturaRr.P3B">Kwalifikowany podpis elektroniczny nabywcy lub osoby uprawnionej do wystawienia faktury</s:String>
+    <s:String x:Key="FakturaRr.P3B.NumerSeryjny">Numer seryjny certyfikatu kwalifikowanego podpisu elektroniczego nabywcy lub osoby uprawnionej do otrzymania faktury</s:String>
+    <s:String x:Key="FakturaRr.P3B.Wystawca">Wystawca certyfikatu kwalifikowanego podpisu elektroniczego nabywcy lub osoby uprawnionej do otrzymania faktury (dane opisujące podmiot wystawiający certyfikat rozdzielone przecinkiem)</s:String>
+    <s:String x:Key="FakturaRr.P3B.Posiadacz">Posiadacz certyfikatu kwalifikowanego podpisu elektroniczego nabywcy lub osoby uprawnionej do otrzymania faktury (dane opisujące posiadacza certyfikatu rozdzielone przecinkiem; w tym informacja o nazwisku, imieniu, identyfikatorze podmiotu)</s:String>
+    <s:String x:Key="FakturaRr.P4A">Data dokonania nabycia</s:String>
+    <s:String x:Key="FakturaRr.P4B">Data wystawienia faktury</s:String>
+    <s:String x:Key="FakturaRr.P4C1">Kolejny numer faktury</s:String>
+    <s:String x:Key="FakturaRr.P11_1">Wartość nabytych produktów rolnych</s:String>
+    <s:String x:Key="FakturaRr.P11_2">Kwota zryczałtowanego zwrotu podatku</s:String>
+    <s:String x:Key="FakturaRr.P12_1">Kwota należności ogółem wraz z kwotą zryczałtowanego zwrotu podatku, wyrażona cyfrowo</s:String>
+    <s:String x:Key="FakturaRr.P12_2">Kwota należności ogółem wraz z kwotą zryczałtowanego zwrotu podatku, wyrażona słownie</s:String>
+    <s:String x:Key="FakturaRr.P116_3">Oświadczenie dostawcy produktów rolnych w brzmieniu: ,,Oświadczam, że jestem rolnikiem ryczałtowym zwolnionym od podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 3 ustawy o podatku od towarów i usług. W przypadku, gdy faktura zawiera oświadczenie, należy podać wartość "true"; w przeciwnym przypadku - wartość - "false"</s:String>
+    <s:String x:Key="FakturaRr.RodzajFaktury">Rodzaj faktury: podstawowa lub korygująca</s:String>
+    <s:String x:Key="FakturaRr.PrzyczynaKorekty">Przyczyna korekty dla faktur korygujących</s:String>
+    <s:String x:Key="FakturaRr.NrFaKorygowanej">Numer faktury korygowanej</s:String>
+    <s:String x:Key="FakturaRr.OkresFaKorygowanej">Dla faktury korygującej - okres, do którego odnosi się udzielany opust lub obniżka, w przypadku gdy podatnik udziela opustu lub obniżki ceny w odniesieniu do wszystkich dostaw towarów lub usług dokonanych lub świadczonych na rzecz jednego odbiorcy w danym okresie</s:String>
+    <s:String x:Key="FakturaRr.Dokument">Dane identyfikacyjne dokumentu potwierdzającego dokonanie zapłaty zaliczki, o którym mowa w art. 116 ust. 9 pkt 1 i ust. 9b ustawy o VAT</s:String>
+
+    <s:String x:Key="FakturaRrWiersz">Szczegółowe pozycje faktur VAT RR</s:String>
+    <s:String x:Key="FakturaRrWiersz.P4C2">Kolejny numer faktury, identyczny jak w polu P 4C 1</s:String>
+    <s:String x:Key="FakturaRrWiersz.P5">Nazwa nabytego produktu rolnego</s:String>
+    <s:String x:Key="FakturaRrWiersz.P6A">Jednostka miary nabytego produktu rolnego</s:String>
+    <s:String x:Key="FakturaRrWiersz.P6B">Ilość nabytego produktu rolnego</s:String>
+    <s:String x:Key="FakturaRrWiersz.P6C">Oznaczenie (opis) klasy lub jakości tego produktu</s:String>
+    <s:String x:Key="FakturaRrWiersz.P7">Cena jednostkowa nabytego produktu rolnego bez kwoty zryczałtowanego zwrotu podatku</s:String>
+    <s:String x:Key="FakturaRrWiersz.P8">Wartość nabytego produktu rolnego bez kwoty zryczałtowanego zwrotu podatku</s:String>
+    <s:String x:Key="FakturaRrWiersz.P9">Stawka zryczałtowanego zwrotu podatku</s:String>
+    <s:String x:Key="FakturaRrWiersz.P10">Kwota zryczałtowanego zwrotu podatku od wartości nabytego produktu rolnego</s:String>
+
+    <s:String x:Key="Oswiadczenie">Zestawienie oświadczeń, o których mowa w art. 116 ust. 4 i 4a ustawy o podatku od towarów i usług</s:String>
+    <s:String x:Key="Oswiadczenie.P1A2">Imię i nazwisko lub nazwa albo nazwa skrócona dostawcy</s:String>
+    <s:String x:Key="Oswiadczenie.P1B2">Adres dostawcy</s:String>
+    <s:String x:Key="Oswiadczenie.P1C2">Imię i nazwisko lub nazwa albo nazwa skrócona nabywcy</s:String>
+    <s:String x:Key="Oswiadczenie.P1D2">Adres nabywcy</s:String>
+    <s:String x:Key="Oswiadczenie.P2A2">Numer identyfikacji podatkowej lub numer PESEL dostawcy</s:String>
+    <s:String x:Key="Oswiadczenie.P2B2">Numer identyfikacji podatkowej nabywcy</s:String>
+    <s:String x:Key="Oswiadczenie.P116_4_1">Data zawarcia umowy</s:String>
+    <s:String x:Key="Oswiadczenie.P116_4_2">Określenie przedmiotu umowy</s:String>
+    <s:String x:Key="Oswiadczenie.P116_4_3">Data sporządzenia dokumentu</s:String>
+    <s:String x:Key="Oswiadczenie.P3A2">Kwalifikowany podpis elektroniczny składającego oświadczenie</s:String>
+    <s:String x:Key="Oswiadczenie.P3A2.NumerSeryjny">Numer seryjny certyfikatu kwalifikowanego podpisu elektroniczego składającego oświadczenie</s:String>
+    <s:String x:Key="Oswiadczenie.P3A2.Wystawca">Wystawca certyfikatu kwalifikowanego podpisu elektroniczego składającego oświadczenie (dane opisujące podmiot wystawiający certyfikat rozdzielone przecinkiem)</s:String>
+    <s:String x:Key="Oswiadczenie.P3A2.Posiadacz">Posiadacz certyfikatu kwalifikowanego podpisu elektroniczego składającego oświadczenie (dane opisujące posiadacza certyfikatu rozdzielone przecinkiem; w tym informacja o nazwisku, imieniu, identyfikatorze podmiotu)</s:String>
+
+</ResourceDictionary>

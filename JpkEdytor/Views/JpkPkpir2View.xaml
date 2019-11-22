@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
+             xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
              mc:Ignorable="d" 
+             d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkPkpir2ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Resources/Descriptions.xaml" />
+                <ResourceDictionary Source="../Resources/ColumnDescriptions/Pkpir2.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -80,7 +82,7 @@
 			    ItemsSource="{Binding Path=Jpk.PkpirSpis, Mode=TwoWay}">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTemplateColumn Header="Data spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirSpis.P5A}" SortMemberPath="P5A" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirSpis.P5A}" SortMemberPath="P5A" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding P5A, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -92,7 +94,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Wartość spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirSpis.P5B}" 
+                    <DataGridTextColumn Header="Wartość spisu" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirSpis.P5B}" 
                                         Binding="{Binding P5B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -103,7 +105,7 @@
 				ItemsSource="{Binding Path=Jpk.PkpirWiersze, Mode=TwoWay}">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTemplateColumn Header="K 2" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K2}" SortMemberPath="K2" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="K 2" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K2}" SortMemberPath="K2" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding K2, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -115,37 +117,37 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="K 3" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K3}" 
+                    <DataGridTextColumn Header="K 3" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K3}" 
                                         Binding="{Binding K3, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 4" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K4}" 
+                    <DataGridTextColumn Header="K 4" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K4}" 
                                         Binding="{Binding K4, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 5" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K5}" 
+                    <DataGridTextColumn Header="K 5" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K5}" 
                                         Binding="{Binding K5, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 6" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K6}" 
+                    <DataGridTextColumn Header="K 6" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K6}" 
                                         Binding="{Binding K6, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 7" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K7}" 
+                    <DataGridTextColumn Header="K 7" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K7}" 
                                         Binding="{Binding K7, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 8" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K8}" 
+                    <DataGridTextColumn Header="K 8" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K8}" 
                                         Binding="{Binding K8, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 9" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K9}" 
+                    <DataGridTextColumn Header="K 9" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K9}" 
                                         Binding="{Binding K9, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K10}" 
+                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K10}" 
                                         Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K11}" 
+                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K11}" 
                                         Binding="{Binding K11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K12}" 
+                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K12}" 
                                         Binding="{Binding K12, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K13}" 
+                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K13}" 
                                         Binding="{Binding K13, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K14}" 
+                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K14}" 
                                         Binding="{Binding K14, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K15}" 
+                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K15}" 
                                         Binding="{Binding K15, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 16A" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K16A}" 
+                    <DataGridTextColumn Header="K 16A" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K16A}" 
                                         Binding="{Binding K16A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 16B" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K16B}" 
+                    <DataGridTextColumn Header="K 16B" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K16B}" 
                                         Binding="{Binding K16B, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource Pkpir2.PkpirWiersz.K17}" 
+                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource PkpirWiersz.K17}" 
                                         Binding="{Binding K17, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 </DataGrid.Columns>
             </DataGrid>

@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <s:String x:Key="Zois">Zestawienie obrotów i sald</s:String>
+    <s:String x:Key="Zois.KodKonta">Identyfikator konta ostatecznego zapisu (konta pomocniczego lub konta księgi głównej, jeżeli nie jest wymagany zapis na kontach pomocniczych)</s:String>
+    <s:String x:Key="Zois.OpisKonta">Nazwa konta</s:String>
+    <s:String x:Key="Zois.TypKonta">Typ konta (bilansowe, pozabilansowe, rozliczeniowe lub wynikowe)</s:String>
+    <s:String x:Key="Zois.KodZespolu">Kod zespołu kont wg Wykazu Kont Syntetycznych (kont księgi głównej)</s:String>
+    <s:String x:Key="Zois.OpisZespolu">Opis zespołu kont</s:String>
+    <s:String x:Key="Zois.KodKategorii">Kod kategorii konta według Zespołu Kont Syntetycznych (kont księgi głównej)</s:String>
+    <s:String x:Key="Zois.OpisKategorii">Nazwa kategorii konta</s:String>
+    <s:String x:Key="Zois.KodPodkategorii">Kod podkategorii konta ksiąg pomocniczych w ramach poszczególnej kategorii Zespołu Kont Syntetycznych</s:String>
+    <s:String x:Key="Zois.OpisPodkategorii">Nazwa podkategorii konta</s:String>
+    <s:String x:Key="Zois.BilansOtwarciaWinien">Bilans otwarcia po stronie Winien w walucie polskiej</s:String>
+    <s:String x:Key="Zois.BilansOtwarciaMa">Bilans otwarcia po stronie Ma w walucie polskiej</s:String>
+    <s:String x:Key="Zois.ObrotyWinien">Obroty konta po stronie Winien, w okresie którego dotyczy JPK</s:String>
+    <s:String x:Key="Zois.ObrotyMa">Obroty konta po stronie Ma, w okresie którego dotyczy JPK</s:String>
+    <s:String x:Key="Zois.ObrotyWinienNarast">Obroty konta po stronie Winien, w okresie od otwarcia ksiąg do daty końcowej okresu, którego dotyczy JPK</s:String>
+    <s:String x:Key="Zois.ObrotyMaNarast">Obroty konta po stronie Ma, w okresie od otwarcia ksiąg do daty końcowej okresu, którego dotyczy JPK</s:String>
+    <s:String x:Key="Zois.SaldoWinien">Saldo po stronie Winien w walucie polskiej na datę końcową okresu, którego dotyczy JPK z uwzględnieniem bilansu otwarcia</s:String>
+    <s:String x:Key="Zois.SaldoMa">Saldo po stronie Ma w walucie polskiej na datę końcową okresu, którego dotyczy JPK z uwzlędnieniem bilansu otwarcia</s:String>
+
+    <s:String x:Key="Dziennik">Dziennik</s:String>
+    <s:String x:Key="Dziennik.LpZapisuDziennika">Kolejny numer zapisu dziennika</s:String>
+    <s:String x:Key="Dziennik.NrZapisuDziennika">Numer zapisu w dzienniku</s:String>
+    <s:String x:Key="Dziennik.OpisDziennika">Opis dziennika</s:String>
+    <s:String x:Key="Dziennik.NrDowoduKsiegowego">Numer dowodu księgowego (faktury, PK itp.)</s:String>
+    <s:String x:Key="Dziennik.RodzajDowodu">Rodzaj dowodu księgowego (np. faktura, PK, zestawienie, wyciąg bankowy, raport kasowy, raport okresowy z kasy fiskalnej, zamknięcia kont, przeksięgowania techniczne i inne)</s:String>
+    <s:String x:Key="Dziennik.DataOperacji">Data dokonania operacji gospodarczej (np. data sprzedaży, zakupu)</s:String>
+    <s:String x:Key="Dziennik.DataDowodu">Data sporządzenia dowodu księgowego</s:String>
+    <s:String x:Key="Dziennik.DataKsiegowania">Data, pod którą ujęto dowód w księgach</s:String>
+    <s:String x:Key="Dziennik.KodOperatora">Dane pozwalające na ustalenie osoby odpowiedzialnej za treść zapisu</s:String>
+    <s:String x:Key="Dziennik.OpisOperacji">Opis operacji w dzienniku</s:String>
+    <s:String x:Key="Dziennik.DziennikKwotaOperacji">Wartość operacji ujęta w Dzienniku</s:String>
+
+    <s:String x:Key="KontoZapis">Zapisy na kontach księgi głównej i ksiąg pomocniczych</s:String>
+    <s:String x:Key="KontoZapis.LpZapisu">Kolejny numer zapisu konta</s:String>
+    <s:String x:Key="KontoZapis.NrZapisu">Numer (kod) zapisu na koncie pozwalający na jego powiązanie z zapisem w Dzienniku (identyczny z elementem NrZapisuDziennika)</s:String>
+    <s:String x:Key="KontoZapis.KodKontaWinien">Identyfikator konta zapisu (konta pomocniczego lub konta księgi głównej, jeżeli nie jest wymagany zapis na kontach pomocniczych) dla zapisu po stronie Winien</s:String>
+    <s:String x:Key="KontoZapis.KwotaWinien">Kwota zapisu transakcji po stronie Winien</s:String>
+    <s:String x:Key="KontoZapis.KwotaWinienWaluta">Kwota zapisu transakcji po stronie Winien w walucie obcej dla operacji walutowych</s:String>
+    <s:String x:Key="KontoZapis.KodWalutyWinien">Kod waluty dla operacji walutowych dla księgowań po stronie Winien</s:String>
+    <s:String x:Key="KontoZapis.OpisZapisuWinien">Opis zapisu transakcji po stronie Winien</s:String>
+    <s:String x:Key="KontoZapis.KodKontaMa">Identyfikator konta zapisu (konta pomocniczego lub konta księgi głównej, jeżeli nie jest wymagany zapis na kontach pomocniczych) dla zapisu po stronie Ma</s:String>
+    <s:String x:Key="KontoZapis.KwotaMa">Kwota zapisu transakcji po stronie Ma</s:String>
+    <s:String x:Key="KontoZapis.KwotaMaWaluta">Kwota zapisu transakcji po stronie Ma w walucie obcej dla operacji walutowych</s:String>
+    <s:String x:Key="KontoZapis.KodWalutyMa">Kod waluty dla operacji walutowych księgowanych po stronie Ma</s:String>
+    <s:String x:Key="KontoZapis.OpisZapisuMa">Opis zapisu transakcji po stronie Ma</s:String>
+
+</ResourceDictionary>
