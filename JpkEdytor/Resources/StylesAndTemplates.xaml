@@ -13,6 +13,16 @@
     <VerticalAlignment x:Key="VerticalAlignmentDefault">Center</VerticalAlignment>
     <Thickness x:Key="MarginDefault" Left="0" Right="0" Top="1" Bottom="1"/>
 
+    <Style TargetType="{x:Type ContentControl}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
     <Style TargetType="ToolTip">
         <Style.Resources>
             <Style TargetType="ContentPresenter">
