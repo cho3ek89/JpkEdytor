@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2016/03/09/03092/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_WB (1)" wersjaSchemy="1-0">JPK_WB</KodFormularza>
+    <WariantFormularza>1</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+      <REGON xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">357359470</REGON>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">PL</KodKraju>
+      <Wojewodztwo xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">dolnośląskie</Wojewodztwo>
+      <Powiat xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">wałbrzyski</Powiat>
+      <Gmina xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Gmina>
+      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Lipowa</Ulica>
+      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">1</NrDomu>
+      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8</NrLokalu>
+      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
+      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">58-302</KodPocztowy>
+      <Poczta xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Urząd pocztowy</Poczta>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <NumerRachunku>PL68105000024795086358395003</NumerRachunku>
+  <Salda>
+    <SaldoPoczatkowe>23453456.62</SaldoPoczatkowe>
+    <SaldoKoncowe>13123414.32</SaldoKoncowe>
+  </Salda>
+  <WyciagWiersz typ="G">
+    <NumerWiersza>1</NumerWiersza>
+    <DataOperacji>2020-01-02</DataOperacji>
+    <NazwaPodmiotu>Firma A</NazwaPodmiotu>
+    <OpisOperacji>Zapłata za towar.</OpisOperacji>
+    <KwotaOperacji>100.54</KwotaOperacji>
+    <SaldoOperacji>1003.54</SaldoOperacji>
+  </WyciagWiersz>
+  <WyciagWiersz typ="G">
+    <NumerWiersza>2</NumerWiersza>
+    <DataOperacji>2020-01-02</DataOperacji>
+    <NazwaPodmiotu>Firma A</NazwaPodmiotu>
+    <OpisOperacji>Zapłata za towar.</OpisOperacji>
+    <KwotaOperacji>100.54</KwotaOperacji>
+    <SaldoOperacji>1003.54</SaldoOperacji>
+  </WyciagWiersz>
+  <WyciagWiersz typ="G">
+    <NumerWiersza>3</NumerWiersza>
+    <DataOperacji>2020-01-02</DataOperacji>
+    <NazwaPodmiotu>Firma A</NazwaPodmiotu>
+    <OpisOperacji>Zapłata za towar.</OpisOperacji>
+    <KwotaOperacji>100.54</KwotaOperacji>
+    <SaldoOperacji>1003.54</SaldoOperacji>
+  </WyciagWiersz>
+  <WyciagCtrl>
+    <LiczbaWierszy>3</LiczbaWierszy>
+    <SumaObciazen>301.62</SumaObciazen>
+    <SumaUznan>3010.62</SumaUznan>
+  </WyciagCtrl>
+</JPK>

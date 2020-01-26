@@ -16,21 +16,37 @@
 
         private string wojewodztwo;
 
+        private bool wojewodztwoSpecified;
+
         private string powiat;
+
+        private bool powiatSpecified;
 
         private string gmina;
 
+        private bool gminaSpecified;
+
         private string ulica;
+
+        private bool ulicaSpecified;
 
         private string nrDomu;
 
+        private bool nrDomuSpecified;
+
         private string nrLokalu;
+
+        private bool nrLokaluSpecified;
 
         private string miejscowosc;
 
         private string kodPocztowy;
 
+        private bool kodPocztowySpecified;
+
         private string poczta;
+
+        private bool pocztaSpecified;
 
         public Adres()
         {
@@ -64,6 +80,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool WojewodztwoSpecified
+        {
+            get
+            {
+                return wojewodztwoSpecified;
+            }
+            set
+            {
+                wojewodztwoSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string Powiat
         {
@@ -74,6 +104,20 @@
             set
             {
                 powiat = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool PowiatSpecified
+        {
+            get
+            {
+                return powiatSpecified;
+            }
+            set
+            {
+                powiatSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -92,6 +136,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool GminaSpecified
+        {
+            get
+            {
+                return gminaSpecified;
+            }
+            set
+            {
+                gminaSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string Ulica
         {
@@ -102,6 +160,20 @@
             set
             {
                 ulica = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool UlicaSpecified
+        {
+            get
+            {
+                return ulicaSpecified;
+            }
+            set
+            {
+                ulicaSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -120,6 +192,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool NrDomuSpecified
+        {
+            get
+            {
+                return nrDomuSpecified;
+            }
+            set
+            {
+                nrDomuSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrLokalu
         {
@@ -130,6 +216,20 @@
             set
             {
                 nrLokalu = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool NrLokaluSpecified
+        {
+            get
+            {
+                return nrLokaluSpecified;
+            }
+            set
+            {
+                nrLokaluSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -162,6 +262,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool KodPocztowySpecified
+        {
+            get
+            {
+                return kodPocztowySpecified;
+            }
+            set
+            {
+                kodPocztowySpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string Poczta
         {
@@ -172,6 +286,20 @@
             set
             {
                 poczta = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool PocztaSpecified
+        {
+            get
+            {
+                return pocztaSpecified;
+            }
+            set
+            {
+                pocztaSpecified = value;
                 RaisePropertyChanged();
             }
         }

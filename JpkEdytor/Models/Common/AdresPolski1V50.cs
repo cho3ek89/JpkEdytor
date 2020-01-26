@@ -22,9 +22,13 @@
 
         private string ulica;
 
+        private bool ulicaSpecified;
+
         private string nrDomu;
 
         private string nrLokalu;
+
+        private bool nrLokaluSpecified;
 
         private string miejscowosc;
 
@@ -104,6 +108,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool UlicaSpecified
+        {
+            get
+            {
+                return ulicaSpecified;
+            }
+            set
+            {
+                ulicaSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrDomu
         {
@@ -128,6 +146,20 @@
             set
             {
                 nrLokalu = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool NrLokaluSpecified
+        {
+            get
+            {
+                return nrLokaluSpecified;
+            }
+            set
+            {
+                nrLokaluSpecified = value;
                 RaisePropertyChanged();
             }
         }

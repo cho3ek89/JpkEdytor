@@ -15,6 +15,8 @@
 
         private string kodTowaru;
 
+        private bool kodTowaruSpecified;
+
         private string nazwaTowaru;
 
         private decimal iloscPrzyjeta;
@@ -49,6 +51,20 @@
             set
             {
                 kodTowaru = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool KodTowaruSpecified
+        {
+            get
+            {
+                return kodTowaruSpecified;
+            }
+            set
+            {
+                kodTowaruSpecified = value;
                 RaisePropertyChanged();
             }
         }

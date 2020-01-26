@@ -28,16 +28,67 @@
             schemaFileName = @"Schemat_JPK_KR(1)_v1-0.xsd";
         }
 
-        protected override void UpdateCrtls()
+        protected override void UpdateBeforeSerialization()
+        {
+            UpdatePodmiot();
+            UpdateDziennik();
+            UpdateKontoZapis();
+            UpdateZois();
+            UpdateCrtls();
+        }
+
+        private void UpdatePodmiot()
+        {
+            if (Jpk.Podmiot == null) return;
+
+            if (Jpk.Podmiot.IdentyfikatorPodmiotu != null)
+                Jpk.Podmiot.IdentyfikatorPodmiotu.RegonSpecified = !IsDefaultValue(Jpk.Podmiot.IdentyfikatorPodmiotu.Regon);
+
+            if (Jpk.Podmiot.AdresPodmiotu != null)
+            {
+                Jpk.Podmiot.AdresPodmiotu.UlicaSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.Ulica);
+                Jpk.Podmiot.AdresPodmiotu.NrLokaluSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.NrLokalu);
+            }
+        }
+
+        private void UpdateDziennik()
+        {
+            var count = 1;
+            foreach (var dziennikWpis in Jpk?.Dziennik)
+                dziennikWpis.LpZapisuDziennika = count++.ToString();
+        }
+
+        private void UpdateKontoZapis()
+        {
+            var count = 1;
+            foreach (var kontoZapis in Jpk?.KontoZapis)
+            {
+                kontoZapis.LpZapisu = count++.ToString();
+
+                kontoZapis.KwotaWinienWalutaSpecified = kontoZapis.KodWalutyWinien != KodWalutyV30.PLN;
+                kontoZapis.KodWalutyWinienSpecified = kontoZapis.KodWalutyWinien != KodWalutyV30.PLN;
+                kontoZapis.OpisZapisuWinienSpecified = !IsDefaultValue(kontoZapis.OpisZapisuWinien);
+                kontoZapis.KwotaMaWalutaSpecified = kontoZapis.KodWalutyMa != KodWalutyV30.PLN;
+                kontoZapis.KodWalutyMaSpecified = kontoZapis.KodWalutyMa != KodWalutyV30.PLN;
+                kontoZapis.OpisZapisuMaSpecified = !IsDefaultValue(kontoZapis.OpisZapisuMa);
+            }
+        }
+
+        private void UpdateZois()
+        {
+            foreach (var zois in Jpk?.Zois)
+            {
+                zois.KodPodkategoriiSpecified = !IsDefaultValue(zois.KodPodkategorii);
+                zois.OpisPodkategoriiSpecified = !IsDefaultValue(zois.OpisPodkategorii);
+            }
+        }
+
+        private void UpdateCrtls()
         {
             if (Jpk.Dziennik == null || Jpk.Dziennik.Count == 0)
                 Jpk.DziennikCtrl = null;
             else
             {
-                var count = 1;
-                foreach (var dziennikWpis in Jpk.Dziennik)
-                    dziennikWpis.LpZapisuDziennika = count++.ToString();
-
                 Jpk.DziennikCtrl = new DziennikCtrl
                 {
                     LiczbaWierszyDziennika = Jpk.Dziennik.Count.ToString(),
@@ -49,10 +100,6 @@
                 Jpk.KontoZapisCtrl = null;
             else
             {
-                var count = 1;
-                foreach (var kontoZapis in Jpk.KontoZapis)
-                    kontoZapis.LpZapisu = count++.ToString();
-
                 Jpk.KontoZapisCtrl = new KontoZapisCtrl
                 {
                     LiczbaWierszyKontoZapisu = Jpk.KontoZapis.Count.ToString(),

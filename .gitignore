@@ -1,4 +1,9 @@
 *.suo
+*.csproj.user
 /.vs/
 /JpkEdytor/bin/
 /JpkEdytor/obj/
+/JpkEdytor.Test/bin/
+/JpkEdytor.Test/obj/
+/packages/
+/TestResults/

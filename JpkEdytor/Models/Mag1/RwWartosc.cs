@@ -21,7 +21,11 @@
 
         private string skad;
 
+        private bool skadSpecified;
+
         private string dokad;
+
+        private bool dokadSpecified;
 
         [XmlElement(ElementName = "NumerRW", DataType = "token")]
         public string Numer
@@ -93,6 +97,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool SkadSpecified
+        {
+            get
+            {
+                return skadSpecified;
+            }
+            set
+            {
+                skadSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "DokadRW", DataType = "token")]
         public string Dokad
         {
@@ -103,6 +121,20 @@
             set
             {
                 dokad = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool DokadSpecified
+        {
+            get
+            {
+                return dokadSpecified;
+            }
+            set
+            {
+                dokadSpecified = value;
                 RaisePropertyChanged();
             }
         }

@@ -28,7 +28,37 @@
             schemaFileName = @"Schemat_JPK_FA_RR(1)_v1-0.xsd";
         }
 
-        protected override void UpdateCrtls()
+        protected override void UpdateBeforeSerialization()
+        {
+            UpdatePodmiot();
+            UpdateFakturaRr();
+            UpdateCrtls();
+        }
+
+        private void UpdatePodmiot()
+        {
+            if (Jpk.Podmiot != null && Jpk.Podmiot.AdresPodmiotu != null)
+            {
+                Jpk.Podmiot.AdresPodmiotu.UlicaSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.Ulica);
+                Jpk.Podmiot.AdresPodmiotu.NrLokaluSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.NrLokalu);
+            }
+        }
+
+        private void UpdateFakturaRr()
+        {
+            foreach (var fakturaRr in Jpk?.FakturaRr)
+            {
+                var areFaKorSpecified = fakturaRr.RodzajFaktury == RodzajFaktury.Korekta;
+
+                fakturaRr.PrzyczynaKorektySpecified = areFaKorSpecified;
+                fakturaRr.NrFaKorygowanejSpecified = areFaKorSpecified;
+                fakturaRr.OkresFaKorygowanejSpecified = areFaKorSpecified && !IsDefaultValue(fakturaRr.OkresFaKorygowanej);
+
+                fakturaRr.DokumentSpecified = !IsDefaultValue(fakturaRr.Dokument);
+            }
+        }
+
+        private void UpdateCrtls()
         {
             if (Jpk.FakturaRr == null || Jpk.FakturaRr.Count == 0)
                 Jpk.FakturaRrCtrl = null;
@@ -52,7 +82,7 @@
                 };
             }
 
-            if(Jpk.Oswiadczenie == null || Jpk.Oswiadczenie.Count == 0)
+            if (Jpk.Oswiadczenie == null || Jpk.Oswiadczenie.Count == 0)
                 Jpk.OswiadczenieCtrl = null;
             else
             {

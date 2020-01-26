@@ -13,7 +13,11 @@
     {
         private string p7Z;
 
+        private bool p7ZSpecified;
+
         private string p8AZ;
+
+        private bool p8AZSpecified;
 
         private decimal p8BZ;
 
@@ -49,6 +53,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "P_7ZSpecified")]
+        public bool P7ZSpecified
+        {
+            get
+            {
+                return p7ZSpecified;
+            }
+            set
+            {
+                p7ZSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_8AZ", DataType = "token")]
         public string P8AZ
         {
@@ -59,6 +78,21 @@
             set
             {
                 p8AZ = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        [XmlElement(ElementName = "P_8AZSpecified")]
+        public bool P8AZSpecified
+        {
+            get
+            {
+                return p8AZSpecified;
+            }
+            set
+            {
+                p8AZSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -74,7 +108,6 @@
             {
                 p8BZ = value;
                 RaisePropertyChanged();
-                P8BZSpecified = value != default(decimal);
             }
         }
 
@@ -104,7 +137,6 @@
             {
                 p9AZ = value;
                 RaisePropertyChanged();
-                P9AZSpecified = value != default(decimal);
             }
         }
 
@@ -134,7 +166,6 @@
             {
                 p11NettoZ = value;
                 RaisePropertyChanged();
-                P11NettoZSpecified = value != default(decimal);
             }
         }
 
@@ -164,7 +195,6 @@
             {
                 p11VatZ = value;
                 RaisePropertyChanged();
-                P11VatZSpecified = value != default(decimal);
             }
         }
 
@@ -194,7 +224,6 @@
             {
                 p12Z = value;
                 RaisePropertyChanged();
-                P12ZSpecified = value != default(StawkaPodatkuZw);
             }
         }
 

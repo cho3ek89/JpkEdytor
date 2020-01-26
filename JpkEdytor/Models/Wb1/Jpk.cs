@@ -6,7 +6,6 @@
     using System.Xml.Serialization;
 
     using Framework;
-    using JpkEdytor.ViewModels;
 
     [GeneratedCode("xsd", "4.7.3081.0")]
     [Serializable]

@@ -47,11 +47,19 @@
 
         private string przyczynaKorekty;
 
+        private bool przyczynaKorektySpecified;
+
         private string nrFaKorygowanej;
+
+        private bool nrFaKorygowanejSpecified;
 
         private string okresFaKorygowanej;
 
+        private bool okresFaKorygowanejSpecified;
+
         private string dokument;
+
+        private bool dokumentSpecified;
 
         private string typField;
 
@@ -315,6 +323,21 @@
             }
         }
 
+        [XmlElement(ElementName = "PrzyczynaKorektySpecified")]
+        [XmlIgnore]
+        public bool PrzyczynaKorektySpecified
+        {
+            get
+            {
+                return przyczynaKorektySpecified;
+            }
+            set
+            {
+                przyczynaKorektySpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrFaKorygowanej
         {
@@ -325,6 +348,21 @@
             set
             {
                 nrFaKorygowanej = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "NrFaKorygowanejSpecified")]
+        [XmlIgnore]
+        public bool NrFaKorygowanejSpecified
+        {
+            get
+            {
+                return nrFaKorygowanejSpecified;
+            }
+            set
+            {
+                nrFaKorygowanejSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -343,6 +381,21 @@
             }
         }
 
+        [XmlElement(ElementName = "OkresFaKorygowanejSpecified")]
+        [XmlIgnore]
+        public bool OkresFaKorygowanejSpecified
+        {
+            get
+            {
+                return okresFaKorygowanejSpecified;
+            }
+            set
+            {
+                okresFaKorygowanejSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string Dokument
         {
@@ -353,6 +406,21 @@
             set
             {
                 dokument = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "DokumentSpecified")]
+        [XmlIgnore]
+        public bool DokumentSpecified
+        {
+            get
+            {
+                return dokumentSpecified;
+            }
+            set
+            {
+                dokumentSpecified = value;
                 RaisePropertyChanged();
             }
         }

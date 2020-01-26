@@ -17,6 +17,8 @@
 
         private string email;
 
+        private bool emailSpecified;
+
         [XmlElement(ElementName = "NIP", DataType = "token")]
         public string Nip
         {
@@ -55,6 +57,20 @@
             set
             {
                 email = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool EmailSpecified
+        {
+            get
+            {
+                return emailSpecified;
+            }
+            set
+            {
+                emailSpecified = value;
                 RaisePropertyChanged();
             }
         }

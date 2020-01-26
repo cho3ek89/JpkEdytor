@@ -21,7 +21,11 @@
 
         private string p3A;
 
+        private bool p3ASpecified;
+
         private string p3B;
+
+        private bool p3BSpecified;
 
         private string p3C;
 
@@ -33,11 +37,15 @@
 
         private string p4B;
 
+        private bool p4BSpecified;
+
         private KodKrajuUeV30 p5A;
 
         private bool p5ASpecified;
 
         private string p5B;
+
+        private bool p5BSpecified;
 
         private DateTime p6;
 
@@ -45,7 +53,11 @@
 
         private decimal p13_1;
 
+        private bool p13_1Specified;
+
         private decimal p14_1;
+
+        private bool p14_1Specified;
 
         private decimal p14_1W;
 
@@ -53,7 +65,11 @@
 
         private decimal p13_2;
 
+        private bool p13_2Specified;
+
         private decimal p14_2;
+
+        private bool p14_2Specified;
 
         private decimal p14_2W;
 
@@ -61,7 +77,11 @@
 
         private decimal p13_3;
 
+        private bool p13_3Specified;
+
         private decimal p14_3;
+
+        private bool p14_3Specified;
 
         private decimal p14_3W;
 
@@ -69,7 +89,11 @@
 
         private decimal p13_4;
 
+        private bool p13_4Specified;
+
         private decimal p14_4;
+
+        private bool p14_4Specified;
 
         private decimal p14_4W;
 
@@ -101,31 +125,53 @@
 
         private string p19A;
 
+        private bool p19ASpecified;
+
         private string p19B;
 
+        private bool p19BSpecified;
+
         private string p19C;
+
+        private bool p19CSpecified;
 
         private bool p20;
 
         private string p20A;
 
+        private bool p20ASpecified;
+
         private string p20B;
+
+        private bool p20BSpecified;
 
         private bool p21;
 
         private string p21A;
 
+        private bool p21ASpecified;
+
         private string p21B;
 
+        private bool p21BSpecified;
+
         private string p21C;
+
+        private bool p21CSpecified;
 
         private bool p22;
 
         private DateTime p22A;
 
+        private bool p22ASpecified;
+
         private string p22B;
 
+        private bool p22BSpecified;
+
         private string p22C;
+
+        private bool p22CSpecified;
 
         private bool p23;
 
@@ -135,15 +181,25 @@
 
         private string p106E3A;
 
+        private bool p106E3ASpecified;
+
         private RodzajFaktury rodzajFaktury;
 
         private string przyczynaKorekty;
 
+        private bool przyczynaKorektySpecified;
+
         private string nrFaKorygowanej;
+
+        private bool nrFaKorygowanejSpecified;
 
         private string okresFaKorygowanej;
 
+        private bool okresFaKorygowanejSpecified;
+
         private string nrFaZaliczkowej;
+
+        private bool nrFaZaliczkowejSpecified;
 
         public JpkFaktura()
         {
@@ -222,6 +278,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_3ASpecified")]
+        [XmlIgnore]
+        public bool P3ASpecified
+        {
+            get
+            {
+                return p3ASpecified;
+            }
+            set
+            {
+                p3ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_3B", DataType = "token")]
         public string P3B
         {
@@ -232,6 +303,21 @@
             set
             {
                 p3B = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_3BSpecified")]
+        [XmlIgnore]
+        public bool P3BSpecified
+        {
+            get
+            {
+                return p3BSpecified;
+            }
+            set
+            {
+                p3BSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -275,7 +361,6 @@
             {
                 p4A = value;
                 RaisePropertyChanged();
-                P4ASpecified = value != default(KodKrajuUeV30);
             }
         }
 
@@ -308,6 +393,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_4BSpecified")]
+        [XmlIgnore]
+        public bool P4BSpecified
+        {
+            get
+            {
+                return p4BSpecified;
+            }
+            set
+            {
+                p4BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_5A")]
         public KodKrajuUeV30 P5A
         {
@@ -319,7 +419,6 @@
             {
                 p5A = value;
                 RaisePropertyChanged();
-                P5ASpecified = value != default(KodKrajuUeV30);
             }
         }
 
@@ -352,6 +451,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_5BSpecified")]
+        [XmlIgnore]
+        public bool P5BSpecified
+        {
+            get
+            {
+                return p5BSpecified;
+            }
+            set
+            {
+                p5BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_6", DataType = "date")]
         public DateTime P6
         {
@@ -363,7 +477,6 @@
             {
                 p6 = value;
                 RaisePropertyChanged();
-                P6Specified = value != default(DateTime);
             }
         }
 
@@ -396,6 +509,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_13_1Specified")]
+        [XmlIgnore]
+        public bool P13_1Specified
+        {
+            get
+            {
+                return p13_1Specified;
+            }
+            set
+            {
+                p13_1Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_14_1")]
         public decimal P14_1
         {
@@ -406,6 +534,21 @@
             set
             {
                 p14_1 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_14_1Specified")]
+        [XmlIgnore]
+        public bool P14_1Specified
+        {
+            get
+            {
+                return p14_1Specified;
+            }
+            set
+            {
+                p14_1Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -421,7 +564,6 @@
             {
                 p14_1W = value;
                 RaisePropertyChanged();
-                P14_1WSpecified = value != default(decimal);
             }
         }
 
@@ -454,6 +596,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_13_2Specified")]
+        [XmlIgnore]
+        public bool P13_2Specified
+        {
+            get
+            {
+                return p13_2Specified;
+            }
+            set
+            {
+                p13_2Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_14_2")]
         public decimal P14_2
         {
@@ -464,6 +621,21 @@
             set
             {
                 p14_2 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_14_2Specified")]
+        [XmlIgnore]
+        public bool P14_2Specified
+        {
+            get
+            {
+                return p14_2Specified;
+            }
+            set
+            {
+                p14_2Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -479,7 +651,6 @@
             {
                 p14_2W = value;
                 RaisePropertyChanged();
-                P14_2WSpecified = value != default(decimal);
             }
         }
 
@@ -512,6 +683,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_13_3Specified")]
+        [XmlIgnore]
+        public bool P13_3Specified
+        {
+            get
+            {
+                return p13_3Specified;
+            }
+            set
+            {
+                p13_3Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_14_3")]
         public decimal P14_3
         {
@@ -522,6 +708,21 @@
             set
             {
                 p14_3 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_14_3Specified")]
+        [XmlIgnore]
+        public bool P14_3Specified
+        {
+            get
+            {
+                return p14_3Specified;
+            }
+            set
+            {
+                p14_3Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -537,7 +738,6 @@
             {
                 p14_3W = value;
                 RaisePropertyChanged();
-                P14_3WSpecified = value != default(decimal);
             }
         }
 
@@ -570,6 +770,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_13_4Specified")]
+        [XmlIgnore]
+        public bool P13_4Specified
+        {
+            get
+            {
+                return p13_4Specified;
+            }
+            set
+            {
+                p13_4Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_14_4")]
         public decimal P14_4
         {
@@ -580,6 +795,21 @@
             set
             {
                 p14_4 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_14_4Specified")]
+        [XmlIgnore]
+        public bool P14_4Specified
+        {
+            get
+            {
+                return p14_4Specified;
+            }
+            set
+            {
+                p14_4Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -595,7 +825,6 @@
             {
                 p14_4W = value;
                 RaisePropertyChanged();
-                P14_4WSpecified = value != default(decimal);
             }
         }
 
@@ -625,7 +854,6 @@
             {
                 p13_5 = value;
                 RaisePropertyChanged();
-                P13_5Specified = value != default(decimal);
             }
         }
 
@@ -655,7 +883,6 @@
             {
                 p13_6 = value;
                 RaisePropertyChanged();
-                P13_6Specified = value != default(decimal);
             }
         }
 
@@ -685,7 +912,6 @@
             {
                 p13_7 = value;
                 RaisePropertyChanged();
-                P13_7Specified = value != default(decimal);
             }
         }
 
@@ -803,6 +1029,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_19ASpecified")]
+        [XmlIgnore]
+        public bool P19ASpecified
+        {
+            get
+            {
+                return p19ASpecified;
+            }
+            set
+            {
+                p19ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_19B", DataType = "token")]
         [DefaultValue("false")]
         public string P19B
@@ -818,6 +1059,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_19BSpecified")]
+        [XmlIgnore]
+        public bool P19BSpecified
+        {
+            get
+            {
+                return p19BSpecified;
+            }
+            set
+            {
+                p19BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_19C", DataType = "token")]
         [DefaultValue("false")]
         public string P19C
@@ -829,6 +1085,21 @@
             set
             {
                 p19C = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_19CSpecified")]
+        [XmlIgnore]
+        public bool P19CSpecified
+        {
+            get
+            {
+                return p19CSpecified;
+            }
+            set
+            {
+                p19CSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -861,6 +1132,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_20ASpecified")]
+        [XmlIgnore]
+        public bool P20ASpecified
+        {
+            get
+            {
+                return p20ASpecified;
+            }
+            set
+            {
+                p20ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_20B", DataType = "token")]
         public string P20B
         {
@@ -871,6 +1157,21 @@
             set
             {
                 p20B = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_20BSpecified")]
+        [XmlIgnore]
+        public bool P20BSpecified
+        {
+            get
+            {
+                return p20BSpecified;
+            }
+            set
+            {
+                p20BSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -903,6 +1204,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_21ASpecified")]
+        [XmlIgnore]
+        public bool P21ASpecified
+        {
+            get
+            {
+                return p21ASpecified;
+            }
+            set
+            {
+                p21ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_21B", DataType = "token")]
         public string P21B
         {
@@ -917,6 +1233,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_21BSpecified")]
+        [XmlIgnore]
+        public bool P21BSpecified
+        {
+            get
+            {
+                return p21BSpecified;
+            }
+            set
+            {
+                p21BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_21C", DataType = "token")]
         public string P21C
         {
@@ -927,6 +1258,21 @@
             set
             {
                 p21C = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_21CSpecified")]
+        [XmlIgnore]
+        public bool P21CSpecified
+        {
+            get
+            {
+                return p21CSpecified;
+            }
+            set
+            {
+                p21CSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -959,6 +1305,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_22ASpecified")]
+        [XmlIgnore]
+        public bool P22ASpecified
+        {
+            get
+            {
+                return p22ASpecified;
+            }
+            set
+            {
+                p22ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_22B", DataType = "token")]
         public string P22B
         {
@@ -973,6 +1334,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_22BSpecified")]
+        [XmlIgnore]
+        public bool P22BSpecified
+        {
+            get
+            {
+                return p22BSpecified;
+            }
+            set
+            {
+                p22BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_22C", DataType = "token")]
         public string P22C
         {
@@ -983,6 +1359,21 @@
             set
             {
                 p22C = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_22CSpecified")]
+        [XmlIgnore]
+        public bool P22CSpecified
+        {
+            get
+            {
+                return p22CSpecified;
+            }
+            set
+            {
+                p22CSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -1044,6 +1435,21 @@
             }
         }
 
+        [XmlElement(ElementName = "P_106E_3ASpecified")]
+        [XmlIgnore]
+        public bool P106E3ASpecified
+        {
+            get
+            {
+                return p106E3ASpecified;
+            }
+            set
+            {
+                p106E3ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         public RodzajFaktury RodzajFaktury
         {
             get
@@ -1071,6 +1477,21 @@
             }
         }
 
+        [XmlElement(ElementName = "PrzyczynaKorektySpecified")]
+        [XmlIgnore]
+        public bool PrzyczynaKorektySpecified
+        {
+            get
+            {
+                return przyczynaKorektySpecified;
+            }
+            set
+            {
+                przyczynaKorektySpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrFaKorygowanej
         {
@@ -1081,6 +1502,21 @@
             set
             {
                 nrFaKorygowanej = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "NrFaKorygowanejSpecified")]
+        [XmlIgnore]
+        public bool NrFaKorygowanejSpecified
+        {
+            get
+            {
+                return nrFaKorygowanejSpecified;
+            }
+            set
+            {
+                nrFaKorygowanejSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -1099,6 +1535,21 @@
             }
         }
 
+        [XmlElement(ElementName = "OkresFaKorygowanejSpecified")]
+        [XmlIgnore]
+        public bool OkresFaKorygowanejSpecified
+        {
+            get
+            {
+                return okresFaKorygowanejSpecified;
+            }
+            set
+            {
+                okresFaKorygowanejSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrFaZaliczkowej
         {
@@ -1109,6 +1560,21 @@
             set
             {
                 nrFaZaliczkowej = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "NrFaZaliczkowejSpecified")]
+        [XmlIgnore]
+        public bool NrFaZaliczkowejSpecified
+        {
+            get
+            {
+                return nrFaZaliczkowejSpecified;
+            }
+            set
+            {
+                nrFaZaliczkowejSpecified = value;
                 RaisePropertyChanged();
             }
         }

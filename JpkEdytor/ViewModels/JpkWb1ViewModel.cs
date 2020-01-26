@@ -28,16 +28,40 @@
             schemaFileName = @"Schemat_JPK_WB(1)_v1-0.xsd";
         }
 
-        protected override void UpdateCrtls()
+        protected override void UpdateBeforeSerialization()
+        {
+            UpdatePodmiot();
+            UpdateWyciagWiersze();
+            UpdateCrtls();
+        }
+
+        private void UpdatePodmiot()
+        {
+            if (Jpk.Podmiot == null) return;
+
+            if (Jpk.Podmiot.IdentyfikatorPodmiotu != null)
+                Jpk.Podmiot.IdentyfikatorPodmiotu.RegonSpecified = !IsDefaultValue(Jpk.Podmiot.IdentyfikatorPodmiotu.Regon);
+
+            if (Jpk.Podmiot.AdresPodmiotu != null)
+            {
+                Jpk.Podmiot.AdresPodmiotu.UlicaSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.Ulica);
+                Jpk.Podmiot.AdresPodmiotu.NrLokaluSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.NrLokalu);
+            }
+        }
+
+        private void UpdateWyciagWiersze()
+        {
+            var count = 1;
+            foreach (var wyciagWiersz in Jpk?.WyciagWiersze)
+                wyciagWiersz.NumerWiersza = count++.ToString();
+        }
+
+        private void UpdateCrtls()
         {
             if (Jpk.WyciagWiersze == null || Jpk.WyciagWiersze.Count == 0)
                 Jpk.WyciagCtrl = null;
             else
             {
-                var count = 1;
-                foreach (var wyciagWiersz in Jpk.WyciagWiersze)
-                    wyciagWiersz.NumerWiersza = count++.ToString();
-
                 Jpk.WyciagCtrl = new WyciagCtrl
                 {
                     LiczbaWierszy = Jpk.WyciagWiersze.Count.ToString(),

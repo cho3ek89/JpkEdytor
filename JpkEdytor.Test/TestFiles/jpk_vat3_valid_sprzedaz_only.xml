@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2017/11/13/1113/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</KodFormularza>
+    <WariantFormularza>3</WariantFormularza>
+    <CelZlozenia>0</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <NazwaSystemu>JpkEdytor</NazwaSystemu>
+  </Naglowek>
+  <Podmiot1>
+    <NIP>8117960116</NIP>
+    <PelnaNazwa>Zwyczajna Firma s.c.</PelnaNazwa>
+    <Email>firma@.mail.com</Email>
+  </Podmiot1>
+  <SprzedazWiersz>
+    <LpSprzedazy>1</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>2</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_10>1</K_10>
+    <K_15>1</K_15>
+    <K_16>0</K_16>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>3</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_11>1</K_11>
+    <K_15>0</K_15>
+    <K_16>1</K_16>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>4</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_12>1</K_12>
+    <K_17>1</K_17>
+    <K_18>0</K_18>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>5</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_13>1</K_13>
+    <K_17>0</K_17>
+    <K_18>1</K_18>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>6</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_14>1</K_14>
+    <K_19>1</K_19>
+    <K_20>0</K_20>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>7</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_19>0</K_19>
+    <K_20>1</K_20>
+    <K_21>1</K_21>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>8</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_22>1</K_22>
+    <K_23>1</K_23>
+    <K_24>0</K_24>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>9</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_23>0</K_23>
+    <K_24>1</K_24>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>10</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_25>1</K_25>
+    <K_26>0</K_26>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>11</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_25>0</K_25>
+    <K_26>1</K_26>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>12</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_27>1</K_27>
+    <K_28>0</K_28>
+    <K_31>1</K_31>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>13</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_27>0</K_27>
+    <K_28>1</K_28>
+    <K_36>1</K_36>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>14</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_29>1</K_29>
+    <K_30>0</K_30>
+    <K_37>1</K_37>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>15</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_29>0</K_29>
+    <K_30>1</K_30>
+    <K_38>1</K_38>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>16</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_32>1</K_32>
+    <K_33>0</K_33>
+    <K_39>1</K_39>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>17</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_32>0</K_32>
+    <K_33>1</K_33>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>18</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_34>1</K_34>
+    <K_35>0</K_35>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>19</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <K_34>0</K_34>
+    <K_35>1</K_35>
+  </SprzedazWiersz>
+  <SprzedazWiersz>
+    <LpSprzedazy>20</LpSprzedazy>
+    <NrKontrahenta>7766756174</NrKontrahenta>
+    <NazwaKontrahenta>Jakaś tam firemka s.a.</NazwaKontrahenta>
+    <AdresKontrahenta>ul. Łazarska 67, 34-123 Pcim dolny</AdresKontrahenta>
+    <DowodSprzedazy>45/63456</DowodSprzedazy>
+    <DataWystawienia>2020-01-15</DataWystawienia>
+    <DataSprzedazy>2020-01-16</DataSprzedazy>
+    <K_10>1.01</K_10>
+    <K_11>1.01</K_11>
+    <K_12>1.01</K_12>
+    <K_13>1.01</K_13>
+    <K_14>1.01</K_14>
+    <K_15>1.01</K_15>
+    <K_16>1.01</K_16>
+    <K_17>1.01</K_17>
+    <K_18>1.01</K_18>
+    <K_19>1.01</K_19>
+    <K_20>1.01</K_20>
+    <K_21>1.01</K_21>
+    <K_22>1.01</K_22>
+    <K_23>1.01</K_23>
+    <K_24>1.01</K_24>
+    <K_25>1.01</K_25>
+    <K_26>1.01</K_26>
+    <K_27>1.01</K_27>
+    <K_28>1.01</K_28>
+    <K_29>1.01</K_29>
+    <K_30>1.01</K_30>
+    <K_31>1.01</K_31>
+    <K_32>1.01</K_32>
+    <K_33>1.01</K_33>
+    <K_34>1.01</K_34>
+    <K_35>1.01</K_35>
+    <K_36>1.01</K_36>
+    <K_37>1.01</K_37>
+    <K_38>1.01</K_38>
+    <K_39>1.01</K_39>
+  </SprzedazWiersz>
+  <SprzedazCtrl>
+    <LiczbaWierszySprzedazy>20</LiczbaWierszySprzedazy>
+    <PodatekNalezny>18.09</PodatekNalezny>
+  </SprzedazCtrl>
+</JPK>

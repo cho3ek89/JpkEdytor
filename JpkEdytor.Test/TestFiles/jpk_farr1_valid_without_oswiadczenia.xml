@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2019/08/12/08121/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_FA_RR (1)" wersjaSchemy="1-0">JPK_FA_RR</KodFormularza>
+    <WariantFormularza>1</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">PL</KodKraju>
+      <Wojewodztwo xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">dolnośląskie</Wojewodztwo>
+      <Powiat xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">wałbrzyski</Powiat>
+      <Gmina xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Wałbrzych</Gmina>
+      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Lipowa</Ulica>
+      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">1</NrDomu>
+      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8</NrLokalu>
+      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
+      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">58-302</KodPocztowy>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <FakturaRR typ="G">
+    <P_1A>Zenon Piskorski</P_1A>
+    <P_1B>ul. Cicha 5, 56-756 Młode Rumunki</P_1B>
+    <P_1C>Zbigniew Marcinkowski</P_1C>
+    <P_1D>ul. Cicha 2, 56-756 Młode Rumunki</P_1D>
+    <P_2A>5244331440</P_2A>
+    <P_2B>3553405359</P_2B>
+    <P_3A>
+      <NumerSeryjny>524234567</NumerSeryjny>
+      <Wystawca>CERT factory s.c.</Wystawca>
+      <Posiadacz>Zenon Piskorski</Posiadacz>
+    </P_3A>
+    <P_3B>
+      <NumerSeryjny>635623463</NumerSeryjny>
+      <Wystawca>CERT union s.a.</Wystawca>
+      <Posiadacz>Zbigniew Marcinkowski</Posiadacz>
+    </P_3B>
+    <P_4A>2020-01-06</P_4A>
+    <P_4B>2020-01-05</P_4B>
+    <P_4C1>14123/653</P_4C1>
+    <P_11_1>41451.53</P_11_1>
+    <P_11_2>252.74</P_11_2>
+    <P_12_1>525.65</P_12_1>
+    <P_12_2>pięćset dwadzieścia pięć złotych i sześćdziesiąt pięć groszy</P_12_2>
+    <P_116_3>true</P_116_3>
+    <RodzajFaktury>VAT_RR</RodzajFaktury>
+  </FakturaRR>
+  <FakturaRR typ="G">
+    <P_1A>Zenon Piskorski</P_1A>
+    <P_1B>ul. Cicha 5, 56-756 Młode Rumunki</P_1B>
+    <P_1C>Zbigniew Marcinkowski</P_1C>
+    <P_1D>ul. Cicha 2, 56-756 Młode Rumunki</P_1D>
+    <P_2A>5244331440</P_2A>
+    <P_2B>3553405359</P_2B>
+    <P_3A>
+      <NumerSeryjny>524234567</NumerSeryjny>
+      <Wystawca>CERT factory s.c.</Wystawca>
+      <Posiadacz>Zenon Piskorski</Posiadacz>
+    </P_3A>
+    <P_3B>
+      <NumerSeryjny>635623463</NumerSeryjny>
+      <Wystawca>CERT union s.a.</Wystawca>
+      <Posiadacz>Zbigniew Marcinkowski</Posiadacz>
+    </P_3B>
+    <P_4A>2020-01-06</P_4A>
+    <P_4B>2020-01-05</P_4B>
+    <P_4C1>14123/653</P_4C1>
+    <P_11_1>41451.53</P_11_1>
+    <P_11_2>252.74</P_11_2>
+    <P_12_1>525.65</P_12_1>
+    <P_12_2>pięćset dwadzieścia pięć złotych i sześćdziesiąt pięć groszy</P_12_2>
+    <P_116_3>true</P_116_3>
+    <RodzajFaktury>KOREKTA_RR</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>2441/515</NrFaKorygowanej>
+  </FakturaRR>
+  <FakturaRR typ="G">
+    <P_1A>Zenon Piskorski</P_1A>
+    <P_1B>ul. Cicha 5, 56-756 Młode Rumunki</P_1B>
+    <P_1C>Zbigniew Marcinkowski</P_1C>
+    <P_1D>ul. Cicha 2, 56-756 Młode Rumunki</P_1D>
+    <P_2A>5244331440</P_2A>
+    <P_2B>3553405359</P_2B>
+    <P_3A>
+      <NumerSeryjny>524234567</NumerSeryjny>
+      <Wystawca>CERT factory s.c.</Wystawca>
+      <Posiadacz>Zenon Piskorski</Posiadacz>
+    </P_3A>
+    <P_3B>
+      <NumerSeryjny>635623463</NumerSeryjny>
+      <Wystawca>CERT union s.a.</Wystawca>
+      <Posiadacz>Zbigniew Marcinkowski</Posiadacz>
+    </P_3B>
+    <P_4A>2020-01-06</P_4A>
+    <P_4B>2020-01-05</P_4B>
+    <P_4C1>14123/653</P_4C1>
+    <P_11_1>41451.53</P_11_1>
+    <P_11_2>252.74</P_11_2>
+    <P_12_1>525.65</P_12_1>
+    <P_12_2>pięćset dwadzieścia pięć złotych i sześćdziesiąt pięć groszy</P_12_2>
+    <P_116_3>true</P_116_3>
+    <RodzajFaktury>KOREKTA_RR</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>2441/515</NrFaKorygowanej>
+    <OkresFaKorygowanej>styczeń</OkresFaKorygowanej>
+  </FakturaRR>
+  <FakturaRR typ="G">
+    <P_1A>Zenon Piskorski</P_1A>
+    <P_1B>ul. Cicha 5, 56-756 Młode Rumunki</P_1B>
+    <P_1C>Zbigniew Marcinkowski</P_1C>
+    <P_1D>ul. Cicha 2, 56-756 Młode Rumunki</P_1D>
+    <P_2A>5244331440</P_2A>
+    <P_2B>3553405359</P_2B>
+    <P_3A>
+      <NumerSeryjny>524234567</NumerSeryjny>
+      <Wystawca>CERT factory s.c.</Wystawca>
+      <Posiadacz>Zenon Piskorski</Posiadacz>
+    </P_3A>
+    <P_3B>
+      <NumerSeryjny>635623463</NumerSeryjny>
+      <Wystawca>CERT union s.a.</Wystawca>
+      <Posiadacz>Zbigniew Marcinkowski</Posiadacz>
+    </P_3B>
+    <P_4A>2020-01-06</P_4A>
+    <P_4B>2020-01-05</P_4B>
+    <P_4C1>14123/653</P_4C1>
+    <P_11_1>41451.53</P_11_1>
+    <P_11_2>252.74</P_11_2>
+    <P_12_1>525.65</P_12_1>
+    <P_12_2>pięćset dwadzieścia pięć złotych i sześćdziesiąt pięć groszy</P_12_2>
+    <P_116_3>true</P_116_3>
+    <RodzajFaktury>VAT_RR</RodzajFaktury>
+    <Dokument>23542/62411642</Dokument>
+  </FakturaRR>
+  <FakturaRR typ="G">
+    <P_1A>Zenon Piskorski</P_1A>
+    <P_1B>ul. Cicha 5, 56-756 Młode Rumunki</P_1B>
+    <P_1C>Zbigniew Marcinkowski</P_1C>
+    <P_1D>ul. Cicha 2, 56-756 Młode Rumunki</P_1D>
+    <P_2A>5244331440</P_2A>
+    <P_2B>3553405359</P_2B>
+    <P_3A>
+      <NumerSeryjny>524234567</NumerSeryjny>
+      <Wystawca>CERT factory s.c.</Wystawca>
+      <Posiadacz>Zenon Piskorski</Posiadacz>
+    </P_3A>
+    <P_3B>
+      <NumerSeryjny>635623463</NumerSeryjny>
+      <Wystawca>CERT union s.a.</Wystawca>
+      <Posiadacz>Zbigniew Marcinkowski</Posiadacz>
+    </P_3B>
+    <P_4A>2020-01-06</P_4A>
+    <P_4B>2020-01-05</P_4B>
+    <P_4C1>14123/653</P_4C1>
+    <P_11_1>41451.53</P_11_1>
+    <P_11_2>252.74</P_11_2>
+    <P_12_1>525.65</P_12_1>
+    <P_12_2>pięćset dwadzieścia pięć złotych i sześćdziesiąt pięć groszy</P_12_2>
+    <P_116_3>true</P_116_3>
+    <RodzajFaktury>KOREKTA_RR</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>2441/515</NrFaKorygowanej>
+    <OkresFaKorygowanej>styczeń</OkresFaKorygowanej>
+    <Dokument>23542/62411642</Dokument>
+  </FakturaRR>
+  <FakturaRRCtrl>
+    <LiczbaFakturRR>5</LiczbaFakturRR>
+    <WartoscFakturRR>2628.25</WartoscFakturRR>
+  </FakturaRRCtrl>
+  <FakturaRRWiersz typ="G">
+    <P_4C2>14123/653</P_4C2>
+    <P_5>pszenica</P_5>
+    <P_6A>kg</P_6A>
+    <P_6B>23542.51</P_6B>
+    <P_6C>pierwsza</P_6C>
+    <P_7>34.65</P_7>
+    <P_8>634.74</P_8>
+    <P_9>63.85</P_9>
+    <P_10>6354.84</P_10>
+  </FakturaRRWiersz>
+  <FakturaRRWierszCtrl>
+    <LiczbaWierszyFakturRR>1</LiczbaWierszyFakturRR>
+    <WartoscWierszyFakturRR>634.74</WartoscWierszyFakturRR>
+  </FakturaRRWierszCtrl>
+</JPK>

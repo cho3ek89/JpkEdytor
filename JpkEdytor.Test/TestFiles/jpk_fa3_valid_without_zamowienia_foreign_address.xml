@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2019/09/27/09271/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_FA (3)" wersjaSchemy="1-0">JPK_FA</KodFormularza>
+    <WariantFormularza>3</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu2>
+      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">ES</KodKraju>
+      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">28001</KodPocztowy>
+      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
+      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Gran Vía</Ulica>
+      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">1</NrDomu>
+      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8</NrLokalu>
+    </AdresPodmiotu2>
+  </Podmiot1>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>true</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3A>Zenon Jackowiak</P_3A>
+    <P_3B>ul. Cicha 14, 52-125 Marciszów</P_3B>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_4A>CZ</P_4A>
+    <P_4B>5252632498</P_4B>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_5A>BG</P_5A>
+    <P_5B>5357411057</P_5B>
+    <P_6>2020-01-30</P_6>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_13_1>0</P_13_1>
+    <P_14_1>0</P_14_1>
+    <P_13_2>0</P_13_2>
+    <P_14_2>0</P_14_2>
+    <P_13_3>0</P_13_3>
+    <P_14_3>0</P_14_3>
+    <P_13_4>0</P_13_4>
+    <P_14_4>0</P_14_4>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>true</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>true</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>AFN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_13_1>0</P_13_1>
+    <P_14_1>0</P_14_1>
+    <P_14_1W>0</P_14_1W>
+    <P_13_2>0</P_13_2>
+    <P_14_2>0</P_14_2>
+    <P_14_2W>0</P_14_2W>
+    <P_13_3>0</P_13_3>
+    <P_14_3>0</P_14_3>
+    <P_14_3W>0</P_14_3W>
+    <P_13_4>0</P_13_4>
+    <P_14_4>0</P_14_4>
+    <P_14_4W>0</P_14_4W>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>true</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>true</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_13_5>5435.85</P_13_5>
+    <P_13_6>3456.33</P_13_6>
+    <P_13_7>6345.82</P_13_7>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>true</P_19>
+    <P_19A>jakaś tam ustawa</P_19A>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>true</P_19>
+    <P_19B>jakiś tam przepis dyrektywy</P_19B>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>true</P_19>
+    <P_19C>jakaś tam podstawa prawna</P_19C>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>true</P_20>
+    <P_20A>Biuro komornika w Tczewie</P_20A>
+    <P_20B>Biuro komornika w Rawiczu</P_20B>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>true</P_21>
+    <P_21A>Biuro komornika w Tczewie</P_21A>
+    <P_21B>ul. Legionów 1/56, 22-632 Tczew</P_21B>
+    <P_21C>1129685988</P_21C>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>true</P_22>
+    <P_22A>1999-05-26</P_22A>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>true</P_22>
+    <P_22A>1999-05-26</P_22A>
+    <P_22B>150000 km</P_22B>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>true</P_22>
+    <P_22A>1999-05-26</P_22A>
+    <P_22C>1200</P_22C>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>true</P_106E_3>
+    <P_106E_3A>procedura marży - dzieła sztuki</P_106E_3A>
+    <RodzajFaktury>VAT</RodzajFaktury>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>KOREKTA</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>543/732456</NrFaKorygowanej>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>KOREKTA</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>543/732456</NrFaKorygowanej>
+    <OkresFaKorygowanej>styczeń 2019</OkresFaKorygowanej>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>PLN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>false</P_18>
+    <P_18A>false</P_18A>
+    <P_19>false</P_19>
+    <P_20>false</P_20>
+    <P_21>false</P_21>
+    <P_22>false</P_22>
+    <P_23>false</P_23>
+    <P_106E_2>false</P_106E_2>
+    <P_106E_3>false</P_106E_3>
+    <RodzajFaktury>ZAL</RodzajFaktury>
+    <NrFaZaliczkowej>235/7372</NrFaZaliczkowej>
+  </Faktura>
+  <Faktura>
+    <KodWaluty>AFN</KodWaluty>
+    <P_1>2020-01-26</P_1>
+    <P_2A>5234/234522</P_2A>
+    <P_3A>Zenon Jackowiak</P_3A>
+    <P_3B>ul. Cicha 14, 52-125 Marciszów</P_3B>
+    <P_3C>Albert Wcisło</P_3C>
+    <P_3D>ul. Łagiewnicka 14, 44-121 Łagiewniki</P_3D>
+    <P_4A>CZ</P_4A>
+    <P_4B>5252632498</P_4B>
+    <P_5A>BG</P_5A>
+    <P_5B>5357411057</P_5B>
+    <P_6>2020-01-30</P_6>
+    <P_13_1>0</P_13_1>
+    <P_14_1>0</P_14_1>
+    <P_14_1W>0</P_14_1W>
+    <P_13_2>0</P_13_2>
+    <P_14_2>0</P_14_2>
+    <P_14_2W>0</P_14_2W>
+    <P_13_3>0</P_13_3>
+    <P_14_3>0</P_14_3>
+    <P_14_3W>0</P_14_3W>
+    <P_13_4>0</P_13_4>
+    <P_14_4>0</P_14_4>
+    <P_14_4W>0</P_14_4W>
+    <P_13_5>5435.85</P_13_5>
+    <P_13_6>3456.33</P_13_6>
+    <P_13_7>6345.82</P_13_7>
+    <P_15>1.01</P_15>
+    <P_16>false</P_16>
+    <P_17>false</P_17>
+    <P_18>true</P_18>
+    <P_18A>false</P_18A>
+    <P_19>true</P_19>
+    <P_19A>jakaś tam ustawa</P_19A>
+    <P_19B>jakiś tam przepis dyrektywy</P_19B>
+    <P_19C>jakaś tam podstawa prawna</P_19C>
+    <P_20>true</P_20>
+    <P_20A>Biuro komornika w Tczewie</P_20A>
+    <P_20B>Biuro komornika w Rawiczu</P_20B>
+    <P_21>true</P_21>
+    <P_21A>Biuro komornika w Tczewie</P_21A>
+    <P_21B>ul. Legionów 1/56, 22-632 Tczew</P_21B>
+    <P_21C>1129685988</P_21C>
+    <P_22>true</P_22>
+    <P_22A>1999-05-26</P_22A>
+    <P_22B>150000 km</P_22B>
+    <P_22C>1200</P_22C>
+    <P_23>false</P_23>
+    <P_106E_2>true</P_106E_2>
+    <P_106E_3>true</P_106E_3>
+    <P_106E_3A>procedura marży - dzieła sztuki</P_106E_3A>
+    <RodzajFaktury>KOREKTA</RodzajFaktury>
+    <PrzyczynaKorekty>błąd</PrzyczynaKorekty>
+    <NrFaKorygowanej>543/732456</NrFaKorygowanej>
+    <OkresFaKorygowanej>styczeń 2019</OkresFaKorygowanej>
+  </Faktura>
+  <FakturaCtrl>
+    <LiczbaFaktur>20</LiczbaFaktur>
+    <WartoscFaktur>20.20</WartoscFaktur>
+  </FakturaCtrl>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_7>Zwykły towar</P_7>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_8A>kg</P_8A>
+    <P_8B>2000</P_8B>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_9A>1900.03</P_9A>
+    <P_9B>2000.04</P_9B>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_10>2345.85</P_10>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_11>2352.74</P_11>
+    <P_11A>2345.84</P_11A>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_12>8</P_12>
+  </FakturaWiersz>
+  <FakturaWiersz>
+    <P_2B>5234/234522</P_2B>
+    <P_7>Zwykły towar</P_7>
+    <P_8A>kg</P_8A>
+    <P_8B>2000</P_8B>
+    <P_9A>1900.03</P_9A>
+    <P_9B>2000.04</P_9B>
+    <P_10>2345.85</P_10>
+    <P_11>2352.74</P_11>
+    <P_11A>2345.84</P_11A>
+    <P_12>8</P_12>
+  </FakturaWiersz>
+  <FakturaWierszCtrl>
+    <LiczbaWierszyFaktur>8</LiczbaWierszyFaktur>
+    <WartoscWierszyFaktur>4705.48</WartoscWierszyFaktur>
+  </FakturaWierszCtrl>
+</JPK>

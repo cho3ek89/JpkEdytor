@@ -23,6 +23,8 @@
 
         private string numerFaktury;
 
+        private bool numerFakturySpecified;
+
         private DateTime dataFaktury;
 
         private bool dataFakturySpecified;
@@ -111,6 +113,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool NumerFakturySpecified
+        {
+            get
+            {
+                return numerFakturySpecified;
+            }
+            set
+            {
+                numerFakturySpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "DataFaWZ", DataType = "date")]
         public DateTime DataFaktury
         {
@@ -122,7 +138,6 @@
             {
                 dataFaktury = value;
                 RaisePropertyChanged();
-                DataFakturySpecified = value != default(DateTime);
             }
         }
 

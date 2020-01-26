@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2017/11/13/1113/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</KodFormularza>
+    <WariantFormularza>3</WariantFormularza>
+    <CelZlozenia>0</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <NazwaSystemu>JpkEdytor</NazwaSystemu>
+  </Naglowek>
+  <Podmiot1>
+    <NIP>8117960116</NIP>
+    <PelnaNazwa>Zwyczajna Firma s.c.</PelnaNazwa>
+    <Email>firma@.mail.com</Email>
+  </Podmiot1>
+  <ZakupWiersz>
+    <LpZakupu>1</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <DataWplywu>2020-01-16</DataWplywu>
+  </ZakupWiersz>
+  <ZakupWiersz>
+    <LpZakupu>2</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <K_43>1</K_43>
+    <K_44>0</K_44>
+    <K_47>1</K_47>
+  </ZakupWiersz>
+  <ZakupWiersz>
+    <LpZakupu>3</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <DataWplywu>2020-01-16</DataWplywu>
+    <K_43>0</K_43>
+    <K_44>1</K_44>
+    <K_48>1</K_48>
+  </ZakupWiersz>
+  <ZakupWiersz>
+    <LpZakupu>4</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <K_45>1</K_45>
+    <K_46>0</K_46>
+    <K_49>1</K_49>
+  </ZakupWiersz>
+  <ZakupWiersz>
+    <LpZakupu>5</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <DataWplywu>2020-01-16</DataWplywu>
+    <K_45>0</K_45>
+    <K_46>1</K_46>
+    <K_50>1</K_50>
+  </ZakupWiersz>
+  <ZakupWiersz>
+    <LpZakupu>6</LpZakupu>
+    <NrDostawcy>7766756174</NrDostawcy>
+    <NazwaDostawcy>Jakaś tam firemka s.a.</NazwaDostawcy>
+    <AdresDostawcy>ul. Łazarska 67, 34-123 Pcim dolny</AdresDostawcy>
+    <DowodZakupu>45/63456</DowodZakupu>
+    <DataZakupu>2020-01-15</DataZakupu>
+    <DataWplywu>2020-01-16</DataWplywu>
+    <K_43>1.01</K_43>
+    <K_44>1.01</K_44>
+    <K_45>1.01</K_45>
+    <K_46>1.01</K_46>
+    <K_47>1.01</K_47>
+    <K_48>1.01</K_48>
+    <K_49>1.01</K_49>
+    <K_50>1.01</K_50>
+  </ZakupWiersz>
+  <ZakupCtrl>
+    <LiczbaWierszyZakupow>6</LiczbaWierszyZakupow>
+    <PodatekNaliczony>12.06</PodatekNaliczony>
+  </ZakupCtrl>
+</JPK>

@@ -43,9 +43,15 @@
 
         private string k16A;
 
+        private bool k16ASpecified;
+
         private decimal k16B;
 
+        private bool k16BSpecified;
+
         private string k17;
+
+        private bool k17Specified;
 
         private string typ;
 
@@ -278,6 +284,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_16ASpecified", DataType = "boolean")]
+        public bool K16ASpecified
+        {
+            get
+            {
+                return k16ASpecified;
+            }
+            set
+            {
+                k16ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "K_16B", DataType = "decimal")]
         public decimal K16B
         {
@@ -292,6 +313,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_16BSpecified", DataType = "boolean")]
+        public bool K16BSpecified
+        {
+            get
+            {
+                return k16BSpecified;
+            }
+            set
+            {
+                k16BSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "K_17", DataType = "token")]
         public string K17
         {
@@ -302,6 +338,21 @@
             set
             {
                 k17 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_17Specified", DataType = "boolean")]
+        public bool K17Specified
+        {
+            get
+            {
+                return k17Specified;
+            }
+            set
+            {
+                k17Specified = value;
                 RaisePropertyChanged();
             }
         }

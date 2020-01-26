@@ -30,6 +30,8 @@
 
         private string opisZapisuWinien;
 
+        private bool opisZapisuWinienSpecified;
+
         private string kodKontaMa;
 
         private decimal kwotaMa;
@@ -44,12 +46,16 @@
 
         private string opisZapisuMa;
 
+        private bool opisZapisuMaSpecified;
+
         private string typ;
 
         public KontoZapis()
         {
             KodKontaWinien = "null";
+            KodWalutyWinien = KodWalutyV30.PLN;
             KodKontaMa = "null";
+            KodWalutyMa = KodWalutyV30.PLN;
             Typ = "G";
         }
 
@@ -118,7 +124,6 @@
             {
                 kwotaWinienWaluta = value;
                 RaisePropertyChanged();
-                KwotaWinienWalutaSpecified = value != default(decimal);
             }
         }
 
@@ -146,7 +151,6 @@
             {
                 kodWalutyWinien = value;
                 RaisePropertyChanged();
-                KodWalutyWinienSpecified = value != default(KodWalutyV30);
             }
         }
 
@@ -174,6 +178,20 @@
             set
             {
                 opisZapisuWinien = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool OpisZapisuWinienSpecified
+        {
+            get
+            {
+                return opisZapisuWinienSpecified;
+            }
+            set
+            {
+                opisZapisuWinienSpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -215,7 +233,6 @@
             {
                 kwotaMaWaluta = value;
                 RaisePropertyChanged();
-                KwotaMaWalutaSpecified = value != default(decimal);
             }
         }
 
@@ -243,7 +260,6 @@
             {
                 kodWalutyMa = value;
                 RaisePropertyChanged();
-                KodWalutyMaSpecified = value != default(KodWalutyV30);
             }
         }
 
@@ -271,6 +287,20 @@
             set
             {
                 opisZapisuMa = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool OpisZapisuMaSpecified
+        {
+            get
+            {
+                return opisZapisuMaSpecified;
+            }
+            set
+            {
+                opisZapisuMaSpecified = value;
                 RaisePropertyChanged();
             }
         }

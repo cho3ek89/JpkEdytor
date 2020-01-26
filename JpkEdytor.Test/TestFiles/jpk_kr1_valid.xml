@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2016/03/09/03091/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_KR (1)" wersjaSchemy="1-0">JPK_KR</KodFormularza>
+    <WariantFormularza>1</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+      <REGON xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">357359470</REGON>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">PL</KodKraju>
+      <Wojewodztwo xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">dolnośląskie</Wojewodztwo>
+      <Powiat xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">wałbrzyski</Powiat>
+      <Gmina xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Gmina>
+      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Lipowa</Ulica>
+      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">1</NrDomu>
+      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8</NrLokalu>
+      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
+      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">58-302</KodPocztowy>
+      <Poczta xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Urząd pocztowy</Poczta>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <ZOiS typ="G">
+    <KodKonta>34/24222</KodKonta>
+    <OpisKonta>Konto firmowe</OpisKonta>
+    <TypKonta>Oszczędnościowe</TypKonta>
+    <KodZespolu>65/9858</KodZespolu>
+    <OpisZespolu>Zwykły opis</OpisZespolu>
+    <KodKategorii>235/67332</KodKategorii>
+    <OpisKategorii>Kategoria ABC</OpisKategorii>
+    <BilansOtwarciaWinien>12345.72</BilansOtwarciaWinien>
+    <BilansOtwarciaMa>3462.47</BilansOtwarciaMa>
+    <ObrotyWinien>32623.56</ObrotyWinien>
+    <ObrotyMa>2458.94</ObrotyMa>
+    <ObrotyWinienNarast>364769.83</ObrotyWinienNarast>
+    <ObrotyMaNarast>134733.43</ObrotyMaNarast>
+    <SaldoWinien>94373.84</SaldoWinien>
+    <SaldoMa>456679.34</SaldoMa>
+  </ZOiS>
+  <ZOiS typ="G">
+    <KodKonta>34/24222</KodKonta>
+    <OpisKonta>Konto firmowe</OpisKonta>
+    <TypKonta>Oszczędnościowe</TypKonta>
+    <KodZespolu>65/9858</KodZespolu>
+    <OpisZespolu>Zwykły opis</OpisZespolu>
+    <KodKategorii>235/67332</KodKategorii>
+    <OpisKategorii>Kategoria ABC</OpisKategorii>
+    <KodPodkategorii>362/834724</KodPodkategorii>
+    <BilansOtwarciaWinien>12345.72</BilansOtwarciaWinien>
+    <BilansOtwarciaMa>3462.47</BilansOtwarciaMa>
+    <ObrotyWinien>32623.56</ObrotyWinien>
+    <ObrotyMa>2458.94</ObrotyMa>
+    <ObrotyWinienNarast>364769.83</ObrotyWinienNarast>
+    <ObrotyMaNarast>134733.43</ObrotyMaNarast>
+    <SaldoWinien>94373.84</SaldoWinien>
+    <SaldoMa>456679.34</SaldoMa>
+  </ZOiS>
+  <ZOiS typ="G">
+    <KodKonta>34/24222</KodKonta>
+    <OpisKonta>Konto firmowe</OpisKonta>
+    <TypKonta>Oszczędnościowe</TypKonta>
+    <KodZespolu>65/9858</KodZespolu>
+    <OpisZespolu>Zwykły opis</OpisZespolu>
+    <KodKategorii>235/67332</KodKategorii>
+    <OpisKategorii>Kategoria ABC</OpisKategorii>
+    <OpisPodkategorii>73457/236260</OpisPodkategorii>
+    <BilansOtwarciaWinien>12345.72</BilansOtwarciaWinien>
+    <BilansOtwarciaMa>3462.47</BilansOtwarciaMa>
+    <ObrotyWinien>32623.56</ObrotyWinien>
+    <ObrotyMa>2458.94</ObrotyMa>
+    <ObrotyWinienNarast>364769.83</ObrotyWinienNarast>
+    <ObrotyMaNarast>134733.43</ObrotyMaNarast>
+    <SaldoWinien>94373.84</SaldoWinien>
+    <SaldoMa>456679.34</SaldoMa>
+  </ZOiS>
+  <ZOiS typ="G">
+    <KodKonta>34/24222</KodKonta>
+    <OpisKonta>Konto firmowe</OpisKonta>
+    <TypKonta>Oszczędnościowe</TypKonta>
+    <KodZespolu>65/9858</KodZespolu>
+    <OpisZespolu>Zwykły opis</OpisZespolu>
+    <KodKategorii>235/67332</KodKategorii>
+    <OpisKategorii>Kategoria ABC</OpisKategorii>
+    <KodPodkategorii>362/834724</KodPodkategorii>
+    <OpisPodkategorii>73457/236260</OpisPodkategorii>
+    <BilansOtwarciaWinien>12345.72</BilansOtwarciaWinien>
+    <BilansOtwarciaMa>3462.47</BilansOtwarciaMa>
+    <ObrotyWinien>32623.56</ObrotyWinien>
+    <ObrotyMa>2458.94</ObrotyMa>
+    <ObrotyWinienNarast>364769.83</ObrotyWinienNarast>
+    <ObrotyMaNarast>134733.43</ObrotyMaNarast>
+    <SaldoWinien>94373.84</SaldoWinien>
+    <SaldoMa>456679.34</SaldoMa>
+  </ZOiS>
+  <Dziennik typ="G">
+    <LpZapisuDziennika>2</LpZapisuDziennika>
+    <NrZapisuDziennika>45/4252</NrZapisuDziennika>
+    <OpisDziennika>Zwykły dziennik</OpisDziennika>
+    <NrDowoduKsiegowego>65/23622</NrDowoduKsiegowego>
+    <RodzajDowodu>Faktura</RodzajDowodu>
+    <DataOperacji>2020-01-25</DataOperacji>
+    <DataDowodu>2020-01-26</DataDowodu>
+    <DataKsiegowania>2020-01-27</DataKsiegowania>
+    <KodOperatora>xf5G3bi</KodOperatora>
+    <OpisOperacji>Zwykła operacja</OpisOperacji>
+    <DziennikKwotaOperacji>63463.84</DziennikKwotaOperacji>
+  </Dziennik>
+  <Dziennik typ="G">
+    <LpZapisuDziennika>2</LpZapisuDziennika>
+    <NrZapisuDziennika>45/4252</NrZapisuDziennika>
+    <OpisDziennika>Zwykły dziennik</OpisDziennika>
+    <NrDowoduKsiegowego>65/23622</NrDowoduKsiegowego>
+    <RodzajDowodu>Faktura</RodzajDowodu>
+    <DataOperacji>2020-01-25</DataOperacji>
+    <DataDowodu>2020-01-26</DataDowodu>
+    <DataKsiegowania>2020-01-27</DataKsiegowania>
+    <KodOperatora>xf5G3bi</KodOperatora>
+    <OpisOperacji>Zwykła operacja</OpisOperacji>
+    <DziennikKwotaOperacji>63463.84</DziennikKwotaOperacji>
+  </Dziennik>
+  <DziennikCtrl>
+    <LiczbaWierszyDziennika>2</LiczbaWierszyDziennika>
+    <SumaKwotOperacji>126927.68</SumaKwotOperacji>
+  </DziennikCtrl>
+  <KontoZapis typ="G">
+    <LpZapisu>1</LpZapisu>
+    <NrZapisu>235/23572</NrZapisu>
+    <KodKontaWinien>214123411234</KodKontaWinien>
+    <KwotaWinien>52354.63</KwotaWinien>
+    <KodKontaMa>6235462475</KodKontaMa>
+    <KwotaMa>3456.74</KwotaMa>
+  </KontoZapis>
+  <KontoZapis typ="G">
+    <LpZapisu>2</LpZapisu>
+    <NrZapisu>235/23572</NrZapisu>
+    <KodKontaWinien>214123411234</KodKontaWinien>
+    <KwotaWinien>52354.63</KwotaWinien>
+    <KwotaWinienWaluta>21000.33</KwotaWinienWaluta>
+    <KodWalutyWinien>AUD</KodWalutyWinien>
+    <KodKontaMa>6235462475</KodKontaMa>
+    <KwotaMa>3456.74</KwotaMa>
+    <OpisZapisuMa>Jakiś tam zapis po stronie 'ma'</OpisZapisuMa>
+  </KontoZapis>
+  <KontoZapis typ="G">
+    <LpZapisu>3</LpZapisu>
+    <NrZapisu>235/23572</NrZapisu>
+    <KodKontaWinien>214123411234</KodKontaWinien>
+    <KwotaWinien>52354.63</KwotaWinien>
+    <OpisZapisuWinien>Jakiś tam zapis po stronie 'winien'</OpisZapisuWinien>
+    <KodKontaMa>6235462475</KodKontaMa>
+    <KwotaMa>3456.74</KwotaMa>
+    <KwotaMaWaluta>15000.33</KwotaMaWaluta>
+    <KodWalutyMa>USD</KodWalutyMa>
+  </KontoZapis>
+  <KontoZapis typ="G">
+    <LpZapisu>4</LpZapisu>
+    <NrZapisu>235/23572</NrZapisu>
+    <KodKontaWinien>214123411234</KodKontaWinien>
+    <KwotaWinien>52354.63</KwotaWinien>
+    <KwotaWinienWaluta>21000.33</KwotaWinienWaluta>
+    <KodWalutyWinien>AUD</KodWalutyWinien>
+    <OpisZapisuWinien>Jakiś tam zapis po stronie 'winien'</OpisZapisuWinien>
+    <KodKontaMa>6235462475</KodKontaMa>
+    <KwotaMa>3456.74</KwotaMa>
+    <KwotaMaWaluta>15000.33</KwotaMaWaluta>
+    <KodWalutyMa>USD</KodWalutyMa>
+    <OpisZapisuMa>Jakiś tam zapis po stronie 'ma'</OpisZapisuMa>
+  </KontoZapis>
+  <KontoZapisCtrl>
+    <LiczbaWierszyKontoZapisj>4</LiczbaWierszyKontoZapisj>
+    <SumaWinien>209418.52</SumaWinien>
+    <SumaMa>13826.96</SumaMa>
+  </KontoZapisCtrl>
+</JPK>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2016/03/09/03093/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_MAG (1)" wersjaSchemy="1-0">JPK_MAG</KodFormularza>
+    <WariantFormularza>1</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+      <REGON xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">357359470</REGON>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">PL</KodKraju>
+      <Wojewodztwo xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">dolnośląskie</Wojewodztwo>
+      <Powiat xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">wałbrzyski</Powiat>
+      <Gmina xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Gmina>
+      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Lipowa</Ulica>
+      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">1</NrDomu>
+      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8</NrLokalu>
+      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
+      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">58-302</KodPocztowy>
+      <Poczta xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Urząd pocztowy</Poczta>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <Magazyn>Magazyn nr 14351</Magazyn>
+  <PZ>
+    <PZWartosc>
+      <NumerPZ>23451/15114</NumerPZ>
+      <DataPZ>2020-01-13</DataPZ>
+      <WartoscPZ>42352.84</WartoscPZ>
+      <DataOtrzymaniaPZ>2020-01-15</DataOtrzymaniaPZ>
+      <Dostawca>Firma ABC s.c.</Dostawca>
+    </PZWartosc>
+    <PZWartosc>
+      <NumerPZ>23451/15114</NumerPZ>
+      <DataPZ>2020-01-13</DataPZ>
+      <WartoscPZ>42352.84</WartoscPZ>
+      <DataOtrzymaniaPZ>2020-01-15</DataOtrzymaniaPZ>
+      <Dostawca>Firma ABC s.c.</Dostawca>
+      <NumerFaPZ>123414/73432</NumerFaPZ>
+    </PZWartosc>
+    <PZWartosc>
+      <NumerPZ>23451/15114</NumerPZ>
+      <DataPZ>2020-01-13</DataPZ>
+      <WartoscPZ>42352.84</WartoscPZ>
+      <DataOtrzymaniaPZ>2020-01-15</DataOtrzymaniaPZ>
+      <Dostawca>Firma ABC s.c.</Dostawca>
+      <DataFaPZ>2020-01-17</DataFaPZ>
+    </PZWartosc>
+    <PZWartosc>
+      <NumerPZ>23451/15114</NumerPZ>
+      <DataPZ>2020-01-13</DataPZ>
+      <WartoscPZ>42352.84</WartoscPZ>
+      <DataOtrzymaniaPZ>2020-01-15</DataOtrzymaniaPZ>
+      <Dostawca>Firma ABC s.c.</Dostawca>
+      <NumerFaPZ>123414/73432</NumerFaPZ>
+      <DataFaPZ>2020-01-17</DataFaPZ>
+    </PZWartosc>
+    <PZWiersz>
+      <Numer2PZ>23451/15114</Numer2PZ>
+      <NazwaTowaruPZ>piwo</NazwaTowaruPZ>
+      <IloscPrzyjetaPZ>4145.71</IloscPrzyjetaPZ>
+      <JednostkaMiaryPZ>litr</JednostkaMiaryPZ>
+      <CenaJednPZ>3.52</CenaJednPZ>
+      <WartoscPozycjiPZ>0.36</WartoscPozycjiPZ>
+    </PZWiersz>
+    <PZWiersz>
+      <Numer2PZ>23451/15114</Numer2PZ>
+      <KodTowaruPZ>2345233</KodTowaruPZ>
+      <NazwaTowaruPZ>piwo</NazwaTowaruPZ>
+      <IloscPrzyjetaPZ>4145.71</IloscPrzyjetaPZ>
+      <JednostkaMiaryPZ>litr</JednostkaMiaryPZ>
+      <CenaJednPZ>3.52</CenaJednPZ>
+      <WartoscPozycjiPZ>0.36</WartoscPozycjiPZ>
+    </PZWiersz>
+    <PZCtrl>
+      <LiczbaPZ>4</LiczbaPZ>
+      <SumaPZ>169411.36</SumaPZ>
+    </PZCtrl>
+  </PZ>
+  <RW>
+    <RWWartosc>
+      <NumerRW>23451/15114</NumerRW>
+      <DataRW>2020-01-13</DataRW>
+      <WartoscRW>42352.84</WartoscRW>
+      <DataWydaniaRW>2020-01-15</DataWydaniaRW>
+    </RWWartosc>
+    <RWWartosc>
+      <NumerRW>23451/15114</NumerRW>
+      <DataRW>2020-01-13</DataRW>
+      <WartoscRW>42352.84</WartoscRW>
+      <DataWydaniaRW>2020-01-15</DataWydaniaRW>
+      <SkadRW>Sanok</SkadRW>
+    </RWWartosc>
+    <RWWartosc>
+      <NumerRW>23451/15114</NumerRW>
+      <DataRW>2020-01-13</DataRW>
+      <WartoscRW>42352.84</WartoscRW>
+      <DataWydaniaRW>2020-01-15</DataWydaniaRW>
+      <DokadRW>Rawicz</DokadRW>
+    </RWWartosc>
+    <RWWartosc>
+      <NumerRW>23451/15114</NumerRW>
+      <DataRW>2020-01-13</DataRW>
+      <WartoscRW>42352.84</WartoscRW>
+      <DataWydaniaRW>2020-01-15</DataWydaniaRW>
+      <SkadRW>Sanok</SkadRW>
+      <DokadRW>Rawicz</DokadRW>
+    </RWWartosc>
+    <RWWiersz>
+      <Numer2RW>23451/15114</Numer2RW>
+      <NazwaTowaruRW>piwo</NazwaTowaruRW>
+      <IloscWydanaRW>4145.71</IloscWydanaRW>
+      <JednostkaMiaryRW>litr</JednostkaMiaryRW>
+      <CenaJednRW>3.52</CenaJednRW>
+      <WartoscPozycjiRW>0.36</WartoscPozycjiRW>
+    </RWWiersz>
+    <RWWiersz>
+      <Numer2RW>23451/15114</Numer2RW>
+      <KodTowaruRW>2345233</KodTowaruRW>
+      <NazwaTowaruRW>piwo</NazwaTowaruRW>
+      <IloscWydanaRW>4145.71</IloscWydanaRW>
+      <JednostkaMiaryRW>litr</JednostkaMiaryRW>
+      <CenaJednRW>3.52</CenaJednRW>
+      <WartoscPozycjiRW>0.36</WartoscPozycjiRW>
+    </RWWiersz>
+    <RWCtrl>
+      <LiczbaRW>4</LiczbaRW>
+      <SumaRW>169411.36</SumaRW>
+    </RWCtrl>
+  </RW>
+  <MM>
+    <MMWartosc>
+      <NumerMM>23451/15114</NumerMM>
+      <DataMM>2020-01-13</DataMM>
+      <WartoscMM>42352.84</WartoscMM>
+      <DataWydaniaMM>2020-01-15</DataWydaniaMM>
+    </MMWartosc>
+    <MMWartosc>
+      <NumerMM>23451/15114</NumerMM>
+      <DataMM>2020-01-13</DataMM>
+      <WartoscMM>42352.84</WartoscMM>
+      <DataWydaniaMM>2020-01-15</DataWydaniaMM>
+      <SkadMM>Sanok</SkadMM>
+    </MMWartosc>
+    <MMWartosc>
+      <NumerMM>23451/15114</NumerMM>
+      <DataMM>2020-01-13</DataMM>
+      <WartoscMM>42352.84</WartoscMM>
+      <DataWydaniaMM>2020-01-15</DataWydaniaMM>
+      <DokadMM>Rawicz</DokadMM>
+    </MMWartosc>
+    <MMWartosc>
+      <NumerMM>23451/15114</NumerMM>
+      <DataMM>2020-01-13</DataMM>
+      <WartoscMM>42352.84</WartoscMM>
+      <DataWydaniaMM>2020-01-15</DataWydaniaMM>
+      <SkadMM>Sanok</SkadMM>
+      <DokadMM>Rawicz</DokadMM>
+    </MMWartosc>
+    <MMWiersz>
+      <Numer2MM>23451/15114</Numer2MM>
+      <NazwaTowaruMM>piwo</NazwaTowaruMM>
+      <IloscWydanaMM>4145.71</IloscWydanaMM>
+      <JednostkaMiaryMM>litr</JednostkaMiaryMM>
+      <CenaJednMM>3.52</CenaJednMM>
+      <WartoscPozycjiMM>0.36</WartoscPozycjiMM>
+    </MMWiersz>
+    <MMWiersz>
+      <Numer2MM>23451/15114</Numer2MM>
+      <KodTowaruMM>2345233</KodTowaruMM>
+      <NazwaTowaruMM>piwo</NazwaTowaruMM>
+      <IloscWydanaMM>4145.71</IloscWydanaMM>
+      <JednostkaMiaryMM>litr</JednostkaMiaryMM>
+      <CenaJednMM>3.52</CenaJednMM>
+      <WartoscPozycjiMM>0.36</WartoscPozycjiMM>
+    </MMWiersz>
+    <MMCtrl>
+      <LiczbaMM>4</LiczbaMM>
+      <SumaMM>169411.36</SumaMM>
+    </MMCtrl>
+  </MM>
+</JPK>

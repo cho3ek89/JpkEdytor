@@ -15,7 +15,11 @@
 
         private string p7;
 
+        private bool p7Specified;
+
         private string p8A;
+
+        private bool p8ASpecified;
 
         private decimal p8B;
 
@@ -80,6 +84,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "P_7Specified")]
+        public bool P7Specified
+        {
+            get
+            {
+                return p7Specified;
+            }
+            set
+            {
+                p7Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "P_8A", DataType = "token")]
         public string P8A
         {
@@ -94,6 +113,22 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "P_8ASpecified")]
+        public bool P8ASpecified
+        {
+            get
+            {
+                return p8ASpecified;
+            }
+            set
+            {
+                p8ASpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlElement(ElementName = "P_8B")]
         public decimal P8B
         {
             get
@@ -104,7 +139,6 @@
             {
                 p8B = value;
                 RaisePropertyChanged();
-                P8BSpecified = value != default(decimal);
             }
         }
 
@@ -123,6 +157,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_9A")]
         public decimal P9A
         {
             get
@@ -133,7 +168,6 @@
             {
                 p9A = value;
                 RaisePropertyChanged();
-                P9ASpecified = value != default(decimal);
             }
         }
 
@@ -152,6 +186,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_9B")]
         public decimal P9B
         {
             get
@@ -162,7 +197,6 @@
             {
                 p9B = value;
                 RaisePropertyChanged();
-                P9BSpecified = value != default(decimal);
             }
         }
 
@@ -181,6 +215,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_10")]
         public decimal P10
         {
             get
@@ -191,7 +226,6 @@
             {
                 p10 = value;
                 RaisePropertyChanged();
-                P10Specified = value != default(decimal);
             }
         }
 
@@ -210,6 +244,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_11")]
         public decimal P11
         {
             get
@@ -220,7 +255,6 @@
             {
                 p11 = value;
                 RaisePropertyChanged();
-                P11Specified = value != default(decimal);
             }
         }
 
@@ -239,6 +273,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_11A")]
         public decimal P11A
         {
             get
@@ -249,7 +284,6 @@
             {
                 p11A = value;
                 RaisePropertyChanged();
-                P11ASpecified = value != default(decimal);
             }
         }
 
@@ -268,6 +302,7 @@
             }
         }
 
+        [XmlElement(ElementName = "P_12")]
         public StawkaPodatku P12
         {
             get
@@ -278,7 +313,6 @@
             {
                 p12 = value;
                 RaisePropertyChanged();
-                P12Specified = value != default(StawkaPodatku);
             }
         }
 

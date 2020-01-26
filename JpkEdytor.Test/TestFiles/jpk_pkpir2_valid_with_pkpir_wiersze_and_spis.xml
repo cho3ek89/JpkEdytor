@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2016/10/26/10262/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_PKPIR (2)" wersjaSchemy="1-0">JPK_PKPIR</KodFormularza>
+    <WariantFormularza>2</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>2434</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8117960116</NIP>
+      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+      <REGON xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">357359470</REGON>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <KodKraju>PL</KodKraju>
+      <Wojewodztwo>dolnośląskie</Wojewodztwo>
+      <Powiat>wałbrzyski</Powiat>
+      <Gmina>Wałbrzych</Gmina>
+      <Ulica>Lipowa</Ulica>
+      <NrDomu>1</NrDomu>
+      <NrLokalu>8</NrLokalu>
+      <Miejscowosc>Wałbrzych</Miejscowosc>
+      <KodPocztowy>58-302</KodPocztowy>
+      <Poczta>Urząd pocztowy</Poczta>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <PKPIRInfo>
+    <P_1>1.01</P_1>
+    <P_2>2.02</P_2>
+    <P_3>3.03</P_3>
+    <P_4>4.04</P_4>
+  </PKPIRInfo>
+  <PKPIRSpis typ="G">
+    <P_5A>2020-01-13</P_5A>
+    <P_5B>123.45</P_5B>
+  </PKPIRSpis>
+  <PKPIRWiersz typ="G">
+    <K_1>1</K_1>
+    <K_2>2020-01-01</K_2>
+    <K_3>75/5446</K_3>
+    <K_4>Firma krzak s.c.</K_4>
+    <K_5>ul. Maślana 45/234, 56-123 Jagodnik</K_5>
+    <K_6>Zdarzenie gospodarcze ???</K_6>
+    <K_7>1234.52</K_7>
+    <K_8>334.38</K_8>
+    <K_9>3832.68</K_9>
+    <K_10>8322.39</K_10>
+    <K_11>1245475.71</K_11>
+    <K_12>84563.44</K_12>
+    <K_13>56362.02</K_13>
+    <K_14>15.72</K_14>
+    <K_15>943.34</K_15>
+  </PKPIRWiersz>
+  <PKPIRWiersz typ="G">
+    <K_1>2</K_1>
+    <K_2>2020-01-01</K_2>
+    <K_3>75/5446</K_3>
+    <K_4>Firma krzak s.c.</K_4>
+    <K_5>ul. Maślana 45/234, 56-123 Jagodnik</K_5>
+    <K_6>Zdarzenie gospodarcze ???</K_6>
+    <K_7>1234.52</K_7>
+    <K_8>334.38</K_8>
+    <K_9>3832.68</K_9>
+    <K_10>8322.39</K_10>
+    <K_11>1245475.71</K_11>
+    <K_12>84563.44</K_12>
+    <K_13>56362.02</K_13>
+    <K_14>15.72</K_14>
+    <K_15>943.34</K_15>
+    <K_17>Uwagi</K_17>
+  </PKPIRWiersz>
+  <PKPIRWiersz typ="G">
+    <K_1>3</K_1>
+    <K_2>2020-01-01</K_2>
+    <K_3>75/5446</K_3>
+    <K_4>Firma krzak s.c.</K_4>
+    <K_5>ul. Maślana 45/234, 56-123 Jagodnik</K_5>
+    <K_6>Zdarzenie gospodarcze ???</K_6>
+    <K_7>1234.52</K_7>
+    <K_8>334.38</K_8>
+    <K_9>3832.68</K_9>
+    <K_10>8322.39</K_10>
+    <K_11>1245475.71</K_11>
+    <K_12>84563.44</K_12>
+    <K_13>56362.02</K_13>
+    <K_14>15.72</K_14>
+    <K_15>943.34</K_15>
+    <K_16A>Standardowy koszt</K_16A>
+    <K_16B>0</K_16B>
+  </PKPIRWiersz>
+  <PKPIRWiersz typ="G">
+    <K_1>4</K_1>
+    <K_2>2020-01-01</K_2>
+    <K_3>75/5446</K_3>
+    <K_4>Firma krzak s.c.</K_4>
+    <K_5>ul. Maślana 45/234, 56-123 Jagodnik</K_5>
+    <K_6>Zdarzenie gospodarcze ???</K_6>
+    <K_7>1234.52</K_7>
+    <K_8>334.38</K_8>
+    <K_9>3832.68</K_9>
+    <K_10>8322.39</K_10>
+    <K_11>1245475.71</K_11>
+    <K_12>84563.44</K_12>
+    <K_13>56362.02</K_13>
+    <K_14>15.72</K_14>
+    <K_15>943.34</K_15>
+    <K_16A>Standardowy koszt</K_16A>
+    <K_16B>5252.87</K_16B>
+    <K_17>Uwagi</K_17>
+  </PKPIRWiersz>
+  <PKPIRCtrl>
+    <LiczbaWierszy>4</LiczbaWierszy>
+    <SumaPrzychodow>15330.72</SumaPrzychodow>
+  </PKPIRCtrl>
+</JPK>

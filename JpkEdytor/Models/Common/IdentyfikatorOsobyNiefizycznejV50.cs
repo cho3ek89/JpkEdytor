@@ -17,6 +17,8 @@
 
         private string regon;
 
+        private bool regonSpecified;
+
         [XmlElement(ElementName = "NIP", DataType = "token")]
         public string Nip
         {
@@ -55,6 +57,21 @@
             set
             {
                 regon = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        [XmlElement(ElementName = "REGONSpecified", DataType = "boolean")]
+        public bool RegonSpecified
+        {
+            get
+            {
+                return regonSpecified;
+            }
+            set
+            {
+                regonSpecified = value;
                 RaisePropertyChanged();
             }
         }

@@ -29,11 +29,19 @@
 
         private decimal k43;
 
+        private bool k43Specified;
+
         private decimal k44;
+
+        private bool k44Specified;
 
         private decimal k45;
 
+        private bool k45Specified;
+
         private decimal k46;
+
+        private bool k46Specified;
 
         private decimal k47;
 
@@ -145,7 +153,6 @@
             {
                 dataWplywu = value;
                 RaisePropertyChanged();
-                DataWplywuSpecified = value != default(DateTime);
             }
         }
 
@@ -177,6 +184,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_43Specified", DataType = "boolean")]
+        public bool K43Specified
+        {
+            get
+            {
+                return k43Specified;
+            }
+            set
+            {
+                k43Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "K_44", DataType = "decimal")]
         public decimal K44
         {
@@ -187,6 +209,21 @@
             set
             {
                 k44 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_44Specified", DataType = "boolean")]
+        public bool K44Specified
+        {
+            get
+            {
+                return k44Specified;
+            }
+            set
+            {
+                k44Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -205,6 +242,21 @@
             }
         }
 
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_45Specified", DataType = "boolean")]
+        public bool K45Specified
+        {
+            get
+            {
+                return k45Specified;
+            }
+            set
+            {
+                k45Specified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(ElementName = "K_46", DataType = "decimal")]
         public decimal K46
         {
@@ -215,6 +267,21 @@
             set
             {
                 k46 = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        [XmlElement(ElementName = "K_46Specified", DataType = "boolean")]
+        public bool K46Specified
+        {
+            get
+            {
+                return k46Specified;
+            }
+            set
+            {
+                k46Specified = value;
                 RaisePropertyChanged();
             }
         }
@@ -230,7 +297,6 @@
             {
                 k47 = value;
                 RaisePropertyChanged();
-                K47Specified = value != default(decimal);
             }
         }
 
@@ -260,7 +326,6 @@
             {
                 k48 = value;
                 RaisePropertyChanged();
-                K48Specified = value != default(decimal);
             }
         }
 
@@ -290,7 +355,6 @@
             {
                 k49 = value;
                 RaisePropertyChanged();
-                K49Specified = value != default(decimal);
             }
         }
 
@@ -320,7 +384,6 @@
             {
                 k50 = value;
                 RaisePropertyChanged();
-                K50Specified = value != default(decimal);
             }
         }
 

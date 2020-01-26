@@ -15,13 +15,21 @@
 
         private string kodPocztowy;
 
+        private bool kodPocztowySpecified;
+
         private string miejscowosc;
 
         private string ulica;
 
+        private bool ulicaSpecified;
+
         private string nrDomu;
 
+        private bool nrDomuSpecified;
+
         private string nrLokalu;
+
+        private bool nrLokaluSpecified;
 
         public KodKrajuV50 KodKraju
         {
@@ -46,6 +54,20 @@
             set
             {
                 kodPocztowy = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool KodPocztowySpecified
+        {
+            get
+            {
+                return kodPocztowySpecified;
+            }
+            set
+            {
+                kodPocztowySpecified = value;
                 RaisePropertyChanged();
             }
         }
@@ -78,6 +100,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool UlicaSpecified
+        {
+            get
+            {
+                return ulicaSpecified;
+            }
+            set
+            {
+                ulicaSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrDomu
         {
@@ -92,6 +128,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool NrDomuSpecified
+        {
+            get
+            {
+                return nrDomuSpecified;
+            }
+            set
+            {
+                nrDomuSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string NrLokalu
         {
@@ -102,6 +152,20 @@
             set
             {
                 nrLokalu = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool NrLokaluSpecified
+        {
+            get
+            {
+                return nrLokaluSpecified;
+            }
+            set
+            {
+                nrLokaluSpecified = value;
                 RaisePropertyChanged();
             }
         }

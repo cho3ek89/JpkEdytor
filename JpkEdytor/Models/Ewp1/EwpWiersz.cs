@@ -209,7 +209,6 @@
             {
                 k12 = value;
                 RaisePropertyChanged();
-                K12Specified = value != default(DateTime);
             }
         }
 

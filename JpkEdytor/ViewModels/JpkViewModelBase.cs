@@ -52,7 +52,17 @@
             await Task.Run(() => 
             {
                 var doc = GetSerializedDocument();
-                doc.Save(fullFilePath);
+
+                var xmlWriterSettings = new XmlWriterSettings
+                {
+                    Indent = true,
+                    Encoding = new UTF8Encoding(false)
+                };
+
+                using (var xmlWriter = XmlWriter.Create(fullFilePath, xmlWriterSettings))
+                {
+                    doc.Save(xmlWriter);
+                }
             });
         }
 
@@ -74,7 +84,7 @@
 
         protected virtual XDocument GetSerializedDocument()
         {
-            UpdateCrtls();
+            UpdateBeforeSerialization();
 
             var serializer = new XmlSerializer(typeof(T));
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", null));
@@ -98,10 +108,19 @@
             return schemaSet;
         }
 
-        protected abstract void UpdateCrtls();
+        /// <summary>
+        /// Updates <see cref="Jpk"/> before serialization.
+        /// </summary>
+        /// <remarks>
+        /// Can be used to sets up specified fields, indexes, CRTL's etc.
+        /// </remarks>
+        protected abstract void UpdateBeforeSerialization();
 
         protected static bool IsDefaultValue<Type>(Type obj)
         {
+            if (typeof(Type) == typeof(string))
+                return string.IsNullOrEmpty(obj?.ToString());
+
             return obj.Equals(default(Type));
         }
     }

@@ -27,7 +27,11 @@
 
         private string kodPodkategorii;
 
+        private bool kodPodkategoriiSpecified;
+
         private string opisPodkategorii;
+
+        private bool opisPodkategoriiSpecified;
 
         private decimal bilansOtwarciaWinien;
 
@@ -164,6 +168,20 @@
             }
         }
 
+        [XmlIgnore]
+        public bool KodPodkategoriiSpecified
+        {
+            get
+            {
+                return kodPodkategoriiSpecified;
+            }
+            set
+            {
+                kodPodkategoriiSpecified = value;
+                RaisePropertyChanged();
+            }
+        }
+
         [XmlElement(DataType = "token")]
         public string OpisPodkategorii
         {
@@ -174,6 +192,20 @@
             set
             {
                 opisPodkategorii = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        [XmlIgnore]
+        public bool OpisPodkategoriiSpecified
+        {
+            get
+            {
+                return opisPodkategoriiSpecified;
+            }
+            set
+            {
+                opisPodkategoriiSpecified = value;
                 RaisePropertyChanged();
             }
         }

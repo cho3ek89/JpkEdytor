@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2017/11/13/1113/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</KodFormularza>
+    <WariantFormularza>3</WariantFormularza>
+    <CelZlozenia>0</CelZlozenia>
+    <DataWytworzeniaJPK>2020-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2020-01-01</DataOd>
+    <DataDo>2020-01-31</DataDo>
+    <NazwaSystemu>JpkEdytor</NazwaSystemu>
+  </Naglowek>
+  <Podmiot1>
+    <NIP>8117960116</NIP>
+    <PelnaNazwa>Zwyczajna Firma s.c.</PelnaNazwa>
+    <Email>firma@.mail.com</Email>
+  </Podmiot1>
+</JPK>
