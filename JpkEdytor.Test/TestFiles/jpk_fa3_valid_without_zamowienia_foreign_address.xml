@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2019/09/27/09271/">
+<JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/" xmlns="http://jpk.mf.gov.pl/wzor/2019/09/27/09271/">
   <Naglowek>
     <KodFormularza kodSystemowy="JPK_FA (3)" wersjaSchemy="1-0">JPK_FA</KodFormularza>
     <WariantFormularza>3</WariantFormularza>
@@ -11,16 +11,16 @@
   </Naglowek>
   <Podmiot1>
     <IdentyfikatorPodmiotu>
-      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8117960116</NIP>
-      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
+      <etd:NIP>8117960116</etd:NIP>
+      <etd:PelnaNazwa>Zwyczajna Firma s.c.</etd:PelnaNazwa>
     </IdentyfikatorPodmiotu>
     <AdresPodmiotu2>
-      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">ES</KodKraju>
-      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">28001</KodPocztowy>
-      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
-      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">Gran Vía</Ulica>
-      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">1</NrDomu>
-      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/">8</NrLokalu>
+      <etd:KodKraju>ES</etd:KodKraju>
+      <etd:KodPocztowy>28001</etd:KodPocztowy>
+      <etd:Miejscowosc>Wałbrzych</etd:Miejscowosc>
+      <etd:Ulica>Gran Vía</etd:Ulica>
+      <etd:NrDomu>1</etd:NrDomu>
+      <etd:NrLokalu>8</etd:NrLokalu>
     </AdresPodmiotu2>
   </Podmiot1>
   <Faktura>

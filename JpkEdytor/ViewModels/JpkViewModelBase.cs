@@ -31,6 +31,8 @@
 
         protected string schemaFileName;
 
+        protected string etdNamespace;
+
         public virtual async Task LoadFromFile(string fullFilePath)
         {
             await Task.Run(() =>
@@ -91,10 +93,20 @@
 
             using (var xmlWriter = doc.CreateWriter())
             {
-                serializer.Serialize(xmlWriter, Jpk);
+                var xmlNamespaces = GetXmlNamespaces();
+
+                serializer.Serialize(xmlWriter, Jpk, xmlNamespaces);
             }
 
             return doc;
+        }
+
+        protected virtual XmlSerializerNamespaces GetXmlNamespaces()
+        {
+            var xmlNamespaces = new XmlSerializerNamespaces();
+            xmlNamespaces.Add("etd", etdNamespace);
+
+            return xmlNamespaces;
         }
 
         protected virtual XmlSchemaSet GetSchemaSet()

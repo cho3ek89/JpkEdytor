@@ -14,6 +14,7 @@
             Jpk = new Jpk();
 
             schemaFileName = @"Schemat_JPK_MAG(1)_v1-0.xsd";
+            etdNamespace = @"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/";
         }
 
         protected override void UpdateBeforeSerialization()

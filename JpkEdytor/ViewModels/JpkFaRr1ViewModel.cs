@@ -26,6 +26,7 @@
             };
 
             schemaFileName = @"Schemat_JPK_FA_RR(1)_v1-0.xsd";
+            etdNamespace = @"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/";
         }
 
         protected override void UpdateBeforeSerialization()

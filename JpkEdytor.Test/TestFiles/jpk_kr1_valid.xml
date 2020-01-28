@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jpk.mf.gov.pl/wzor/2016/03/09/03091/">
+<JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/" xmlns="http://jpk.mf.gov.pl/wzor/2016/03/09/03091/">
   <Naglowek>
     <KodFormularza kodSystemowy="JPK_KR (1)" wersjaSchemy="1-0">JPK_KR</KodFormularza>
     <WariantFormularza>1</WariantFormularza>
@@ -12,21 +12,21 @@
   </Naglowek>
   <Podmiot1>
     <IdentyfikatorPodmiotu>
-      <NIP xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8117960116</NIP>
-      <PelnaNazwa xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Zwyczajna Firma s.c.</PelnaNazwa>
-      <REGON xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">357359470</REGON>
+      <etd:NIP>8117960116</etd:NIP>
+      <etd:PelnaNazwa>Zwyczajna Firma s.c.</etd:PelnaNazwa>
+      <etd:REGON>357359470</etd:REGON>
     </IdentyfikatorPodmiotu>
     <AdresPodmiotu>
-      <KodKraju xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">PL</KodKraju>
-      <Wojewodztwo xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">dolnośląskie</Wojewodztwo>
-      <Powiat xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">wałbrzyski</Powiat>
-      <Gmina xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Gmina>
-      <Ulica xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Lipowa</Ulica>
-      <NrDomu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">1</NrDomu>
-      <NrLokalu xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">8</NrLokalu>
-      <Miejscowosc xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Wałbrzych</Miejscowosc>
-      <KodPocztowy xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">58-302</KodPocztowy>
-      <Poczta xmlns="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/">Urząd pocztowy</Poczta>
+      <etd:KodKraju>PL</etd:KodKraju>
+      <etd:Wojewodztwo>dolnośląskie</etd:Wojewodztwo>
+      <etd:Powiat>wałbrzyski</etd:Powiat>
+      <etd:Gmina>Wałbrzych</etd:Gmina>
+      <etd:Ulica>Lipowa</etd:Ulica>
+      <etd:NrDomu>1</etd:NrDomu>
+      <etd:NrLokalu>8</etd:NrLokalu>
+      <etd:Miejscowosc>Wałbrzych</etd:Miejscowosc>
+      <etd:KodPocztowy>58-302</etd:KodPocztowy>
+      <etd:Poczta>Urząd pocztowy</etd:Poczta>
     </AdresPodmiotu>
   </Podmiot1>
   <ZOiS typ="G">
@@ -102,7 +102,7 @@
     <SaldoMa>456679.34</SaldoMa>
   </ZOiS>
   <Dziennik typ="G">
-    <LpZapisuDziennika>2</LpZapisuDziennika>
+    <LpZapisuDziennika>1</LpZapisuDziennika>
     <NrZapisuDziennika>45/4252</NrZapisuDziennika>
     <OpisDziennika>Zwykły dziennik</OpisDziennika>
     <NrDowoduKsiegowego>65/23622</NrDowoduKsiegowego>

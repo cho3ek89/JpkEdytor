@@ -76,10 +76,8 @@
 
         private static void AppendDziennik(Jpk jpk)
         {
-            var d = GetDziennikTemplate();
-
-            jpk.Dziennik.Add(d);
-            jpk.Dziennik.Add(d);
+            jpk.Dziennik.Add(GetDziennikTemplate());
+            jpk.Dziennik.Add(GetDziennikTemplate());
         }
 
         private static void AppendKontoZapisy(Jpk jpk)
