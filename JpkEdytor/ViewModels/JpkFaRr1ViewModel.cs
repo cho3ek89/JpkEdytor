@@ -1,10 +1,10 @@
 ﻿namespace JpkEdytor.ViewModels
 {
     using System.Collections.ObjectModel;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using Helpers.CsvImporter;
+    using Helpers.JpkModelUpdater;
     using Models.Common;
     using Models.FaRr1;
 
@@ -27,71 +27,8 @@
 
             schemaFileName = @"Schemat_JPK_FA_RR(1)_v1-0.xsd";
             etdNamespace = @"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/";
-        }
 
-        protected override void UpdateBeforeSerialization()
-        {
-            UpdatePodmiot();
-            UpdateFakturaRr();
-            UpdateCrtls();
-        }
-
-        private void UpdatePodmiot()
-        {
-            if (Jpk.Podmiot != null && Jpk.Podmiot.AdresPodmiotu != null)
-            {
-                Jpk.Podmiot.AdresPodmiotu.UlicaSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.Ulica);
-                Jpk.Podmiot.AdresPodmiotu.NrLokaluSpecified = !IsDefaultValue(Jpk.Podmiot.AdresPodmiotu.NrLokalu);
-            }
-        }
-
-        private void UpdateFakturaRr()
-        {
-            foreach (var fakturaRr in Jpk?.FakturaRr)
-            {
-                var areFaKorSpecified = fakturaRr.RodzajFaktury == RodzajFaktury.Korekta;
-
-                fakturaRr.PrzyczynaKorektySpecified = areFaKorSpecified;
-                fakturaRr.NrFaKorygowanejSpecified = areFaKorSpecified;
-                fakturaRr.OkresFaKorygowanejSpecified = areFaKorSpecified && !IsDefaultValue(fakturaRr.OkresFaKorygowanej);
-
-                fakturaRr.DokumentSpecified = !IsDefaultValue(fakturaRr.Dokument);
-            }
-        }
-
-        private void UpdateCrtls()
-        {
-            if (Jpk.FakturaRr == null || Jpk.FakturaRr.Count == 0)
-                Jpk.FakturaRrCtrl = null;
-            else
-            {
-                Jpk.FakturaRrCtrl = new FakturaRrCtrl
-                {
-                    LiczbaFakturRr = Jpk.FakturaRr.Count.ToString(),
-                    WartoscFakturRr = Jpk.FakturaRr.Sum(s => s.P12_1)
-                };
-            }
-
-            if (Jpk.FakturaRrWiersz == null || Jpk.FakturaRrWiersz.Count == 0)
-                Jpk.FakturaRrWierszCtrl = null;
-            else
-            {
-                Jpk.FakturaRrWierszCtrl = new FakturaRrWierszCtrl
-                {
-                    LiczbaWierszyFakturRr = Jpk.FakturaRrWiersz.Count.ToString(),
-                    WartoscWierszyFakturRr = Jpk.FakturaRrWiersz.Sum(s => s.P8)
-                };
-            }
-
-            if (Jpk.Oswiadczenie == null || Jpk.Oswiadczenie.Count == 0)
-                Jpk.OswiadczenieCtrl = null;
-            else
-            {
-                Jpk.OswiadczenieCtrl = new OswiadczenieCtrl
-                {
-                    LiczbaOswiadczen = Jpk.Oswiadczenie.Count.ToString()
-                };
-            }
+            jpkModelUpdater = new JpkFaRr1ModelUpdater();
         }
 
         public async Task ImportFakturaRrFromCsv(string fullFilePath)

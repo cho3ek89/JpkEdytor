@@ -10,6 +10,7 @@
 
     using Framework;
     using Helpers;
+    using Helpers.JpkModelUpdater;
     using Models;
 
     public abstract class JpkViewModelBase<T> : NotifyPropertyChanged, IJpkViewModel<T> where T : IJpk
@@ -32,6 +33,8 @@
         protected string schemaFileName;
 
         protected string etdNamespace;
+
+        protected IJpkModelUpdater<T> jpkModelUpdater;
 
         public virtual async Task LoadFromFile(string fullFilePath)
         {
@@ -120,20 +123,9 @@
             return schemaSet;
         }
 
-        /// <summary>
-        /// Updates <see cref="Jpk"/> before serialization.
-        /// </summary>
-        /// <remarks>
-        /// Can be used to sets up specified fields, indexes, CRTL's etc.
-        /// </remarks>
-        protected abstract void UpdateBeforeSerialization();
-
-        protected static bool IsDefaultValue<Type>(Type obj)
+        protected virtual void UpdateBeforeSerialization()
         {
-            if (typeof(Type) == typeof(string))
-                return string.IsNullOrEmpty(obj?.ToString());
-
-            return obj.Equals(default(Type));
+            jpkModelUpdater.UpdateJpk(Jpk);
         }
     }
 }

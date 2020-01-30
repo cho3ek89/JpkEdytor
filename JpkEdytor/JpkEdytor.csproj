@@ -64,6 +64,17 @@
     <Compile Include="Helpers\CsvImporter\CsvImporterColumnMap.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporterColumnMapFactory.cs" />
     <Compile Include="Helpers\DateUtils.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\IJpkModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkEwp1ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkFa2ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkFa3ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkFaRr1ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkKr1ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkMag1ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkPkpir2ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkVat3ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkWb1ModelUpdater.cs" />
     <Compile Include="Models\Common\AdresPolski1V50.cs" />
     <Compile Include="Models\Common\AdresZagranicznyV50.cs" />
     <Compile Include="Models\Common\IdentyfikatorOsobyNiefizycznej1V50.cs" />
