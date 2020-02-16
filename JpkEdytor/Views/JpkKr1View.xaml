@@ -36,10 +36,10 @@
             </ScrollViewer>
         </TabItem>
         <TabItem Header="ZOiS">
-			<DataGrid
+            <DataGrid
 				Style="{StaticResource DataGridStyle}"
 				ItemsSource="{Binding Path=Jpk.Zois, Mode=TwoWay}">
-				<DataGrid.Columns>
+                <DataGrid.Columns>
 					<DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
                     <DataGridTextColumn Header="Kod konta" local:DataGridExtensions.HeaderToolTip="{StaticResource Zois.KodKonta}" 
                                         Binding="{Binding KodKonta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
@@ -141,7 +141,24 @@
 			<DataGrid
 				Style="{StaticResource DataGridStyle}"
 				ItemsSource="{Binding Path=Jpk.KontoZapis, Mode=TwoWay}">
-				<DataGrid.Columns>
+                <DataGrid.Resources>
+                    <Style x:Key="WinienWalutaCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding KodWalutyWinien}" Value="PLN">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    
+                    <Style x:Key="MaWalutaCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding KodWalutyMa}" Value="PLN">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
 					<DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
                     <DataGridTextColumn Header="Numer zapisu" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.NrZapisu}" 
                                         Binding="{Binding NrZapisu, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
@@ -149,9 +166,9 @@
                                         Binding="{Binding KodKontaWinien, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="Kwota (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaWinien}" 
                                         Binding="{Binding KwotaWinien, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota w walucie obcej (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaWinienWaluta}" 
+                    <DataGridTextColumn Header="Kwota w walucie obcej (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaWinienWaluta}" CellStyle="{StaticResource WinienWalutaCellStyle}"
                                         Binding="{Binding KwotaWinienWaluta, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Kod waluty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyWinien}" SortMemberPath="KodWalutyWinien">
+                    <DataGridTemplateColumn Header="Kod waluty (winien)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyWinien}" SortMemberPath="KodWalutyWinien" CellStyle="{StaticResource WinienWalutaCellStyle}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding KodWalutyWinien, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -170,9 +187,9 @@
                                         Binding="{Binding KodKontaMa, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="Kwota (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaMa}" 
                                         Binding="{Binding KwotaMa, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kwota w walucie obcej (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaMaWaluta}" 
+                    <DataGridTextColumn Header="Kwota w walucie obcej (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KwotaMaWaluta}" CellStyle="{StaticResource MaWalutaCellStyle}"
                                         Binding="{Binding KwotaMaWaluta, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Kod waluty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyMa}" SortMemberPath="KodWalutyMa">
+                    <DataGridTemplateColumn Header="Kod waluty (ma)" local:DataGridExtensions.HeaderToolTip="{StaticResource KontoZapis.KodWalutyMa}" SortMemberPath="KodWalutyMa" CellStyle="{StaticResource MaWalutaCellStyle}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding KodWalutyMa, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>

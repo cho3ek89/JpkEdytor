@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
              xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkMag1ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -14,6 +15,14 @@
                 <ResourceDictionary Source="../Resources/ColumnDescriptions/Mag1.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="DataFakturyCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DataFaktury}" Value="{x:Static system:DateTime.MinValue}">
+                        <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -92,7 +101,7 @@
                                         Binding="{Binding Dostawca, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                             <DataGridTextColumn Header="Numer faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Pz.PzWartosc.NumerFaktury}" 
                                         Binding="{Binding NumerFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Pz.PzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}">
+                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Pz.PzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}" CellStyle="{StaticResource DataFakturyCellStyle}">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding DataFaktury, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -172,7 +181,7 @@
                                         Binding="{Binding Odbiorca, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                             <DataGridTextColumn Header="Numer faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Wz.WzWartosc.NumerFaktury}" 
                                         Binding="{Binding NumerFaktury, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Wz.WzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}">
+                            <DataGridTemplateColumn Header="Data faktury" local:DataGridExtensions.HeaderToolTip="{StaticResource Wz.WzWartosc.DataFaktury}" SortMemberPath="DataFaktury" Width="{StaticResource DateTimeColFixedWidth}" CellStyle="{StaticResource DataFakturyCellStyle}">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding DataFaktury, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>

@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
              xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkVat3ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -50,6 +51,219 @@
             <DataGrid
                 Style="{StaticResource DataGridStyle}"
                 ItemsSource="{Binding Path=Jpk.SprzedazWiersz, Mode=TwoWay}">
+                <DataGrid.Resources>
+                    <Style x:Key="DataSprzedazyCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataSprzedazy}" Value="{x:Static system:DateTime.MinValue}">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K10CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K10}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K11CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K11}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K12CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K12}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K13CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K13}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K14CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K14}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K15K16CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K15}" Value="0"/>
+                                    <Condition Binding="{Binding K16}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K17K18CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K17}" Value="0"/>
+                                    <Condition Binding="{Binding K18}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K19K20CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K19}" Value="0"/>
+                                    <Condition Binding="{Binding K20}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K21CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K21}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K22CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K22}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K23K24CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K23}" Value="0"/>
+                                    <Condition Binding="{Binding K24}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K25K26CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K25}" Value="0"/>
+                                    <Condition Binding="{Binding K26}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K27K28CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K27}" Value="0"/>
+                                    <Condition Binding="{Binding K28}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K29K30CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K29}" Value="0"/>
+                                    <Condition Binding="{Binding K30}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K31CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K31}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K32K33CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K32}" Value="0"/>
+                                    <Condition Binding="{Binding K33}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K34K35CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K34}" Value="0"/>
+                                    <Condition Binding="{Binding K35}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K36CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K36}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K37CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K37}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K38CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K38}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K39CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K39}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
                     <DataGridTextColumn Header="Numer kontrahenta" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.NrKontrahenta}" 
@@ -72,7 +286,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Data sprzedaży" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.DataSprzedazy}" SortMemberPath="DataSprzedazy" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data sprzedaży" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.DataSprzedazy}" SortMemberPath="DataSprzedazy" Width="{StaticResource DateTimeColFixedWidth}" CellStyle="{StaticResource DataSprzedazyCellStyle}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataSprzedazy, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -84,65 +298,65 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K10}" 
+                    <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K10}" CellStyle="{StaticResource K10CellStyle}"
                                         Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K11}" 
+                    <DataGridTextColumn Header="K 11" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K11}" CellStyle="{StaticResource K11CellStyle}"
                                         Binding="{Binding K11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K12}"
+                    <DataGridTextColumn Header="K 12" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K12}" CellStyle="{StaticResource K12CellStyle}"
                                         Binding="{Binding K12, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K13}" 
+                    <DataGridTextColumn Header="K 13" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K13}" CellStyle="{StaticResource K13CellStyle}"
                                         Binding="{Binding K13, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K14}" 
+                    <DataGridTextColumn Header="K 14" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K14}" CellStyle="{StaticResource K14CellStyle}"
                                         Binding="{Binding K14, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K15}" 
+                    <DataGridTextColumn Header="K 15" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K15}" CellStyle="{StaticResource K15K16CellStyle}"
                                         Binding="{Binding K15, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 16" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K16}" 
+                    <DataGridTextColumn Header="K 16" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K16}" CellStyle="{StaticResource K15K16CellStyle}"
                                         Binding="{Binding K16, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K17}" 
+                    <DataGridTextColumn Header="K 17" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K17}" CellStyle="{StaticResource K17K18CellStyle}"
                                         Binding="{Binding K17, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 18" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K18}" 
+                    <DataGridTextColumn Header="K 18" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K18}" CellStyle="{StaticResource K17K18CellStyle}"
                                         Binding="{Binding K18, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 19" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K19}" 
+                    <DataGridTextColumn Header="K 19" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K19}" CellStyle="{StaticResource K19K20CellStyle}"
                                         Binding="{Binding K19, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 20" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K20}" 
+                    <DataGridTextColumn Header="K 20" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K20}" CellStyle="{StaticResource K19K20CellStyle}"
                                         Binding="{Binding K20, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 21" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K21}" 
+                    <DataGridTextColumn Header="K 21" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K21}" CellStyle="{StaticResource K21CellStyle}"
                                         Binding="{Binding K21, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 22" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K22}" 
+                    <DataGridTextColumn Header="K 22" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K22}" CellStyle="{StaticResource K22CellStyle}"
                                         Binding="{Binding K22, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 23" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K23}" 
+                    <DataGridTextColumn Header="K 23" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K23}" CellStyle="{StaticResource K23K24CellStyle}"
                                         Binding="{Binding K23, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 24" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K24}" 
+                    <DataGridTextColumn Header="K 24" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K24}" CellStyle="{StaticResource K23K24CellStyle}"
                                         Binding="{Binding K24, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 25" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K25}" 
+                    <DataGridTextColumn Header="K 25" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K25}" CellStyle="{StaticResource K25K26CellStyle}"
                                         Binding="{Binding K25, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 26" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K26}" 
+                    <DataGridTextColumn Header="K 26" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K26}" CellStyle="{StaticResource K25K26CellStyle}"
                                         Binding="{Binding K26, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 27" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K27}" 
+                    <DataGridTextColumn Header="K 27" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K27}" CellStyle="{StaticResource K27K28CellStyle}"
                                         Binding="{Binding K27, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 28" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K28}" 
+                    <DataGridTextColumn Header="K 28" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K28}" CellStyle="{StaticResource K27K28CellStyle}"
                                         Binding="{Binding K28, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 29" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K29}" 
+                    <DataGridTextColumn Header="K 29" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K29}" CellStyle="{StaticResource K29K30CellStyle}"
                                         Binding="{Binding K29, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 30" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K30}" 
+                    <DataGridTextColumn Header="K 30" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K30}" CellStyle="{StaticResource K29K30CellStyle}"
                                         Binding="{Binding K30, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 31" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K31}" 
+                    <DataGridTextColumn Header="K 31" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K31}" CellStyle="{StaticResource K31CellStyle}"
                                         Binding="{Binding K31, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 32" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K32}" 
+                    <DataGridTextColumn Header="K 32" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K32}" CellStyle="{StaticResource K32K33CellStyle}"
                                         Binding="{Binding K32, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 33" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K33}" 
+                    <DataGridTextColumn Header="K 33" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K33}" CellStyle="{StaticResource K32K33CellStyle}"
                                         Binding="{Binding K33, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 34" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K34}" 
+                    <DataGridTextColumn Header="K 34" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K34}" CellStyle="{StaticResource K34K35CellStyle}"
                                         Binding="{Binding K34, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 35" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K35}" 
+                    <DataGridTextColumn Header="K 35" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K35}" CellStyle="{StaticResource K34K35CellStyle}"
                                         Binding="{Binding K35, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 36" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K36}" 
+                    <DataGridTextColumn Header="K 36" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K36}" CellStyle="{StaticResource K36CellStyle}"
                                         Binding="{Binding K36, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 37" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K37}" 
+                    <DataGridTextColumn Header="K 37" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K37}" CellStyle="{StaticResource K37CellStyle}"
                                         Binding="{Binding K37, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 38" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K38}" 
+                    <DataGridTextColumn Header="K 38" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K38}" CellStyle="{StaticResource K38CellStyle}"
                                         Binding="{Binding K38, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 39" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K39}"
+                    <DataGridTextColumn Header="K 39" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K39}" CellStyle="{StaticResource K39CellStyle}"
                                         Binding="{Binding K39, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -151,6 +365,71 @@
             <DataGrid
                 Style="{StaticResource DataGridStyle}"
                 ItemsSource="{Binding Path=Jpk.ZakupWiersz, Mode=TwoWay}">
+                <DataGrid.Resources>
+                    <Style x:Key="DataWplywuCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataWplywu}" Value="{x:Static system:DateTime.MinValue}">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    
+                    <Style x:Key="K43K44CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K43}" Value="0"/>
+                                    <Condition Binding="{Binding K44}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K45K46CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding K45}" Value="0"/>
+                                    <Condition Binding="{Binding K46}" Value="0"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K47CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K47}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K48CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K48}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K49CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K49}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="K50CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding K50}" Value="0">
+                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
                     <DataGridTextColumn Header="Numer dostawcy" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.NrDostawcy}"
@@ -173,7 +452,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Data wpływu" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.DataWplywu}" SortMemberPath="DataWplywu" Width="{StaticResource DateTimeColFixedWidth}">
+                    <DataGridTemplateColumn Header="Data wpływu" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.DataWplywu}" SortMemberPath="DataWplywu" Width="{StaticResource DateTimeColFixedWidth}" CellStyle="{StaticResource DataWplywuCellStyle}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataWplywu, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -185,21 +464,21 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="K 43" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K43}" 
+                    <DataGridTextColumn Header="K 43" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K43}" CellStyle="{StaticResource K43K44CellStyle}"
                                         Binding="{Binding K43, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 44" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K44}" 
+                    <DataGridTextColumn Header="K 44" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K44}" CellStyle="{StaticResource K43K44CellStyle}"
                                         Binding="{Binding K44, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 45" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K45}" 
+                    <DataGridTextColumn Header="K 45" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K45}" CellStyle="{StaticResource K45K46CellStyle}"
                                         Binding="{Binding K45, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 46" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K46}" 
+                    <DataGridTextColumn Header="K 46" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K46}" CellStyle="{StaticResource K45K46CellStyle}"
                                         Binding="{Binding K46, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 47" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K47}" 
+                    <DataGridTextColumn Header="K 47" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K47}" CellStyle="{StaticResource K47CellStyle}"
                                         Binding="{Binding K47, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 48" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K48}" 
+                    <DataGridTextColumn Header="K 48" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K48}" CellStyle="{StaticResource K48CellStyle}"
                                         Binding="{Binding K48, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 49" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K49}" 
+                    <DataGridTextColumn Header="K 49" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K49}" CellStyle="{StaticResource K49CellStyle}"
                                         Binding="{Binding K49, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="K 50" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K50}"
+                    <DataGridTextColumn Header="K 50" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K50}" CellStyle="{StaticResource K50CellStyle}"
                                         Binding="{Binding K50, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 </DataGrid.Columns>
             </DataGrid>

@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
              xmlns:models="clr-namespace:JpkEdytor.Models.FaRr1"
-             xmlns:system="clr-namespace:System;assembly=mscorlib"
              xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DataContext ="{d:DesignInstance {x:Type viewModels:JpkFaRr1ViewModel}, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -47,6 +47,15 @@
                             <x:Type TypeName="models:RodzajFaktury"/>
                         </ObjectDataProvider.MethodParameters>
                     </ObjectDataProvider>
+
+                    <Style x:Key="KorektaCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
+                        <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding RodzajFaktury}" Value="Korekta">
+                                <Setter Property="Foreground" Value="Black"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
 
@@ -87,7 +96,6 @@
 
                     <DataGridTextColumn Header="P 3B (Posiadacz)" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.P3B.Posiadacz}" 
                                         Binding="{Binding P3B.Posiadacz, FallbackValue={x:Null}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
 
                     <DataGridTemplateColumn Header="P 4A" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.P4A}" SortMemberPath="P4A" Width="{StaticResource DateTimeColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
@@ -147,18 +155,17 @@
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTextColumn Header="Przyczyna korekty" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.PrzyczynaKorekty}" 
+                    <DataGridTextColumn Header="Przyczyna korekty" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.PrzyczynaKorekty}" CellStyle="{StaticResource KorektaCellStyle}"
                                         Binding="{Binding PrzyczynaKorekty, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 
-                    <DataGridTextColumn Header="Numer faktury korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.NrFaKorygowanej}" 
+                    <DataGridTextColumn Header="Numer faktury korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.NrFaKorygowanej}" CellStyle="{StaticResource KorektaCellStyle}"
                                         Binding="{Binding NrFaKorygowanej, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 
-                    <DataGridTextColumn Header="Okres faktury Korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.OkresFaKorygowanej}" 
+                    <DataGridTextColumn Header="Okres faktury Korygowanej" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.OkresFaKorygowanej}" CellStyle="{StaticResource KorektaCellStyle}"
                                         Binding="{Binding OkresFaKorygowanej, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
 
                     <DataGridTextColumn Header="Dokument" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaRr.Dokument}" 
                                         Binding="{Binding Dokument, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-
 
                 </DataGrid.Columns>
             </DataGrid>

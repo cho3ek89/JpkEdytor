@@ -115,6 +115,7 @@
     <DataGridLength x:Key="KodKrajuColFixedWidth">47.2</DataGridLength>
     
     <SolidColorBrush x:Key="GridLinesBrush" Color="LightGray" Opacity=".3" />
+    <SolidColorBrush x:Key="DafaultValueColor" Color="LightGray" />
 
     <Style x:Key="DataGridRowStyle" TargetType="{x:Type DataGridRow}">
         <Style.Resources>

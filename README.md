@@ -30,6 +30,8 @@ Widok każdego nowo utworzonego bądź otwartego pliku JPK jest podzielony na ka
 
 Niektóre karty widoku pliku JPK zawierają arkusz, na przykład karta *„Spis z natury”* widoku pliku JPK_PKPIR *(wersja 2)*. Najechanie kursorem myszy na nagłówek kolumny niniejszego arkusza (na przykład: *„Data spisu”*) spowoduje wyświetlenie się po ułamku sekundy dymka zawierającego opis danej kolumny. Kliknięcie kursorem myszy na nagłówek kolumny arkusza spowoduje posortowanie wierszy arkusza względem tej kolumny.
 
+Niektóre komórki arkusza mogą mieć *szary* kolor czcionki – dzieje się tak kiedy są one nieobowiązkowe oraz zawierają wartości domyślne lub gdy nie są spełnione inne warunki. Takie komórki nie znajdą się w wynikowym pliku JPK.
+
 ### Edycja pliku JPK
 
 #### Edycja danych w arkuszach
