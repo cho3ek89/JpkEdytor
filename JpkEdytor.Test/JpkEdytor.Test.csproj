@@ -62,7 +62,6 @@
     <Compile Include="ViewModelTests\JpkVat3ViewModelTests.cs" />
     <Compile Include="ViewModelTests\JpkWb1ViewModelTests.cs" />
     <Compile Include="ViewModelTests\TestHelper.cs" />
-    <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

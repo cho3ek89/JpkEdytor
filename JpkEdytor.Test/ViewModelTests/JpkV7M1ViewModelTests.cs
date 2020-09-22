@@ -3,6 +3,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using System;
+    using System.IO;
     using System.Threading.Tasks;
 
     using JpkEdytor.Models.V71.Common;
@@ -10,7 +11,7 @@
     using JpkEdytor.ViewModels;
 
     [TestClass]
-    public class JpkV7M1ViewModelTests : ViewModelTestsBase
+    public class JpkV7M1ViewModelTests
     {
         [DataTestMethod]
         [DataRow(false, false, false, false, "TestFiles/jpk_v7m1_valid_empty_osoba_niefizyczna.xml", DisplayName = "Empty; osoba niefizyczna")]
@@ -29,9 +30,8 @@
         [DataRow(true, false, true, true, "TestFiles/jpk_v7m1_valid_sprzedaz_zakupy_osoba_fizyczna.xml", DisplayName = "With sprzedaz, zakupy; osoba fizyczna")]
         [DataRow(false, true, true, true, "TestFiles/jpk_v7m1_valid_deklaracja_sprzedaz_zakupy_osoba_niefizyczna.xml", DisplayName = "With deklaracja, sprzedaz, zakupy; osoba niefizyczna")]
         [DataRow(true, true, true, true, "TestFiles/jpk_v7m1_valid_deklaracja_sprzedaz_zakupy_osoba_fizyczna.xml", DisplayName = "With deklaracja, sprzedaz, zakupy; osoba fizyczna")]
-
         [Description("Checks if jpk_v7m1 files are generated properly.")]
-        public async Task JpkVM1FilesAreGeneratedProperly(bool osobaFizyczna, bool appendDeklaracja, bool appendSprzedaz, bool appendZakupy, string expectedFullFilePath)
+        public async Task JpkV7M1FilesAreGeneratedProperly(bool osobaFizyczna, bool appendDeklaracja, bool appendSprzedaz, bool appendZakupy, string expectedFullFilePath)
         {
             var vm = new JpkV7M1ViewModel();
             var jpk = vm.Jpk;
@@ -45,10 +45,12 @@
 
             Assert.AreEqual(string.Empty, await vm.Validate());
 
-            var actualFullFilePath = GetTempFilePath();
+            var actualFullFilePath = Path.GetTempFileName();
             await vm.SaveToFile(actualFullFilePath);
 
             TestHelper.AreMd5HashesEqual(expectedFullFilePath, actualFullFilePath);
+
+            File.Delete(actualFullFilePath);
         }
 
         private void AppendNaglowek(Jpk jpk)
