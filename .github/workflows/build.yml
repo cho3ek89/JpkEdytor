@@ -18,7 +18,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.1
       
       - name: Build
-        run: msbuild JpkEdytor/JpkEdytor.csproj 
+        run: msbuild JpkEdytor.sln -t:Build -p:Configuration=Release -v:Minimal
 
       - name: Run a multi-line script
         run: |
