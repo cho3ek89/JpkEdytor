@@ -11,11 +11,14 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+      
+      - name: Build
+        run: msbuild JpkEdytor/JpkEdytor.csproj 
 
       - name: Run a multi-line script
         run: |
