@@ -17,6 +17,12 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
       
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.2
+        
+      - name: Restore NuGet packages
+        run: nuget restore JpkEdytor.sln
+        
       - name: Build
         run: msbuild JpkEdytor.sln -t:Build -p:Configuration=Release -v:Minimal
 
