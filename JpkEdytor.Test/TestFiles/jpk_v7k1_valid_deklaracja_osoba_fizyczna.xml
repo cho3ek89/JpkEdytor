@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/" xmlns:tns="http://crd.gov.pl/wzor/2020/05/08/9394/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_V7K (1)" wersjaSchemy="1-2E">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:DataWytworzeniaJPK>2020-09-21T00:00:00</tns:DataWytworzeniaJPK>
+    <tns:NazwaSystemu>JpkEdytor</tns:NazwaSystemu>
+    <tns:CelZlozenia poz="P_7">1</tns:CelZlozenia>
+    <tns:KodUrzedu>0202</tns:KodUrzedu>
+    <tns:Rok>2020</tns:Rok>
+    <tns:Miesiac>9</tns:Miesiac>
+  </tns:Naglowek>
+  <tns:Podmiot1 rola="Podatnik">
+    <tns:OsobaFizyczna>
+      <etd:NIP>7018631981</etd:NIP>
+      <etd:ImiePierwsze>Jan</etd:ImiePierwsze>
+      <etd:Nazwisko>Kowaski</etd:Nazwisko>
+      <etd:DataUrodzenia>1979-08-13</etd:DataUrodzenia>
+      <tns:Email>jan.kowalski@mail.com,</tns:Email>
+      <tns:Telefon>566871429</tns:Telefon>
+    </tns:OsobaFizyczna>
+  </tns:Podmiot1>
+  <tns:Deklaracja>
+    <tns:Naglowek>
+      <tns:KodFormularzaDekl kodSystemowy="VAT-7K (15)" kodPodatku="VAT" rodzajZobowiazania="Z" wersjaSchemy="1-2E">VAT-7K</tns:KodFormularzaDekl>
+      <tns:WariantFormularzaDekl>15</tns:WariantFormularzaDekl>
+      <tns:Kwartal>1</tns:Kwartal>
+    </tns:Naglowek>
+    <tns:PozycjeSzczegolowe>
+      <tns:P_38>5133</tns:P_38>
+      <tns:P_51>124</tns:P_51>
+    </tns:PozycjeSzczegolowe>
+    <tns:Pouczenia>1</tns:Pouczenia>
+  </tns:Deklaracja>
+</tns:JPK>

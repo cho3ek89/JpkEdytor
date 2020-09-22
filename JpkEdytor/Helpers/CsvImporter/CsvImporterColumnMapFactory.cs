@@ -39,6 +39,8 @@
             AddMag1MmWierszMapping(map);
             AddPkpir2PkpirSpisMapping(map);
             AddPkpir2PkpirWierszMapping(map);
+            AddV7K1SprzedazWierszMapping(map);
+            AddV7K1ZakupWierszMapping(map);
             AddVat3SprzedazWierszMapping(map);
             AddVat3ZakupWierszMapping(map);
             AddWb1WyciagWierszMapping(map);
@@ -105,6 +107,14 @@
                 AddPkpir2PkpirSpisMapping(map);
             else if (typeName == typeof(Models.Pkpir2.PkpirWiersz).FullName)
                 AddPkpir2PkpirWierszMapping(map);
+            else if (typeName == typeof(Models.V71.V7K.EwidencjaSprzedazWiersz).FullName)
+                AddV7K1SprzedazWierszMapping(map);
+            else if (typeName == typeof(Models.V71.V7K.EwidencjaZakupWiersz).FullName)
+                AddV7K1ZakupWierszMapping(map);
+            else if (typeName == typeof(Models.V71.V7M.EwidencjaSprzedazWiersz).FullName)
+                AddV7M1SprzedazWierszMapping(map);
+            else if (typeName == typeof(Models.V71.V7M.EwidencjaZakupWiersz).FullName)
+                AddV7M1ZakupWierszMapping(map);
             else if (typeName == typeof(Models.Vat3.SprzedazWiersz).FullName)
                 AddVat3SprzedazWierszMapping(map);
             else if (typeName == typeof(Models.Vat3.ZakupWiersz).FullName)
@@ -519,6 +529,182 @@
             map.AddCsvColumnMapping((Models.Pkpir2.PkpirWiersz p) => p.K16A);
             map.AddCsvColumnMapping((Models.Pkpir2.PkpirWiersz p) => p.K16B);
             map.AddCsvColumnMapping((Models.Pkpir2.PkpirWiersz p) => p.K17);
+        }
+
+        private static void AddV7K1SprzedazWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.KodKrajuNadaniaTin);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.NrKontrahenta);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.NazwaKontrahenta);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.DowodSprzedazy);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.DataWystawienia);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.DataSprzedazy);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.TypDokumentu);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu01);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu02);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu03);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu04);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu05);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu06);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu07);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu08);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu09);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu10);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu11);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu12);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Gtu13);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Sw);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Ee);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Tp);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.TtWnt);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.TtD);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.MrT);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.MrUz);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.I42);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.I63);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.BSpv);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.BSpvDostawa);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.BMpvProwizja);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.Mpp);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.KorektaPodstawyOpodatkowania);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K10);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K11);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K12);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K13);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K14);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K15);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K16);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K17);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K18);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K19);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K20);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K21);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K22);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K23);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K24);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K25);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K26);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K27);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K28);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K29);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K30);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K31);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K32);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K33);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K34);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K35);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.K36);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaSprzedazWiersz p) => p.SprzedazVatMarza);
+        }
+
+        public static void AddV7K1ZakupWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.KodKrajuNadaniaTin);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.NrDostawcy);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.NazwaDostawcy);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.DowodZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.DataZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.DataWplywu);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.DokumentZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.Mpp);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.Imp);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K40);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K41);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K42);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K43);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K44);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K45);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K46);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.K47);
+            map.AddCsvColumnMapping((Models.V71.V7K.EwidencjaZakupWiersz p) => p.ZakupVatMarza);
+        }
+
+        private static void AddV7M1SprzedazWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.KodKrajuNadaniaTin);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.NrKontrahenta);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.NazwaKontrahenta);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.DowodSprzedazy);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.DataWystawienia);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.DataSprzedazy);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.TypDokumentu);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu01);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu02);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu03);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu04);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu05);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu06);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu07);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu08);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu09);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu10);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu11);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu12);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Gtu13);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Sw);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Ee);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Tp);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.TtWnt);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.TtD);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.MrT);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.MrUz);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.I42);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.I63);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.BSpv);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.BSpvDostawa);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.BMpvProwizja);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.Mpp);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.KorektaPodstawyOpodatkowania);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K10);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K11);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K12);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K13);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K14);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K15);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K16);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K17);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K18);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K19);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K20);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K21);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K22);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K23);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K24);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K25);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K26);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K27);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K28);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K29);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K30);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K31);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K32);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K33);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K34);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K35);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.K36);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaSprzedazWiersz p) => p.SprzedazVatMarza);
+        }
+
+        public static void AddV7M1ZakupWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.KodKrajuNadaniaTin);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.NrDostawcy);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.NazwaDostawcy);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.DowodZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.DataZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.DataWplywu);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.DokumentZakupu);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.Mpp);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.Imp);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K40);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K41);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K42);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K43);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K44);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K45);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K46);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.K47);
+            map.AddCsvColumnMapping((Models.V71.V7M.EwidencjaZakupWiersz p) => p.ZakupVatMarza);
         }
 
         private static void AddVat3SprzedazWierszMapping(CsvImporterColumnMap map)

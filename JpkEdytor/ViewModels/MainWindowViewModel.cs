@@ -372,6 +372,70 @@
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.Pkpir2.Jpk> && !IsBusy; });
 
+        public ICommand ImportJpkV7K1 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkV7K1ViewModel)?.ImportSprzedazFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkV7K1ViewModel)?.ImportZakupyFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.V71.V7K.Jpk> && !IsBusy; });
+
+        public ICommand ImportJpkV7M1 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkV7M1ViewModel)?.ImportSprzedazFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkV7M1ViewModel)?.ImportZakupyFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.V71.V7M.Jpk> && !IsBusy; });
+
         public ICommand ImportJpkWb1 => new RelayCommand(async obj =>
         {
             var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
@@ -449,9 +513,9 @@
             switch (index)
             {
                 case "0":
-                    return new JpkVat3ViewModel();
-                case "1":
                     return new JpkEwp1ViewModel();
+                case "1":
+                    return new JpkFa2ViewModel();
                 case "2":
                     return new JpkFa3ViewModel();
                 case "3":
@@ -463,9 +527,13 @@
                 case "6":
                     return new JpkPkpir2ViewModel();
                 case "7":
-                    return new JpkWb1ViewModel();
+                    return new JpkVat3ViewModel();
                 case "8":
-                    return new JpkFa2ViewModel();
+                    return new JpkV7K1ViewModel();
+                case "9":
+                    return new JpkV7M1ViewModel();
+                case "10":
+                    return new JpkWb1ViewModel();
                 default:
                     throw new NotImplementedException();
             }

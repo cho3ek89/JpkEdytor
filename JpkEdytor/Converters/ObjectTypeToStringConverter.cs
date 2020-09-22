@@ -4,11 +4,11 @@
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// Converts <see cref="object"/> to its type name.
+    /// </summary>
     public class ObjectTypeToStringConverter : IValueConverter
     {
-        /// <summary>
-        /// Converts an object to its type name.
-        /// </summary>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return value?.GetType().Name;

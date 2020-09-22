@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/" xmlns:tns="http://crd.gov.pl/wzor/2020/05/08/9393/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_V7M (1)" wersjaSchemy="1-2E">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:DataWytworzeniaJPK>2020-09-21T00:00:00</tns:DataWytworzeniaJPK>
+    <tns:NazwaSystemu>JpkEdytor</tns:NazwaSystemu>
+    <tns:CelZlozenia poz="P_7">1</tns:CelZlozenia>
+    <tns:KodUrzedu>0202</tns:KodUrzedu>
+    <tns:Rok>2020</tns:Rok>
+    <tns:Miesiac>9</tns:Miesiac>
+  </tns:Naglowek>
+  <tns:Podmiot1 rola="Podatnik">
+    <tns:OsobaNiefizyczna>
+      <tns:NIP>7018631981</tns:NIP>
+      <tns:PelnaNazwa>Firma rodzinna s.c.</tns:PelnaNazwa>
+      <tns:Email>jan.kowalski@mail.com,</tns:Email>
+      <tns:Telefon>566871429</tns:Telefon>
+    </tns:OsobaNiefizyczna>
+  </tns:Podmiot1>
+  <tns:Ewidencja>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>1</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>2</tns:LpSprzedazy>
+      <tns:KodKrajuNadaniaTIN>PL</tns:KodKrajuNadaniaTIN>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:DataSprzedazy>2020-04-25</tns:DataSprzedazy>
+      <tns:TypDokumentu>RO</tns:TypDokumentu>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>3</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:GTU_01>1</tns:GTU_01>
+      <tns:GTU_03>1</tns:GTU_03>
+      <tns:GTU_05>1</tns:GTU_05>
+      <tns:GTU_07>1</tns:GTU_07>
+      <tns:GTU_09>1</tns:GTU_09>
+      <tns:GTU_11>1</tns:GTU_11>
+      <tns:GTU_13>1</tns:GTU_13>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>4</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:GTU_02>1</tns:GTU_02>
+      <tns:GTU_04>1</tns:GTU_04>
+      <tns:GTU_06>1</tns:GTU_06>
+      <tns:GTU_08>1</tns:GTU_08>
+      <tns:GTU_10>1</tns:GTU_10>
+      <tns:GTU_12>1</tns:GTU_12>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>5</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:SW>1</tns:SW>
+      <tns:EE>1</tns:EE>
+      <tns:TP>1</tns:TP>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>6</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:TT_WNT>1</tns:TT_WNT>
+      <tns:TT_D>1</tns:TT_D>
+      <tns:MR_T>1</tns:MR_T>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>7</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:MR_UZ>1</tns:MR_UZ>
+      <tns:I_42>1</tns:I_42>
+      <tns:I_63>1</tns:I_63>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>8</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:B_SPV>1</tns:B_SPV>
+      <tns:B_SPV_DOSTAWA>1</tns:B_SPV_DOSTAWA>
+      <tns:B_MPV_PROWIZJA>1</tns:B_MPV_PROWIZJA>
+      <tns:MPP>1</tns:MPP>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>9</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:KorektaPodstawyOpodt>1</tns:KorektaPodstawyOpodt>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>10</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_10>150.1</tns:K_10>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>11</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_11>150.11</tns:K_11>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>12</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_12>150.12</tns:K_12>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>13</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_13>150.13</tns:K_13>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>14</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_14>150.14</tns:K_14>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>15</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_15>150.15</tns:K_15>
+      <tns:K_16>0</tns:K_16>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>16</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_15>0</tns:K_15>
+      <tns:K_16>150.16</tns:K_16>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>17</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_17>150.17</tns:K_17>
+      <tns:K_18>0</tns:K_18>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>18</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_17>0</tns:K_17>
+      <tns:K_18>150.18</tns:K_18>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>19</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_19>150.19</tns:K_19>
+      <tns:K_20>0</tns:K_20>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>20</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_19>0</tns:K_19>
+      <tns:K_20>150.2</tns:K_20>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>21</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_21>150.21</tns:K_21>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>22</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_22>150.22</tns:K_22>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>23</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_23>150.23</tns:K_23>
+      <tns:K_24>0</tns:K_24>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>24</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_23>0</tns:K_23>
+      <tns:K_24>150.24</tns:K_24>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>25</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_25>150.25</tns:K_25>
+      <tns:K_26>0</tns:K_26>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>26</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_25>0</tns:K_25>
+      <tns:K_26>150.26</tns:K_26>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>27</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_27>150.27</tns:K_27>
+      <tns:K_28>0</tns:K_28>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>28</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_27>0</tns:K_27>
+      <tns:K_28>150.28</tns:K_28>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>29</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_29>150.29</tns:K_29>
+      <tns:K_30>0</tns:K_30>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>30</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_29>0</tns:K_29>
+      <tns:K_30>150.3</tns:K_30>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>31</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_31>150.31</tns:K_31>
+      <tns:K_32>0</tns:K_32>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>32</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_31>0</tns:K_31>
+      <tns:K_32>150.32</tns:K_32>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>33</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_33>150.33</tns:K_33>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>34</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_34>150.34</tns:K_34>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>35</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_35>150.35</tns:K_35>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>36</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:K_36>150.36</tns:K_36>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>37</tns:LpSprzedazy>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:SprzedazVAT_Marza>150.37</tns:SprzedazVAT_Marza>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazWiersz>
+      <tns:LpSprzedazy>38</tns:LpSprzedazy>
+      <tns:KodKrajuNadaniaTIN>PL</tns:KodKrajuNadaniaTIN>
+      <tns:NrKontrahenta>9527765432</tns:NrKontrahenta>
+      <tns:NazwaKontrahenta>Fabryka piwa s.a.</tns:NazwaKontrahenta>
+      <tns:DowodSprzedazy>523/67272</tns:DowodSprzedazy>
+      <tns:DataWystawienia>2020-04-23</tns:DataWystawienia>
+      <tns:DataSprzedazy>2020-04-25</tns:DataSprzedazy>
+      <tns:TypDokumentu>RO</tns:TypDokumentu>
+      <tns:GTU_01>1</tns:GTU_01>
+      <tns:GTU_02>1</tns:GTU_02>
+      <tns:GTU_03>1</tns:GTU_03>
+      <tns:GTU_04>1</tns:GTU_04>
+      <tns:GTU_05>1</tns:GTU_05>
+      <tns:GTU_06>1</tns:GTU_06>
+      <tns:GTU_07>1</tns:GTU_07>
+      <tns:GTU_08>1</tns:GTU_08>
+      <tns:GTU_09>1</tns:GTU_09>
+      <tns:GTU_10>1</tns:GTU_10>
+      <tns:GTU_11>1</tns:GTU_11>
+      <tns:GTU_12>1</tns:GTU_12>
+      <tns:GTU_13>1</tns:GTU_13>
+      <tns:SW>1</tns:SW>
+      <tns:EE>1</tns:EE>
+      <tns:TP>1</tns:TP>
+      <tns:TT_WNT>1</tns:TT_WNT>
+      <tns:TT_D>1</tns:TT_D>
+      <tns:MR_T>1</tns:MR_T>
+      <tns:MR_UZ>1</tns:MR_UZ>
+      <tns:I_42>1</tns:I_42>
+      <tns:I_63>1</tns:I_63>
+      <tns:B_SPV>1</tns:B_SPV>
+      <tns:B_SPV_DOSTAWA>1</tns:B_SPV_DOSTAWA>
+      <tns:B_MPV_PROWIZJA>1</tns:B_MPV_PROWIZJA>
+      <tns:MPP>1</tns:MPP>
+      <tns:KorektaPodstawyOpodt>1</tns:KorektaPodstawyOpodt>
+      <tns:K_10>123.45</tns:K_10>
+      <tns:K_11>123.45</tns:K_11>
+      <tns:K_12>123.45</tns:K_12>
+      <tns:K_13>123.45</tns:K_13>
+      <tns:K_14>123.45</tns:K_14>
+      <tns:K_15>123.45</tns:K_15>
+      <tns:K_16>123.45</tns:K_16>
+      <tns:K_17>123.45</tns:K_17>
+      <tns:K_18>123.45</tns:K_18>
+      <tns:K_19>123.45</tns:K_19>
+      <tns:K_20>123.45</tns:K_20>
+      <tns:K_21>123.45</tns:K_21>
+      <tns:K_22>123.45</tns:K_22>
+      <tns:K_23>123.45</tns:K_23>
+      <tns:K_24>123.45</tns:K_24>
+      <tns:K_25>123.45</tns:K_25>
+      <tns:K_26>123.45</tns:K_26>
+      <tns:K_27>123.45</tns:K_27>
+      <tns:K_28>123.45</tns:K_28>
+      <tns:K_29>123.45</tns:K_29>
+      <tns:K_30>123.45</tns:K_30>
+      <tns:K_31>123.45</tns:K_31>
+      <tns:K_32>123.45</tns:K_32>
+      <tns:K_33>123.45</tns:K_33>
+      <tns:K_34>123.45</tns:K_34>
+      <tns:K_35>123.45</tns:K_35>
+      <tns:K_36>123.45</tns:K_36>
+      <tns:SprzedazVAT_Marza>123.45</tns:SprzedazVAT_Marza>
+    </tns:SprzedazWiersz>
+    <tns:SprzedazCtrl>
+      <tns:LiczbaWierszySprzedazy>38</tns:LiczbaWierszySprzedazy>
+      <tns:PodatekNalezny>2189.50</tns:PodatekNalezny>
+    </tns:SprzedazCtrl>
+    <tns:ZakupCtrl>
+      <tns:LiczbaWierszyZakupow>0</tns:LiczbaWierszyZakupow>
+      <tns:PodatekNaliczony>0</tns:PodatekNaliczony>
+    </tns:ZakupCtrl>
+  </tns:Ewidencja>
+</tns:JPK>

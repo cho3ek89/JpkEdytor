@@ -108,9 +108,14 @@
         /// <returns>Converted string value.</returns>
         private static object GetValueToSet(string value, Type type)
         {
-            var valueToSet = type.IsEnum
-                ? Enum.Parse(type, value)
-                : Convert.ChangeType(value, type);
+            var typeToChangeTo = Nullable.GetUnderlyingType(type) ?? type;
+
+            if (Nullable.GetUnderlyingType(type) != null && string.IsNullOrEmpty(value))
+                return null;
+
+            var valueToSet = typeToChangeTo.IsEnum
+                ? Enum.Parse(typeToChangeTo, value)
+                : Convert.ChangeType(value, typeToChangeTo);
 
             return valueToSet;
         }

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converters="clr-namespace:JpkEdytor.Converters"
              xmlns:local="clr-namespace:JpkEdytor.Helpers"
              xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
              mc:Ignorable="d" 
@@ -14,6 +15,7 @@
                 <ResourceDictionary Source="../Resources/ColumnDescriptions/Pkpir2.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <converters:IsStringNullOrEmptyConverter x:Key="IsStringNullOrEmptyConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
     
@@ -135,10 +137,7 @@
                 <DataGrid.Resources>
                     <Style x:Key="K16AK16BCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding K16A}" Value="{x:Null}">
-                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
-                            </DataTrigger>
-                            <DataTrigger Binding="{Binding K16A}" Value="">
+                            <DataTrigger Binding="{Binding K16A, Converter={StaticResource IsStringNullOrEmptyConverter}}" Value="true">
                                 <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
                             </DataTrigger>
                         </Style.Triggers>

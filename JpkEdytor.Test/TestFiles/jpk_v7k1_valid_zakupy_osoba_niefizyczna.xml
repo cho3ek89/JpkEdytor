@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/" xmlns:tns="http://crd.gov.pl/wzor/2020/05/08/9394/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_V7K (1)" wersjaSchemy="1-2E">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:DataWytworzeniaJPK>2020-09-21T00:00:00</tns:DataWytworzeniaJPK>
+    <tns:NazwaSystemu>JpkEdytor</tns:NazwaSystemu>
+    <tns:CelZlozenia poz="P_7">1</tns:CelZlozenia>
+    <tns:KodUrzedu>0202</tns:KodUrzedu>
+    <tns:Rok>2020</tns:Rok>
+    <tns:Miesiac>9</tns:Miesiac>
+  </tns:Naglowek>
+  <tns:Podmiot1 rola="Podatnik">
+    <tns:OsobaNiefizyczna>
+      <tns:NIP>7018631981</tns:NIP>
+      <tns:PelnaNazwa>Firma rodzinna s.c.</tns:PelnaNazwa>
+      <tns:Email>jan.kowalski@mail.com,</tns:Email>
+      <tns:Telefon>566871429</tns:Telefon>
+    </tns:OsobaNiefizyczna>
+  </tns:Podmiot1>
+  <tns:Ewidencja>
+    <tns:SprzedazCtrl>
+      <tns:LiczbaWierszySprzedazy>0</tns:LiczbaWierszySprzedazy>
+      <tns:PodatekNalezny>0</tns:PodatekNalezny>
+    </tns:SprzedazCtrl>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>1</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>2</tns:LpZakupu>
+      <tns:KodKrajuNadaniaTIN>PL</tns:KodKrajuNadaniaTIN>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>3</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:DataWplywu>2020-04-28</tns:DataWplywu>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>4</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:DokumentZakupu>VAT_RR</tns:DokumentZakupu>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>5</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:MPP>1</tns:MPP>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>6</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:IMP>1</tns:IMP>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>7</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_40>167.07</tns:K_40>
+      <tns:K_41>0</tns:K_41>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>8</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_40>0</tns:K_40>
+      <tns:K_41>167.08</tns:K_41>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>9</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_42>167.09</tns:K_42>
+      <tns:K_43>0</tns:K_43>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>10</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_42>0</tns:K_42>
+      <tns:K_43>167.1</tns:K_43>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>11</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_44>167.11</tns:K_44>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>12</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_45>167.12</tns:K_45>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>13</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_46>167.13</tns:K_46>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>14</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:K_47>167.14</tns:K_47>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>15</tns:LpZakupu>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:ZakupVAT_Marza>167.15</tns:ZakupVAT_Marza>
+    </tns:ZakupWiersz>
+    <tns:ZakupWiersz>
+      <tns:LpZakupu>16</tns:LpZakupu>
+      <tns:KodKrajuNadaniaTIN>PL</tns:KodKrajuNadaniaTIN>
+      <tns:NrDostawcy>3897424335</tns:NrDostawcy>
+      <tns:NazwaDostawcy>Magazyn chmielu s.c.</tns:NazwaDostawcy>
+      <tns:DowodZakupu>386/52672</tns:DowodZakupu>
+      <tns:DataZakupu>2020-05-17</tns:DataZakupu>
+      <tns:DataWplywu>2020-04-28</tns:DataWplywu>
+      <tns:DokumentZakupu>VAT_RR</tns:DokumentZakupu>
+      <tns:MPP>1</tns:MPP>
+      <tns:IMP>1</tns:IMP>
+      <tns:K_40>167.16</tns:K_40>
+      <tns:K_41>167.16</tns:K_41>
+      <tns:K_42>167.16</tns:K_42>
+      <tns:K_43>167.16</tns:K_43>
+      <tns:K_44>167.16</tns:K_44>
+      <tns:K_45>167.16</tns:K_45>
+      <tns:K_46>167.16</tns:K_46>
+      <tns:K_47>167.16</tns:K_47>
+      <tns:ZakupVAT_Marza>167.16</tns:ZakupVAT_Marza>
+    </tns:ZakupWiersz>
+    <tns:ZakupCtrl>
+      <tns:LiczbaWierszyZakupow>16</tns:LiczbaWierszyZakupow>
+      <tns:PodatekNaliczony>2005.64</tns:PodatekNaliczony>
+    </tns:ZakupCtrl>
+  </tns:Ewidencja>
+</tns:JPK>

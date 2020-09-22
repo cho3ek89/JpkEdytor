@@ -242,6 +242,11 @@
             <x:Type TypeName="models:KodUsV50"/>
         </ObjectDataProvider.MethodParameters>
     </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodUsV60Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodUsV60"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
     <ObjectDataProvider x:Key="KodWalutyV30Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
         <ObjectDataProvider.MethodParameters>
             <x:Type TypeName="models:KodWalutyV30"/>
@@ -506,6 +511,48 @@
 
     <!--#region Id Osoby Templates-->
 
+    <DataTemplate x:Key="Imie">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                   Content="Imię:"/>
+            <TextBox Grid.Column="1" Width="130"
+                     Style="{StaticResource TextBoxDefaultStyle}"
+                     Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Nazwisko">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                   Content="Nazwisko:"/>
+            <TextBox Grid.Column="1" Width="130"
+                     Style="{StaticResource TextBoxDefaultStyle}"
+                     Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataUrodzenia">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                   Content="Data urodzenia:"/>
+            <DatePicker Grid.Column="1"
+                        Style="{StaticResource DatePickerStyle}"
+                        Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+    </DataTemplate>
+
     <DataTemplate x:Key="Nip">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -557,6 +604,20 @@
             <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
                    Content="Email:"/>
             <TextBox Grid.Column="1" Width="230"
+                     Style="{StaticResource TextBoxDefaultStyle}"
+                     Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Telefon">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}"
+                   Content="Telefon:"/>
+            <TextBox Grid.Column="1" Width="110" 
                      Style="{StaticResource TextBoxDefaultStyle}"
                      Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
         </Grid>
@@ -695,8 +756,48 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                     </DataTemplate>
+                    <DataTemplate DataType="{x:Type models:KodUsV60}">
+                        <ComboBox Width="352"
+                                  Style="{StaticResource ComboBoxDefaultStyle}"
+                                  ItemsSource="{Binding Source={StaticResource KodUsV60Enum}}"
+                                  SelectedItem="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumValToDescConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
                 </ContentControl.Resources>
             </ContentControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Miesiac">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                   Content="Miesiąc:"/>
+            <TextBox Grid.Column="1" Width="27"
+                     Style="{StaticResource TextBoxDefaultStyle}"
+                     Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Rok">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition SharedSizeGroup="A"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Style="{StaticResource LabelDefaultStyle}" 
+                   Content="Rok:"/>
+            <TextBox Grid.Column="1" Width="35"
+                     Style="{StaticResource TextBoxDefaultStyle}"
+                     Text="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
         </Grid>
     </DataTemplate>
 

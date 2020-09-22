@@ -59,6 +59,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\IsStringNullOrEmptyConverter.cs" />
+    <Compile Include="Converters\NullableEnumToStringConverter.cs" />
     <Compile Include="Converters\ObjectTypeToStringConverter.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporter.cs" />
     <Compile Include="Helpers\CsvImporter\CsvImporterColumnMap.cs" />
@@ -73,6 +75,9 @@
     <Compile Include="Helpers\JpkModelUpdater\JpkMag1ModelUpdater.cs" />
     <Compile Include="Helpers\JpkModelUpdater\JpkModelUpdater.cs" />
     <Compile Include="Helpers\JpkModelUpdater\JpkPkpir2ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkV71ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkV7K1ModelUpdater.cs" />
+    <Compile Include="Helpers\JpkModelUpdater\JpkV7M1ModelUpdater.cs" />
     <Compile Include="Helpers\JpkModelUpdater\JpkVat3ModelUpdater.cs" />
     <Compile Include="Helpers\JpkModelUpdater\JpkWb1ModelUpdater.cs" />
     <Compile Include="Models\Common\AdresPolski1V50.cs" />
@@ -126,6 +131,55 @@
     <Compile Include="Models\Mag1\WzCtrl.cs" />
     <Compile Include="Models\Mag1\WzWartosc.cs" />
     <Compile Include="Models\Mag1\WzWiersz.cs" />
+    <Compile Include="Models\V71\Common\DeklaracjaPozycjeSzczegoloweBase.cs" />
+    <Compile Include="Models\V71\Common\DokumentZakupu.cs" />
+    <Compile Include="Models\V71\Common\EwidencjaSprzedazWierszBase.cs" />
+    <Compile Include="Models\V71\Common\EwidencjaZakupWierszBase.cs" />
+    <Compile Include="Models\V71\Common\TypZwrotu.cs" />
+    <Compile Include="Models\V71\Common\TypDokumentu.cs" />
+    <Compile Include="Models\Common\IdentyfikatorOsobyFizycznej2V60.cs" />
+    <Compile Include="Models\Common\KodUsV60.cs" />
+    <Compile Include="Models\V71\IJpkV71.cs" />
+    <Compile Include="Models\V71\V7K\Deklaracja.cs" />
+    <Compile Include="Models\V71\V7K\DeklaracjaNaglowek.cs" />
+    <Compile Include="Models\V71\V7K\DeklaracjaNaglowekKodFormularza.cs" />
+    <Compile Include="Models\V71\V7K\DeklaracjaPozycjeSzczegolowe.cs" />
+    <Compile Include="Models\V71\V7K\Ewidencja.cs" />
+    <Compile Include="Models\V71\V7K\EwidencjaSprzedazCtrl.cs" />
+    <Compile Include="Models\V71\V7K\EwidencjaSprzedazWiersz.cs" />
+    <Compile Include="Models\V71\V7K\EwidencjaZakupCtrl.cs" />
+    <Compile Include="Models\V71\V7K\EwidencjaZakupWiersz.cs" />
+    <Compile Include="Models\V71\V7K\IdentyfikatorOsobyNiefizycznej.cs" />
+    <Compile Include="Models\V71\V7K\Jpk.cs" />
+    <Compile Include="Models\V71\V7K\JpkNaglowek.cs" />
+    <Compile Include="Models\V71\V7K\KodFormularza.cs" />
+    <Compile Include="Models\V71\V7K\Naglowek.cs" />
+    <Compile Include="Models\V71\V7K\NaglowekCelZlozenia.cs" />
+    <Compile Include="Models\V71\V7K\NaglowekKodFormularza.cs" />
+    <Compile Include="Models\V71\V7K\Podmiot.cs" />
+    <Compile Include="Models\V71\V7K\PodmiotDowolnyBezAdresu.cs" />
+    <Compile Include="Models\V71\V7K\PodmiotDowolnyBezAdresuOsobaFizyczna.cs" />
+    <Compile Include="Models\V71\V7K\PodmiotDowolnyBezAdresuOsobaNiefizyczna.cs" />
+    <Compile Include="Models\V71\V7M\Deklaracja.cs" />
+    <Compile Include="Models\V71\V7M\DeklaracjaNaglowek.cs" />
+    <Compile Include="Models\V71\V7M\DeklaracjaNaglowekKodFormularza.cs" />
+    <Compile Include="Models\V71\V7M\DeklaracjaPozycjeSzczegolowe.cs" />
+    <Compile Include="Models\V71\V7M\Ewidencja.cs" />
+    <Compile Include="Models\V71\V7M\EwidencjaSprzedazCtrl.cs" />
+    <Compile Include="Models\V71\V7M\EwidencjaSprzedazWiersz.cs" />
+    <Compile Include="Models\V71\V7M\EwidencjaZakupCtrl.cs" />
+    <Compile Include="Models\V71\V7M\EwidencjaZakupWiersz.cs" />
+    <Compile Include="Models\V71\V7M\IdentyfikatorOsobyNiefizycznej.cs" />
+    <Compile Include="Models\V71\V7M\Jpk.cs" />
+    <Compile Include="Models\V71\V7M\JpkNaglowek.cs" />
+    <Compile Include="Models\V71\V7M\KodFormularza.cs" />
+    <Compile Include="Models\V71\V7M\Naglowek.cs" />
+    <Compile Include="Models\V71\V7M\NaglowekCelZlozenia.cs" />
+    <Compile Include="Models\V71\V7M\NaglowekKodFormularza.cs" />
+    <Compile Include="Models\V71\V7M\Podmiot.cs" />
+    <Compile Include="Models\V71\V7M\PodmiotDowolnyBezAdresu.cs" />
+    <Compile Include="Models\V71\V7M\PodmiotDowolnyBezAdresuOsobaFizyczna.cs" />
+    <Compile Include="Models\V71\V7M\PodmiotDowolnyBezAdresuOsobaNiefizyczna.cs" />
     <Compile Include="Resources\BusySpinner.xaml.cs">
       <DependentUpon>BusySpinner.xaml</DependentUpon>
     </Compile>
@@ -134,6 +188,9 @@
     <Compile Include="ViewModels\JpkFaRr1ViewModel.cs" />
     <Compile Include="ViewModels\JpkMag1ViewModel.cs" />
     <Compile Include="ViewModels\JpkPkpir2ViewModel.cs" />
+    <Compile Include="ViewModels\JpkV7K1ViewModel.cs" />
+    <Compile Include="ViewModels\JpkV7M1ViewModel.cs" />
+    <Compile Include="ViewModels\JpkV71ViewModelBase.cs" />
     <Compile Include="ViewModels\MessageViewModel.cs" />
     <Compile Include="Views\JpkFa2View.xaml.cs">
       <DependentUpon>JpkFa2View.xaml</DependentUpon>
@@ -149,6 +206,9 @@
     </Compile>
     <Compile Include="Views\JpkPkpir2View.xaml.cs">
       <DependentUpon>JpkPkpir2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JpkV71View.xaml.cs">
+      <DependentUpon>JpkV71View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MessageView.xaml.cs">
       <DependentUpon>MessageView.xaml</DependentUpon>
@@ -185,6 +245,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\ColumnDescriptions\Pkpir2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ColumnDescriptions\V71.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,6 +293,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\JpkPkpir2View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\JpkV71View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -431,6 +499,24 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_FA%283%29_v1-0.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\ElementarneTypyDanych_v6-0E.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\KodyKrajow_v6-0E.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\KodyUrzedowSkarbowych_v6-0E.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_V7K%281%29_v1-2E.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\Schemat_JPK_V7M%281%29_v1-2E.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XmlSchemas\StrukturyDanych_v6-0E.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

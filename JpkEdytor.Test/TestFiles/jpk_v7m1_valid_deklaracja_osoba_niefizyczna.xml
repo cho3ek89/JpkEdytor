@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/" xmlns:tns="http://crd.gov.pl/wzor/2020/05/08/9393/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_V7M (1)" wersjaSchemy="1-2E">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:DataWytworzeniaJPK>2020-09-21T00:00:00</tns:DataWytworzeniaJPK>
+    <tns:NazwaSystemu>JpkEdytor</tns:NazwaSystemu>
+    <tns:CelZlozenia poz="P_7">1</tns:CelZlozenia>
+    <tns:KodUrzedu>0202</tns:KodUrzedu>
+    <tns:Rok>2020</tns:Rok>
+    <tns:Miesiac>9</tns:Miesiac>
+  </tns:Naglowek>
+  <tns:Podmiot1 rola="Podatnik">
+    <tns:OsobaNiefizyczna>
+      <tns:NIP>7018631981</tns:NIP>
+      <tns:PelnaNazwa>Firma rodzinna s.c.</tns:PelnaNazwa>
+      <tns:Email>jan.kowalski@mail.com,</tns:Email>
+      <tns:Telefon>566871429</tns:Telefon>
+    </tns:OsobaNiefizyczna>
+  </tns:Podmiot1>
+  <tns:Deklaracja>
+    <tns:Naglowek>
+      <tns:KodFormularzaDekl kodSystemowy="VAT-7 (21)" kodPodatku="VAT" rodzajZobowiazania="Z" wersjaSchemy="1-2E">VAT-7</tns:KodFormularzaDekl>
+      <tns:WariantFormularzaDekl>21</tns:WariantFormularzaDekl>
+    </tns:Naglowek>
+    <tns:PozycjeSzczegolowe>
+      <tns:P_38>5133</tns:P_38>
+      <tns:P_51>124</tns:P_51>
+    </tns:PozycjeSzczegolowe>
+    <tns:Pouczenia>1</tns:Pouczenia>
+  </tns:Deklaracja>
+</tns:JPK>

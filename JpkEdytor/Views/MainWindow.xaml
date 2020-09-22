@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:JpkEdytor.ViewModels"
         xmlns:views="clr-namespace:JpkEdytor.Views"
-        xmlns:resources="clr-namespace:JpkEdytor.Resources"
+        xmlns:resources="clr-namespace:JpkEdytor.Resources" 
         mc:Ignorable="d"
         Title="JPK Edytor" Height="468" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -36,10 +36,8 @@
             </Menu.Resources>
             <MenuItem Header="Plik">
                 <MenuItem Header="Nowy">
-                    <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="0"/>
                     <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="1"/>
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="0"/>
                     <MenuItem Header="JPK FA" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="2"/>
                     <MenuItem Header="JPK FA RR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
@@ -50,19 +48,23 @@
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="5"/>
                     <MenuItem Header="JPK PKPIR" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="6"/>
+                    <MenuItem Header="JPK V7K" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="8"/>
+                    <MenuItem Header="JPK V7M" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="9"/>
                     <MenuItem Header="JPK WB" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="7"/>
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="10"/>
                     <Separator/>
                     <MenuItem Header="Nieaktualne">
                         <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="8"/>
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="1"/>
+                        <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="7"/>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Otwórz">
-                    <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="0"/>
                     <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="1"/>
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="0"/>
                     <MenuItem Header="JPK FA" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="2"/>
                     <MenuItem Header="JPK FA RR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
@@ -73,12 +75,18 @@
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="5"/>
                     <MenuItem Header="JPK PKPIR" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="6" />
+                    <MenuItem Header="JPK V7K" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="8" />
+                    <MenuItem Header="JPK V7M" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="9" />
                     <MenuItem Header="JPK WB" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="7" />
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="10" />
                     <Separator/>
                     <MenuItem Header="Nieaktualne">
                         <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="8"/>
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="1"/>
+                        <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="7"/>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Importuj CSV">
@@ -154,6 +162,16 @@
                     <MenuItem Header="Przychody i rozchody" Command="{Binding ImportJpkPkpir2, Mode=OneWay}" CommandParameter="1"
                               Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
+                    <MenuItem Header="Sprzedaż" Command="{Binding ImportJpkV7K1, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Zakupy" Command="{Binding ImportJpkV7K1, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <MenuItem Header="Sprzedaż" Command="{Binding ImportJpkV7M1, Mode=OneWay}" CommandParameter="0" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <MenuItem Header="Zakupy" Command="{Binding ImportJpkV7M1, Mode=OneWay}" CommandParameter="1" 
+                              Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
                     <MenuItem Header="Wyciąg" Command="{Binding ImportJpkWb1, Mode=OneWay}" 
                               Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                 </MenuItem>
@@ -204,6 +222,12 @@
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModels:JpkFa2ViewModel}">
                     <views:JpkFa2View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkV7K1ViewModel}">
+                    <views:JpkV71View />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:JpkV7M1ViewModel}">
+                    <views:JpkV71View />
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
