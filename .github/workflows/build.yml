@@ -31,3 +31,9 @@ jobs:
         
       - name: Run unit tests
         run: vstest.console.exe JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: JpkEdytor-artifacts
+          path: JpkEdytor/bin/Release/JpkEdytor.exe
