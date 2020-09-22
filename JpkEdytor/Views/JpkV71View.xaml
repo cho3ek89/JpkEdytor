@@ -1091,7 +1091,7 @@
 
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTextColumn Header="Kod kraju nadania TIN" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.KodKrajuNadaniaTin}" 
+                    <DataGridTextColumn Header="Kod kraju nadania TIN" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.KodKrajuNadaniaTin}" Width="SizeToHeader" 
                                         Binding="{Binding KodKrajuNadaniaTin, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="Numer kontrahenta" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.NrKontrahenta}" 
                                         Binding="{Binding NrKontrahenta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
@@ -1099,7 +1099,7 @@
                                         Binding="{Binding NazwaKontrahenta, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="Dowód sprzedaży" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.DowodSprzedazy}" 
                                         Binding="{Binding DowodSprzedazy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="Data wystawienia" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.DataWystawienia}" SortMemberPath="DataWystawienia">
+                    <DataGridTemplateColumn Header="Data wystawienia" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.DataWystawienia}" SortMemberPath="DataWystawienia" Width="SizeToHeader">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DataWystawienia, Mode=OneWay, StringFormat='yyyy-MM-dd'}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -1123,7 +1123,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Typ dokumentu" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TypDokumentu}" SortMemberPath="TypDokumentu">
+                    <DataGridTemplateColumn Header="Typ dokumentu" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TypDokumentu}" SortMemberPath="TypDokumentu" Width="SizeToHeader">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding TypDokumentu, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -1143,59 +1143,59 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="GTU 01" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu01}" CellStyle="{StaticResource Gtu01CellStyle}"
+                    <DataGridTextColumn Header="GTU 01" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu01}" Width="SizeToHeader" CellStyle="{StaticResource Gtu01CellStyle}"
                                         Binding="{Binding Gtu01, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 02" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu02}" CellStyle="{StaticResource Gtu02CellStyle}"
+                    <DataGridTextColumn Header="GTU 02" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu02}" Width="SizeToHeader" CellStyle="{StaticResource Gtu02CellStyle}"
                                         Binding="{Binding Gtu02, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 03" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu03}" CellStyle="{StaticResource Gtu03CellStyle}"
+                    <DataGridTextColumn Header="GTU 03" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu03}" Width="SizeToHeader" CellStyle="{StaticResource Gtu03CellStyle}"
                                         Binding="{Binding Gtu03, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 04" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu04}" CellStyle="{StaticResource Gtu04CellStyle}"
+                    <DataGridTextColumn Header="GTU 04" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu04}" Width="SizeToHeader" CellStyle="{StaticResource Gtu04CellStyle}"
                                         Binding="{Binding Gtu04, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 05" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu05}" CellStyle="{StaticResource Gtu05CellStyle}"
+                    <DataGridTextColumn Header="GTU 05" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu05}" Width="SizeToHeader" CellStyle="{StaticResource Gtu05CellStyle}"
                                         Binding="{Binding Gtu05, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 06" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu06}" CellStyle="{StaticResource Gtu06CellStyle}"
+                    <DataGridTextColumn Header="GTU 06" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu06}" Width="SizeToHeader" CellStyle="{StaticResource Gtu06CellStyle}"
                                         Binding="{Binding Gtu06, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 07" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu07}" CellStyle="{StaticResource Gtu07CellStyle}"
+                    <DataGridTextColumn Header="GTU 07" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu07}" Width="SizeToHeader" CellStyle="{StaticResource Gtu07CellStyle}"
                                         Binding="{Binding Gtu07, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 08" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu08}" CellStyle="{StaticResource Gtu08CellStyle}"
+                    <DataGridTextColumn Header="GTU 08" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu08}" Width="SizeToHeader" CellStyle="{StaticResource Gtu08CellStyle}"
                                         Binding="{Binding Gtu08, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 09" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu09}" CellStyle="{StaticResource Gtu09CellStyle}"
+                    <DataGridTextColumn Header="GTU 09" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu09}" Width="SizeToHeader" CellStyle="{StaticResource Gtu09CellStyle}"
                                         Binding="{Binding Gtu09, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 10" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu10}" CellStyle="{StaticResource Gtu10CellStyle}"
+                    <DataGridTextColumn Header="GTU 10" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu10}" Width="SizeToHeader" CellStyle="{StaticResource Gtu10CellStyle}"
                                         Binding="{Binding Gtu10, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 11" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu11}" CellStyle="{StaticResource Gtu11CellStyle}"
+                    <DataGridTextColumn Header="GTU 11" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu11}" Width="SizeToHeader" CellStyle="{StaticResource Gtu11CellStyle}"
                                         Binding="{Binding Gtu11, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 12" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu12}" CellStyle="{StaticResource Gtu12CellStyle}"
+                    <DataGridTextColumn Header="GTU 12" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu12}" Width="SizeToHeader" CellStyle="{StaticResource Gtu12CellStyle}"
                                         Binding="{Binding Gtu12, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="GTU 13" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu13}" CellStyle="{StaticResource Gtu13CellStyle}"
+                    <DataGridTextColumn Header="GTU 13" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Gtu13}" Width="SizeToHeader" CellStyle="{StaticResource Gtu13CellStyle}"
                                         Binding="{Binding Gtu13, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="SW" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Sw}" CellStyle="{StaticResource SwCellStyle}"
+                    <DataGridTextColumn Header="SW" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Sw}" Width="SizeToHeader" CellStyle="{StaticResource SwCellStyle}"
                                         Binding="{Binding Sw, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="EE" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Ee}" CellStyle="{StaticResource EeCellStyle}"
+                    <DataGridTextColumn Header="EE" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Ee}" Width="SizeToHeader" CellStyle="{StaticResource EeCellStyle}"
                                         Binding="{Binding Ee, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="TP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Tp}" CellStyle="{StaticResource TpCellStyle}"
+                    <DataGridTextColumn Header="TP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Tp}" Width="SizeToHeader" CellStyle="{StaticResource TpCellStyle}"
                                         Binding="{Binding Tp, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="TT WNT" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TtWnt}" CellStyle="{StaticResource TtWntCellStyle}"
+                    <DataGridTextColumn Header="TT WNT" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TtWnt}" Width="SizeToHeader" CellStyle="{StaticResource TtWntCellStyle}"
                                         Binding="{Binding TtWnt, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="TT D" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TtD}" CellStyle="{StaticResource TtDCellStyle}"
+                    <DataGridTextColumn Header="TT D" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.TtD}" Width="SizeToHeader" CellStyle="{StaticResource TtDCellStyle}"
                                         Binding="{Binding TtD, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="MR T" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.MrT}" CellStyle="{StaticResource MrTCellStyle}"
+                    <DataGridTextColumn Header="MR T" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.MrT}" Width="SizeToHeader" CellStyle="{StaticResource MrTCellStyle}"
                                         Binding="{Binding MrT, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="MR UZ" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.MrUz}" CellStyle="{StaticResource MrUzCellStyle}"
+                    <DataGridTextColumn Header="MR UZ" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.MrUz}" Width="SizeToHeader" CellStyle="{StaticResource MrUzCellStyle}"
                                         Binding="{Binding MrUz, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="I 42" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.I42}" CellStyle="{StaticResource I42CellStyle}"
+                    <DataGridTextColumn Header="I 42" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.I42}" Width="SizeToHeader" CellStyle="{StaticResource I42CellStyle}"
                                         Binding="{Binding I42, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="I 63" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.I63}" CellStyle="{StaticResource I63CellStyle}"
+                    <DataGridTextColumn Header="I 63" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.I63}" Width="SizeToHeader" CellStyle="{StaticResource I63CellStyle}"
                                         Binding="{Binding I63, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="B SPV" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BSpv}" CellStyle="{StaticResource BSpvCellStyle}"
+                    <DataGridTextColumn Header="B SPV" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BSpv}" Width="SizeToHeader" CellStyle="{StaticResource BSpvCellStyle}"
                                         Binding="{Binding BSpv, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="B SPV Dostawa" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BSpvDostawa}" CellStyle="{StaticResource BSpvDostawaCellStyle}"
+                    <DataGridTextColumn Header="B SPV Dostawa" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BSpvDostawa}" Width="SizeToHeader" CellStyle="{StaticResource BSpvDostawaCellStyle}"
                                         Binding="{Binding BSpvDostawa, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="B MPV Prowizja" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BMpvProwizja}" CellStyle="{StaticResource BMpvProwizjaCellStyle}"
+                    <DataGridTextColumn Header="B MPV Prowizja" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.BMpvProwizja}" Width="SizeToHeader" CellStyle="{StaticResource BMpvProwizjaCellStyle}"
                                         Binding="{Binding BMpvProwizja, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="MPP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Mpp}" CellStyle="{StaticResource MppCellStyle}"
+                    <DataGridTextColumn Header="MPP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Mpp}" Width="SizeToHeader" CellStyle="{StaticResource MppCellStyle}"
                                         Binding="{Binding Mpp, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="Kor Podst Opod" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.KorektaPodstawyOpodatkowania}" CellStyle="{StaticResource KorektaPodstawyOpodatkowaniaCellStyle}"
+                    <DataGridTextColumn Header="Kor Podst Opod" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.KorektaPodstawyOpodatkowania}" Width="SizeToHeader" CellStyle="{StaticResource KorektaPodstawyOpodatkowaniaCellStyle}"
                                         Binding="{Binding KorektaPodstawyOpodatkowania, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="K 10" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.K10}" CellStyle="{StaticResource K10CellStyle}"
                                         Binding="{Binding K10, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
@@ -1358,7 +1358,7 @@
 
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
-                    <DataGridTextColumn Header="Kod kraju nadania TIN" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.KodKrajuNadaniaTin}" 
+                    <DataGridTextColumn Header="Kod kraju nadania TIN" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.KodKrajuNadaniaTin}" Width="SizeToHeader"
                                         Binding="{Binding KodKrajuNadaniaTin, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="Numer dostawcy" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.NrDostawcy}" 
                                         Binding="{Binding NrDostawcy, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
@@ -1390,7 +1390,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Dokument zakupu" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.DokumentZakupu}" SortMemberPath="DokumentZakupu">
+                    <DataGridTemplateColumn Header="Dokument zakupu" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.DokumentZakupu}" SortMemberPath="DokumentZakupu" Width="SizeToHeader">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DokumentZakupu, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -1410,9 +1410,9 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="MPP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Mpp}" CellStyle="{StaticResource MppCellStyle}"
+                    <DataGridTextColumn Header="MPP" local:DataGridExtensions.HeaderToolTip="{StaticResource SprzedazWiersz.Mpp}" Width="SizeToHeader" CellStyle="{StaticResource MppCellStyle}"
                                         Binding="{Binding Mpp, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTextColumn Header="IMP" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.Imp}" CellStyle="{StaticResource ImpCellStyle}"
+                    <DataGridTextColumn Header="IMP" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.Imp}" Width="SizeToHeader" CellStyle="{StaticResource ImpCellStyle}"
                                         Binding="{Binding Imp, StringFormat='N0', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="K 40" local:DataGridExtensions.HeaderToolTip="{StaticResource ZakupWiersz.K40}" CellStyle="{StaticResource K40K41CellStyle}"
                                         Binding="{Binding K40, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
