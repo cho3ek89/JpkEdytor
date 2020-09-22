@@ -1,4 +1,4 @@
-name: JpkEdytor CI
+name: CI
 
 on:
   push:
@@ -27,4 +27,4 @@ jobs:
         run: msbuild JpkEdytor.sln -t:Build -p:Configuration=Release -v:Minimal
         
       - name: Run unit tests
-        run: vstest.console JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
+        run: mstest -testcontainer:JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
