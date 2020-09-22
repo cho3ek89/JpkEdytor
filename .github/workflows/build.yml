@@ -17,6 +17,9 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
       
+      - name: Setup VSTest
+        uses: darenm/Setup-VSTest@v1
+      
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
         
@@ -27,4 +30,4 @@ jobs:
         run: msbuild JpkEdytor.sln -t:Build -p:Configuration=Release -v:Minimal
         
       - name: Run unit tests
-        run: mstest -testcontainer:JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
+        run: vstest.console.exe JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
