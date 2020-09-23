@@ -35,5 +35,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: JpkEdytor-artifacts
-          path: JpkEdytor/bin/Release/JpkEdytor.exe
+          name: JpkEdytor
+          path: |
+            JpkEdytor/bin/Release/JpkEdytor.exe
+            LICENSE
+            README.md
