@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("JpkEdytor.Test")]
-[assembly: AssemblyCopyright("Copyright © 2020 Kamil Cholewa")]
+[assembly: AssemblyCopyright("Copyright © 2021 Kamil Cholewa")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
