@@ -133,7 +133,7 @@
                                 <Button Content="+" Foreground="Green" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0" 
                                         Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" IsTabStop="False"
                                         Command="{x:Static local:DataGridExtensions.AddCommand}"
-                                        CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                        CommandTarget="{Binding RelativeSource={RelativeSource Self}}"/>
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -170,13 +170,12 @@
         <Setter Property="SelectionUnit" Value="Cell"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
-        <Setter Property="HeadersVisibility" Value="Column"/>
+        <Setter Property="RowHeaderWidth" Value="0"/>
         <Setter Property="EnableRowVirtualization" Value="True"/>
         <Setter Property="EnableColumnVirtualization" Value="True"/>
         <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
         <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="Recycling"/>
         <Setter Property="VirtualizingStackPanel.ScrollUnit" Value="Pixel"/>
-        <Setter Property="UseLayoutRounding" Value="True"/>
         <Setter Property="local:DataGridExtensions.RegisterAddCommand" Value="True"/>
         <Setter Property="local:DataGridExtensions.RegisterDeleteCommand" Value="True"/>
         <Setter Property="RowStyle" Value="{StaticResource DataGridRowStyle}"/>
@@ -197,7 +196,7 @@
         <Button Content="-" Foreground="Red" Width="22" Height="22" BorderThickness="0" IsTabStop="False"
                 Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                 Command="{x:Static local:DataGridExtensions.DeleteCommand}"
-                CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                CommandTarget="{Binding RelativeSource={RelativeSource Self}}"/>
     </DataTemplate>
 
     <Style x:Key="TextBlockCellStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
