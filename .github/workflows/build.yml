@@ -14,26 +14,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.2
-      
-      - name: Setup VSTest
-        uses: darenm/Setup-VSTest@v1.1.1
-      
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.5
-        
-      - name: Restore NuGet packages
-        run: nuget restore JpkEdytor.sln
-        
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: '5.0.x'
+
       - name: Build
-        run: msbuild JpkEdytor.sln -t:Build -p:Configuration=Release -v:Minimal
-        
+        run: dotnet build JpkEdytor.sln -c 'Release' -v 'normal' -p:Version=1.0.0.0
+
       - name: Run unit tests
-        run: vstest.console.exe JpkEdytor.Test/bin/Release/JpkEdytor.Test.dll
-        
+        run: dotnet test JpkEdytor.sln -c 'Release' -v 'normal' --no-build
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: JpkEdytor
-          path: JpkEdytor/bin/Release/JpkEdytor.exe
+          path: JpkEdytor/bin/Release/net45/JpkEdytor.exe
