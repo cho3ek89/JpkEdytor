@@ -12,8 +12,8 @@
     [TestClass]
     public class JpkFa2ViewModelTests
     {
-        [TestMethod]
-        [Description("Checks if jpk_fa2 files are generated properly.")]
+        [TestMethod("JPK_FA(2)")]
+        [Description("Checks if JPK_FA(2) files are generated properly.")]
         public async Task JpkFa2FilesAreGeneratedProperly()
         {
             var vm = new JpkFa2ViewModel();

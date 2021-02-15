@@ -12,8 +12,8 @@
     [TestClass]
     public class JpkEwp1ViewModelTests
     {
-        [TestMethod]
-        [Description("Checks if jpk_ewp1 files are generated properly.")]
+        [TestMethod("JPK_EWP(1)")]
+        [Description("Checks if JPK_EWP(1) files are generated properly.")]
         public async Task JpkEwp1FilesAreGeneratedProperly()
         {
             var vm = new JpkEwp1ViewModel();

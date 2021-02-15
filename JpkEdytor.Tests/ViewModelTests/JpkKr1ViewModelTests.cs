@@ -12,8 +12,8 @@
     [TestClass]
     public class JpkKr1ViewModelTests
     {
-        [TestMethod]
-        [Description("Checks if jpk_kr1 files are generated properly.")]
+        [TestMethod("JPK_KR(1)")]
+        [Description("Checks if JPK_KR(1) files are generated properly.")]
         public async Task JpkKr1FilesAreGeneratedProperly()
         {
             var vm = new JpkKr1ViewModel();

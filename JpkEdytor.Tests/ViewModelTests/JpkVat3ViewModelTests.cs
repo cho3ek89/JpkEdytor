@@ -13,11 +13,11 @@
     public class JpkVat3ViewModelTests
     {
         [DataTestMethod]
-        [DataRow(false, false, "TestFiles/jpk_vat3_valid_empty.xml", DisplayName = "Empty")]
-        [DataRow(true, false, "TestFiles/jpk_vat3_valid_sprzedaz_only.xml", DisplayName = "With Sprzedaz")]
-        [DataRow(false, true, "TestFiles/jpk_vat3_valid_zakupy_only.xml", DisplayName = "With Zakupy")]
-        [DataRow(true, true, "TestFiles/jpk_vat3_valid_sprzedaz_and_zakupy.xml", DisplayName = "With Sprzedaz and Zakupy")]
-        [Description("Checks if jpk_vat3 files are generated properly.")]
+        [DataRow(false, false, "TestFiles/jpk_vat3_valid_empty.xml", DisplayName = "JPK_VAT(3) - Empty")]
+        [DataRow(true, false, "TestFiles/jpk_vat3_valid_sprzedaz_only.xml", DisplayName = "JPK_VAT(3) - With Sprzedaz")]
+        [DataRow(false, true, "TestFiles/jpk_vat3_valid_zakupy_only.xml", DisplayName = "JPK_VAT(3) - With Zakupy")]
+        [DataRow(true, true, "TestFiles/jpk_vat3_valid_sprzedaz_and_zakupy.xml", DisplayName = "JPK_VAT(3) - With Sprzedaz and Zakupy")]
+        [Description("Checks if JPK_VAT(3) files are generated properly.")]
         public async Task JpkVat3FilesAreGeneratedProperly(bool appendSprzedaz, bool appendZakupy, string expectedFullFilePath)
         {
             var vm = new JpkVat3ViewModel();

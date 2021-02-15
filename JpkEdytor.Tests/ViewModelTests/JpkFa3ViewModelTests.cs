@@ -13,11 +13,11 @@
     public class JpkFa3ViewModelTests
     {
         [DataTestMethod]
-        [DataRow(false, true, "TestFiles/jpk_fa3_valid_with_zamowienia_foreign_address.xml", DisplayName = "With Zamowienia, foreign address")]
-        [DataRow(true, true, "TestFiles/jpk_fa3_valid_with_zamowienia_polish_address.xml", DisplayName = "With Zamowienia, polish address")]
-        [DataRow(false, false, "TestFiles/jpk_fa3_valid_without_zamowienia_foreign_address.xml", DisplayName = "Without Zamowienia, foreign address")]
-        [DataRow(true, false, "TestFiles/jpk_fa3_valid_without_zamowienia_polish_address.xml", DisplayName = "Without Zamowienia, polish address")]
-        [Description("Checks if jpk_fa3 files are generated properly.")]
+        [DataRow(false, true, "TestFiles/jpk_fa3_valid_with_zamowienia_foreign_address.xml", DisplayName = "JPK_FA(3) - With Zamowienia, foreign address")]
+        [DataRow(true, true, "TestFiles/jpk_fa3_valid_with_zamowienia_polish_address.xml", DisplayName = "JPK_FA(3) - With Zamowienia, polish address")]
+        [DataRow(false, false, "TestFiles/jpk_fa3_valid_without_zamowienia_foreign_address.xml", DisplayName = "JPK_FA(3) - Without Zamowienia, foreign address")]
+        [DataRow(true, false, "TestFiles/jpk_fa3_valid_without_zamowienia_polish_address.xml", DisplayName = "JPK_FA(3) - Without Zamowienia, polish address")]
+        [Description("Checks if JPK_FA(3) files are generated properly.")]
         public async Task JpkFa3FilesAreGeneratedProperly(bool useAdresPolski, bool appendZamowienia, string expectedFullFilePath)
         {
             var vm = new JpkFa3ViewModel();

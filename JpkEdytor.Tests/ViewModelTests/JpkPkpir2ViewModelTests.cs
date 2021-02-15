@@ -13,9 +13,9 @@
     public class JpkPkpir2ViewModelTests
     {
         [DataTestMethod]
-        [DataRow(false, "TestFiles/jpk_pkpir2_valid_with_pkpir_wiersze_only.xml", DisplayName = "Without Spis")]
-        [DataRow(true, "TestFiles/jpk_pkpir2_valid_with_pkpir_wiersze_and_spis.xml", DisplayName = "With Spis")]
-        [Description("Checks if jpk_pkpir2 files are generated properly.")]
+        [DataRow(false, "TestFiles/jpk_pkpir2_valid_with_pkpir_wiersze_only.xml", DisplayName = "JPK_PKPIR(2) - Without Spis")]
+        [DataRow(true, "TestFiles/jpk_pkpir2_valid_with_pkpir_wiersze_and_spis.xml", DisplayName = "JPK_PKPIR(2) - With Spis")]
+        [Description("Checks if JPK_PKPIR(2) files are generated properly.")]
         public async Task JpkPkpir2FilesAreGeneratedProperly(bool appendSpis, string expectedFullFilePath)
         {
             var vm = new JpkPkpir2ViewModel();

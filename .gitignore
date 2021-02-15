@@ -3,7 +3,7 @@
 /.vs/
 /JpkEdytor/bin/
 /JpkEdytor/obj/
-/JpkEdytor.Test/bin/
-/JpkEdytor.Test/obj/
+/JpkEdytor.Tests/bin/
+/JpkEdytor.Tests/obj/
 /packages/
 /TestResults/

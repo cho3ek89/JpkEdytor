@@ -13,9 +13,9 @@
     public class JpkFaRr1ViewModelTests
     {
         [DataTestMethod]
-        [DataRow(false, "TestFiles/jpk_farr1_valid_without_oswiadczenia.xml", DisplayName = "Without Oswiadczenia")]
-        [DataRow(true, "TestFiles/jpk_farr1_valid_with_oswiadczenia.xml", DisplayName = "With Oswiadczenia")]
-        [Description("Checks if jpk_farr1 files are generated properly.")]
+        [DataRow(false, "TestFiles/jpk_farr1_valid_without_oswiadczenia.xml", DisplayName = "JPK_FA_RR(1) - Without Oswiadczenia")]
+        [DataRow(true, "TestFiles/jpk_farr1_valid_with_oswiadczenia.xml", DisplayName = "JPK_FA_RR(1) - With Oswiadczenia")]
+        [Description("Checks if JPK_FA_RR(1) files are generated properly.")]
         public async Task JpkFaRr1FilesAreGeneratedProperly(bool appendOswiadczenia, string expectedFullFilePath)
         {
             var vm = new JpkFaRr1ViewModel();
