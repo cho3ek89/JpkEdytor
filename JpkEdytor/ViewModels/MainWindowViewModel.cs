@@ -131,6 +131,28 @@
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.Ewp1.Jpk> && !IsBusy; });
 
+        public ICommand ImportJpkEwp2 => new RelayCommand(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    await (JpkViewModel as JpkEwp2ViewModel)?.ImportEwpFromCsv(openFileDialog.FileName);
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.Ewp2.Jpk> && !IsBusy; });
+
         public ICommand ImportJpkFa3 => new RelayCommand<string>(async obj =>
         {
             var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
@@ -515,24 +537,26 @@
                 case "0":
                     return new JpkEwp1ViewModel();
                 case "1":
-                    return new JpkFa2ViewModel();
+                    return new JpkEwp2ViewModel();
                 case "2":
-                    return new JpkFa3ViewModel();
+                    return new JpkFa2ViewModel();
                 case "3":
-                    return new JpkFaRr1ViewModel();
+                    return new JpkFa3ViewModel();
                 case "4":
-                    return new JpkKr1ViewModel();
+                    return new JpkFaRr1ViewModel();
                 case "5":
-                    return new JpkMag1ViewModel();
+                    return new JpkKr1ViewModel();
                 case "6":
-                    return new JpkPkpir2ViewModel();
+                    return new JpkMag1ViewModel();
                 case "7":
-                    return new JpkVat3ViewModel();
+                    return new JpkPkpir2ViewModel();
                 case "8":
-                    return new JpkV7K1ViewModel();
+                    return new JpkVat3ViewModel();
                 case "9":
-                    return new JpkV7M1ViewModel();
+                    return new JpkV7K1ViewModel();
                 case "10":
+                    return new JpkV7M1ViewModel();
+                case "11":
                     return new JpkWb1ViewModel();
                 default:
                     throw new NotImplementedException();

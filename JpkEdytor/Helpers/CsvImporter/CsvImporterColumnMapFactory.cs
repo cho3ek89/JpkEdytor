@@ -17,6 +17,7 @@
             var map = new CsvImporterColumnMap();
 
             AddEwp1EwpWierszMapping(map);
+            AddEwp2EwpWierszMapping(map);
             AddFa3JpkFakturaMapping(map);
             AddFa3FakturaWierszMapping(map);
             AddFa3ZamowienieMapping(map);
@@ -63,6 +64,8 @@
 
             if (typeName == typeof(Models.Ewp1.EwpWiersz).FullName)
                 AddEwp1EwpWierszMapping(map);
+            if (typeName == typeof(Models.Ewp2.EwpWiersz).FullName)
+                AddEwp2EwpWierszMapping(map);
             else if (typeName == typeof(Models.Fa3.JpkFaktura).FullName)
                 AddFa3JpkFakturaMapping(map);
             else if (typeName == typeof(Models.Fa3.FakturaWiersz).FullName)
@@ -148,6 +151,22 @@
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K10);
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K11);
             map.AddCsvColumnMapping((Models.Ewp1.EwpWiersz p) => p.K12);
+        }
+
+        private static void AddEwp2EwpWierszMapping(CsvImporterColumnMap map)
+        {
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K2);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K3);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K4);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K5);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K6);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K7);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K8);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K9);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K10);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K11);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K12);
+            map.AddCsvColumnMapping((Models.Ewp2.EwpWiersz p) => p.K13);
         }
 
         private static void AddFa3JpkFakturaMapping(CsvImporterColumnMap map)

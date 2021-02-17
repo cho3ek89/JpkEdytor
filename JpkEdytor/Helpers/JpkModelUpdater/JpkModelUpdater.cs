@@ -45,6 +45,14 @@
             adres.NrLokaluSpecified = !IsDefaultValue(adres.NrLokalu);
         }
 
+        protected void UpdateAdresPolski(AdresPolski1V60 adres)
+        {
+            if (adres == null) return;
+
+            adres.UlicaSpecified = !IsDefaultValue(adres.Ulica);
+            adres.NrLokaluSpecified = !IsDefaultValue(adres.NrLokalu);
+        }
+
         protected void UpdateAdresZagraniczny(AdresZagranicznyV50 adres)
         {
             if (adres == null) return;

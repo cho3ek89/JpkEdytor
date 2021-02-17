@@ -231,6 +231,11 @@
             <x:Type TypeName="models:KodKrajuV50"/>
         </ObjectDataProvider.MethodParameters>
     </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodKrajuV60Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodKrajuV60"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
     <ObjectDataProvider x:Key="KodUsV40Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
         <ObjectDataProvider.MethodParameters>
             <x:Type TypeName="models:KodUsV40"/>
@@ -274,6 +279,13 @@
                         <ComboBox Width="50"
                                   Style="{StaticResource ComboBoxDefaultStyle}"
                                   ItemsSource="{Binding Source={StaticResource KodKrajuV50Enum}}"
+                                  SelectedItem="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" 
+                                  ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type models:KodKrajuV60}">
+                        <ComboBox Width="50"
+                                  Style="{StaticResource ComboBoxDefaultStyle}"
+                                  ItemsSource="{Binding Source={StaticResource KodKrajuV60Enum}}"
                                   SelectedItem="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" 
                                   ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
                     </DataTemplate>
@@ -409,6 +421,31 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type models:AdresPolski1V50}">
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" Content="{Binding KodKraju, Mode=TwoWay}" ContentTemplate="{StaticResource KodKraju}"/>
+            <ContentControl Grid.Row="1" Content="{Binding Wojewodztwo, Mode=TwoWay}" ContentTemplate="{StaticResource Wojewodztwo}"/>
+            <ContentControl Grid.Row="2" Content="{Binding Powiat, Mode=TwoWay}" ContentTemplate="{StaticResource Powiat}"/>
+            <ContentControl Grid.Row="3" Content="{Binding Gmina, Mode=TwoWay}" ContentTemplate="{StaticResource Gmina}"/>
+            <ContentControl Grid.Row="4" Content="{Binding Ulica, Mode=TwoWay}" ContentTemplate="{StaticResource Ulica}"/>
+            <ContentControl Grid.Row="5" Content="{Binding NrDomu, Mode=TwoWay}" ContentTemplate="{StaticResource NrDomu}"/>
+            <ContentControl Grid.Row="6" Content="{Binding NrLokalu, Mode=TwoWay}" ContentTemplate="{StaticResource NrLokalu}"/>
+            <ContentControl Grid.Row="7" Content="{Binding Miejscowosc, Mode=TwoWay}" ContentTemplate="{StaticResource Miejscowosc}"/>
+            <ContentControl Grid.Row="8" Content="{Binding KodPocztowy, Mode=TwoWay}" ContentTemplate="{StaticResource KodPocztowy}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type models:AdresPolski1V60}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -649,6 +686,17 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type models:IdentyfikatorOsobyNiefizycznej1V50}">
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" Content="{Binding Nip, Mode=TwoWay}" ContentTemplate="{StaticResource Nip}"/>
+            <ContentControl Grid.Row="1" Content="{Binding PelnaNazwa, Mode=TwoWay}" ContentTemplate="{StaticResource PelnaNazwa}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type models:IdentyfikatorOsobyNiefizycznej1V60}">
         <Grid Grid.IsSharedSizeScope="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>

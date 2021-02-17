@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/" xmlns="http://jpk.mf.gov.pl/wzor/2021/01/25/01251/">
+  <Naglowek>
+    <KodFormularza kodSystemowy="JPK_EWP (2)" wersjaSchemy="1-1">JPK_EWP</KodFormularza>
+    <WariantFormularza>2</WariantFormularza>
+    <CelZlozenia>1</CelZlozenia>
+    <DataWytworzeniaJPK>2021-01-31T00:00:00</DataWytworzeniaJPK>
+    <DataOd>2021-01-01</DataOd>
+    <DataDo>2021-01-31</DataDo>
+    <DomyslnyKodWaluty>PLN</DomyslnyKodWaluty>
+    <KodUrzedu>1014</KodUrzedu>
+  </Naglowek>
+  <Podmiot1>
+    <IdentyfikatorPodmiotu>
+      <etd:NIP>8117960116</etd:NIP>
+      <etd:PelnaNazwa>Zwyczajna Firma s.c.</etd:PelnaNazwa>
+    </IdentyfikatorPodmiotu>
+    <AdresPodmiotu>
+      <etd:KodKraju>PL</etd:KodKraju>
+      <etd:Wojewodztwo>dolnośląskie</etd:Wojewodztwo>
+      <etd:Powiat>wałbrzyski</etd:Powiat>
+      <etd:Gmina>Wałbrzych</etd:Gmina>
+      <etd:Ulica>Lipowa</etd:Ulica>
+      <etd:NrDomu>1</etd:NrDomu>
+      <etd:NrLokalu>8</etd:NrLokalu>
+      <etd:Miejscowosc>Wałbrzych</etd:Miejscowosc>
+      <etd:KodPocztowy>58-302</etd:KodPocztowy>
+    </AdresPodmiotu>
+  </Podmiot1>
+  <EWPWiersz>
+    <K_1>1</K_1>
+    <K_2>2020-01-23</K_2>
+    <K_3>2020-01-24</K_3>
+    <K_4>65/345672</K_4>
+    <K_5>3725.04</K_5>
+    <K_6>5257.23</K_6>
+    <K_7>345.85</K_7>
+    <K_8>526.23</K_8>
+    <K_9>9541.89</K_9>
+    <K_10>6727.14</K_10>
+    <K_11>527.84</K_11>
+    <K_12>26651.22</K_12>
+  </EWPWiersz>
+  <EWPWiersz>
+    <K_1>2</K_1>
+    <K_2>2020-01-23</K_2>
+    <K_3>2020-01-24</K_3>
+    <K_4>65/345672</K_4>
+    <K_5>3725.04</K_5>
+    <K_6>5257.23</K_6>
+    <K_7>345.85</K_7>
+    <K_8>526.23</K_8>
+    <K_9>9541.89</K_9>
+    <K_10>6727.14</K_10>
+    <K_11>527.84</K_11>
+    <K_12>26651.22</K_12>
+    <K_13>Uwagi...</K_13>
+  </EWPWiersz>
+  <EWPCtrl>
+    <LiczbaWierszy>2</LiczbaWierszy>
+    <SumaPrzychodow>53302.44</SumaPrzychodow>
+  </EWPCtrl>
+</JPK>

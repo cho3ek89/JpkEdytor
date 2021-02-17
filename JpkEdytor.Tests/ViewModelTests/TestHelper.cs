@@ -115,6 +115,27 @@
             return adres;
         }
 
+        public static AdresPolski1V60 GetAdresPolski1V60(bool defineUlica = true, bool defineNrLokalu = true)
+        {
+            var adres = new AdresPolski1V60
+            {
+                Wojewodztwo = "dolnośląskie",
+                Powiat = "wałbrzyski",
+                Gmina = "Wałbrzych",
+                NrDomu = "1",
+                Miejscowosc = "Wałbrzych",
+                KodPocztowy = "58-302",
+            };
+
+            if (defineUlica)
+                adres.Ulica = "Lipowa";
+
+            if (defineNrLokalu)
+                adres.NrLokalu = "8";
+
+            return adres;
+        }
+
         public static IdentyfikatorOsobyNiefizycznejV40 GetIdentyfikatorOsobyNiefizycznejV40(bool defineRegon = true)
         {
             var id = new IdentyfikatorOsobyNiefizycznejV40
@@ -146,6 +167,17 @@
         public static IdentyfikatorOsobyNiefizycznej1V50 GetIdentyfikatorOsobyNiefizycznej1V50()
         {
             var id = new IdentyfikatorOsobyNiefizycznej1V50
+            {
+                Nip = "8117960116",
+                PelnaNazwa = "Zwyczajna Firma s.c."
+            };
+
+            return id;
+        }
+
+        public static IdentyfikatorOsobyNiefizycznej1V60 GetIdentyfikatorOsobyNiefizycznej1V60()
+        {
+            var id = new IdentyfikatorOsobyNiefizycznej1V60
             {
                 Nip = "8117960116",
                 PelnaNazwa = "Zwyczajna Firma s.c."

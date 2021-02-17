@@ -6,12 +6,12 @@
 
     using Framework;
 
-    [GeneratedCode("xsd", "4.7.3081.0")]
+    [GeneratedCode("xsd", "4.8.3928.0")]
     [Serializable]
-    [XmlType(TypeName = "TAdresPolski1", Namespace = "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2018/08/24/eD/DefinicjeTypy/")]
-    public sealed class AdresPolski1V50 : NotifyPropertyChanged
+    [XmlType(TypeName = "TAdresPolski1", Namespace = "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/")]
+    public sealed class AdresPolski1V60 : NotifyPropertyChanged
     {
-        private KodKrajuV50 kodKraju;
+        private KodKrajuV60 kodKraju;
 
         private string wojewodztwo;
 
@@ -33,12 +33,12 @@
 
         private string kodPocztowy;
 
-        public AdresPolski1V50()
+        public AdresPolski1V60()
         {
-            KodKraju = KodKrajuV50.PL;
+            KodKraju = KodKrajuV60.PL;
         }
 
-        public KodKrajuV50 KodKraju
+        public KodKrajuV60 KodKraju
         {
             get
             {

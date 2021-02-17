@@ -4,7 +4,7 @@ Obsługiwane są następujące typy plików:
  - JPK_V7K *(wersja 1)*
  - JPK_V7M *(wersja 1)*
  - JPK_VAT *(wersja 3)*
- - JPK_EWP *(wersja 1)*
+ - JPK_EWP *(wersje: 2, 1)*
  - JPK_FA *(wersje: 3, 2)*
  - JPK_FA_RR *(wersja 1)*
  - JPK_KR *(wersja 1)*
