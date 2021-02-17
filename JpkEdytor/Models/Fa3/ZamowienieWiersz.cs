@@ -35,7 +35,7 @@
 
         private bool p11VatZSpecified;
 
-        private StawkaPodatkuZw p12Z;
+        private StawkaPodatkuZw? p12Z;
 
         private bool p12ZSpecified;
 
@@ -214,7 +214,7 @@
         }
 
         [XmlElement(ElementName = "P_12Z")]
-        public StawkaPodatkuZw P12Z
+        public StawkaPodatkuZw? P12Z
         {
             get
             {

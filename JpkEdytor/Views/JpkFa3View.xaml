@@ -17,6 +17,7 @@
                 <ResourceDictionary Source="../Resources/ColumnDescriptions/Fa3.xaml" />
                 <ResourceDictionary Source="../Resources/StylesAndTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <converters:NullableEnumToStringConverter x:Key="NullableEnumToStringConverter"/>
             <converters:ObjectTypeToStringConverter x:Key="ObjTypeToStrConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -97,22 +98,6 @@
                             <x:Type TypeName="models:RodzajFaktury"/>
                         </ObjectDataProvider.MethodParameters>
                     </ObjectDataProvider>
-
-                    <Style x:Key="P4ACellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding P4A}" Value="AT">
-                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-
-                    <Style x:Key="P5ACellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding P5A}" Value="AT">
-                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
 
                     <Style x:Key="P6CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
                         <Style.Triggers>
@@ -284,7 +269,7 @@
                                         Binding="{Binding P3C, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="P 3D" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P3D}" 
                                         Binding="{Binding P3D, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="P 4A" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P4A}" SortMemberPath="P4A" Width="{StaticResource KodKrajuColFixedWidth}" CellStyle="{StaticResource P4ACellStyle}">
+                    <DataGridTemplateColumn Header="P 4A" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P4A}" SortMemberPath="P4A" Width="{StaticResource KodKrajuColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding P4A, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -292,14 +277,21 @@
                         </DataGridTemplateColumn.CellTemplate>
                         <DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
-                                <ComboBox SelectedItem="{Binding P4A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource KodKrajuUeV30Enum}}" 
-                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                                <ComboBox SelectedItem="{Binding P4A, Mode=TwoWay, UpdateSourceTrigger=LostFocus, Converter={StaticResource NullableEnumToStringConverter}}"
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}">
+                                    <ComboBox.ItemsSource>
+                                        <CompositeCollection>
+                                            <x:Static Member="converters:NullableEnumToStringConverter.NullEnumStringValue"/>
+                                            <CollectionContainer Collection="{Binding Source={StaticResource KodKrajuUeV30Enum}}" />
+                                        </CompositeCollection>
+                                    </ComboBox.ItemsSource>
+                                </ComboBox>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Header="P 4B" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P4B}" 
                                         Binding="{Binding P4B, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="P 5A" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P5A}" SortMemberPath="P5A" Width="{StaticResource KodKrajuColFixedWidth}" CellStyle="{StaticResource P5ACellStyle}">
+                    <DataGridTemplateColumn Header="P 5A" local:DataGridExtensions.HeaderToolTip="{StaticResource Faktura.P5A}" SortMemberPath="P5A" Width="{StaticResource KodKrajuColFixedWidth}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding P5A, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -307,8 +299,15 @@
                         </DataGridTemplateColumn.CellTemplate>
                         <DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
-                                <ComboBox SelectedItem="{Binding P5A, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource KodKrajuUeV30Enum}}" 
-                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                                <ComboBox SelectedItem="{Binding P5A, Mode=TwoWay, UpdateSourceTrigger=LostFocus, Converter={StaticResource NullableEnumToStringConverter}}"
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}">
+                                    <ComboBox.ItemsSource>
+                                        <CompositeCollection>
+                                            <x:Static Member="converters:NullableEnumToStringConverter.NullEnumStringValue"/>
+                                            <CollectionContainer Collection="{Binding Source={StaticResource KodKrajuUeV30Enum}}" />
+                                        </CompositeCollection>
+                                    </ComboBox.ItemsSource>
+                                </ComboBox>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
@@ -496,14 +495,6 @@
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
-
-                    <Style x:Key="P12CellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding P12}" Value="N23">
-                                <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
@@ -525,7 +516,7 @@
                                         Binding="{Binding P11, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTextColumn Header="P 11A" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaWiersz.P11A}" CellStyle="{StaticResource P11ACellStyle}"
                                         Binding="{Binding P11A, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                    <DataGridTemplateColumn Header="P 12" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaWiersz.P12}" SortMemberPath="P12" Width="50.4" CellStyle="{StaticResource P12CellStyle}">
+                    <DataGridTemplateColumn Header="P 12" local:DataGridExtensions.HeaderToolTip="{StaticResource FakturaWiersz.P12}" SortMemberPath="P12" Width="50.4">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding P12, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -533,8 +524,15 @@
                         </DataGridTemplateColumn.CellTemplate>
                         <DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
-                                <ComboBox SelectedItem="{Binding P12, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource StawkaPodatkuEnum}}"
-                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                                <ComboBox SelectedItem="{Binding P12, Mode=TwoWay, UpdateSourceTrigger=LostFocus, Converter={StaticResource NullableEnumToStringConverter}}"
+                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}">
+                                    <ComboBox.ItemsSource>
+                                        <CompositeCollection>
+                                            <x:Static Member="converters:NullableEnumToStringConverter.NullEnumStringValue"/>
+                                            <CollectionContainer Collection="{Binding Source={StaticResource StawkaPodatkuEnum}}" />
+                                        </CompositeCollection>
+                                    </ComboBox.ItemsSource>
+                                </ComboBox>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
@@ -609,14 +607,6 @@
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
-
-                        <Style x:Key="P12ZCellStyle" TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource DataGridCellStyle}">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding P12Z}" Value="N23">
-                                    <Setter Property="Foreground" Value="{StaticResource DafaultValueColor}"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
                         <DataGridTemplateColumn CanUserSort="False" CanUserReorder="False" CanUserResize="False" Width="22" CellStyle="{StaticResource DeleteRowCellStyle}" CellTemplate="{StaticResource DeleteRowCellTemplate}"/>
@@ -632,7 +622,7 @@
                                         Binding="{Binding P11NettoZ, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                         <DataGridTextColumn Header="P 11 Vat Z" local:DataGridExtensions.HeaderToolTip="{StaticResource ZamowienieWiersz.P11VatZ}" CellStyle="{StaticResource P11VatZCellStyle}"
                                         Binding="{Binding P11VatZ, StringFormat='N2', Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                        <DataGridTemplateColumn Header="P 12 Z" local:DataGridExtensions.HeaderToolTip="{StaticResource ZamowienieWiersz.P12Z}" SortMemberPath="P12Z" Width="50.4" CellStyle="{StaticResource P12ZCellStyle}">
+                        <DataGridTemplateColumn Header="P 12 Z" local:DataGridExtensions.HeaderToolTip="{StaticResource ZamowienieWiersz.P12Z}" SortMemberPath="P12Z" Width="50.4">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding P12Z, Mode=OneWay}" Style="{StaticResource TextBlockCellStyle}"/>
@@ -640,8 +630,15 @@
                             </DataGridTemplateColumn.CellTemplate>
                             <DataGridTemplateColumn.CellEditingTemplate>
                                 <DataTemplate>
-                                    <ComboBox SelectedItem="{Binding P12Z, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource StawkaPodatkuEnum}}"
-                                          ItemTemplate="{StaticResource ComboBoxItemTemplate}"/>
+                                    <ComboBox SelectedItem="{Binding P12Z, Mode=TwoWay, UpdateSourceTrigger=LostFocus, Converter={StaticResource NullableEnumToStringConverter}}"
+                                              ItemTemplate="{StaticResource ComboBoxItemTemplate}">
+                                        <ComboBox.ItemsSource>
+                                            <CompositeCollection>
+                                                <x:Static Member="converters:NullableEnumToStringConverter.NullEnumStringValue"/>
+                                                <CollectionContainer Collection="{Binding Source={StaticResource StawkaPodatkuEnum}}" />
+                                            </CompositeCollection>
+                                        </ComboBox.ItemsSource>
+                                    </ComboBox>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellEditingTemplate>
                         </DataGridTemplateColumn>

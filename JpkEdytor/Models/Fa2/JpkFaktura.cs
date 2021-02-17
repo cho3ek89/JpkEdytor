@@ -29,7 +29,7 @@
 
         private string p3D;
 
-        private KodKrajuUeV30 p4A;
+        private KodKrajuUeV30? p4A;
 
         private bool p4ASpecified;
 
@@ -37,7 +37,7 @@
 
         private bool p4BSpecified;
 
-        private KodKrajuUeV30 p5A;
+        private KodKrajuUeV30? p5A;
 
         private bool p5ASpecified;
 
@@ -325,7 +325,7 @@
         }
 
         [XmlElement(ElementName = "P_4A")]
-        public KodKrajuUeV30 P4A
+        public KodKrajuUeV30? P4A
         {
             get
             {
@@ -383,7 +383,7 @@
         }
 
         [XmlElement(ElementName = "P_5A")]
-        public KodKrajuUeV30 P5A
+        public KodKrajuUeV30? P5A
         {
             get
             {
