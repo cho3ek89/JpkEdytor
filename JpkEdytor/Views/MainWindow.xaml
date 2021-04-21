@@ -36,8 +36,8 @@
             </Menu.Resources>
             <MenuItem Header="Plik">
                 <MenuItem Header="Nowy">
-                    <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="0"/>
+                    <MenuItem Header="JPK EWP" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="1"/>
                     <MenuItem Header="JPK FA" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="3"/>
                     <MenuItem Header="JPK FA RR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
@@ -56,8 +56,8 @@
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="11"/>
                     <Separator/>
                     <MenuItem Header="Nieaktualne">
-                        <MenuItem Header="JPK EWP" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="1"/>
+                        <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="0"/>
                         <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding NewJpk, Mode=OneWay}" CommandParameter="2"/>
                         <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
@@ -65,8 +65,8 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Otwórz">
-                    <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="0"/>
+                    <MenuItem Header="JPK EWP" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="1"/>
                     <MenuItem Header="JPK FA" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="3"/>
                     <MenuItem Header="JPK FA RR" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
@@ -85,8 +85,8 @@
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="11" />
                     <Separator/>
                     <MenuItem Header="Nieaktualne">
-                        <MenuItem Header="JPK EWP" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
-                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="1"/>
+                        <MenuItem Header="JPK EWP" Tag="v1" HeaderTemplate="{StaticResource MenuItemTemplate}" 
+                              Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="0"/>
                         <MenuItem Header="JPK FA" Tag="v2" HeaderTemplate="{StaticResource MenuItemTemplate}" 
                               Command="{Binding OpenJpk, Mode=OneWay}" CommandParameter="2"/>
                         <MenuItem Header="JPK VAT" Tag="v3" HeaderTemplate="{StaticResource MenuItemTemplate}" 
