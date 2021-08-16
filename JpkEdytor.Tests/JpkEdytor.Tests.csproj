@@ -10,10 +10,13 @@
     <Description>Testy jednostkowe do aplikacji JpkEdytor</Description>
     <Authors>Kamil Cholewa</Authors>
     <Company />
-    <Copyright>Copyright © 2020 Kamil Cholewa</Copyright>
+    <Copyright>Copyright © 2021 Kamil Cholewa</Copyright>
     <PackageLicenseExpression>GPL-3.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/cho3ek89/JpkEdytor</RepositoryUrl>
     <NeutralLanguage>pl</NeutralLanguage>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
