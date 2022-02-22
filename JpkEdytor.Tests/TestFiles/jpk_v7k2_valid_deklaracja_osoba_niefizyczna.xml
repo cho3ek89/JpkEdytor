@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2021/06/08/eD/DefinicjeTypy/" xmlns:tns="http://crd.gov.pl/wzor/2021/07/08/07082/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_V7K (2)" wersjaSchemy="1-0E">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>2</tns:WariantFormularza>
+    <tns:DataWytworzeniaJPK>2022-02-21T00:00:00</tns:DataWytworzeniaJPK>
+    <tns:NazwaSystemu>JpkEdytor</tns:NazwaSystemu>
+    <tns:CelZlozenia poz="P_7">1</tns:CelZlozenia>
+    <tns:KodUrzedu>0202</tns:KodUrzedu>
+    <tns:Rok>2022</tns:Rok>
+    <tns:Miesiac>2</tns:Miesiac>
+  </tns:Naglowek>
+  <tns:Podmiot1 rola="Podatnik">
+    <tns:OsobaNiefizyczna>
+      <tns:NIP>7018631981</tns:NIP>
+      <tns:PelnaNazwa>Firma rodzinna s.c.</tns:PelnaNazwa>
+      <tns:Email>jan.kowalski@mail.com,</tns:Email>
+      <tns:Telefon>566871429</tns:Telefon>
+    </tns:OsobaNiefizyczna>
+  </tns:Podmiot1>
+  <tns:Deklaracja>
+    <tns:Naglowek>
+      <tns:KodFormularzaDekl kodSystemowy="VAT-7K (16)" kodPodatku="VAT" rodzajZobowiazania="Z" wersjaSchemy="1-0E">VAT-7K</tns:KodFormularzaDekl>
+      <tns:WariantFormularzaDekl>16</tns:WariantFormularzaDekl>
+      <tns:Kwartal>1</tns:Kwartal>
+    </tns:Naglowek>
+    <tns:PozycjeSzczegolowe>
+      <tns:P_38>5133</tns:P_38>
+      <tns:P_51>124</tns:P_51>
+    </tns:PozycjeSzczegolowe>
+    <tns:Pouczenia>1</tns:Pouczenia>
+  </tns:Deklaracja>
+</tns:JPK>
