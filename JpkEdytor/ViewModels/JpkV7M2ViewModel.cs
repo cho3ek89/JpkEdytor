@@ -7,19 +7,19 @@
     using Framework;
     using Helpers.CsvImporter;
     using Helpers.JpkModelUpdater;
-    using Models.V71.V7K;
+    using Models.V72.V7M;
 
-    public sealed class JpkV7K1ViewModel : JpkV7ViewModelBase<Jpk>
+    public sealed class JpkV7M2ViewModel : JpkV7ViewModelBase<Jpk>
     {
-        public JpkV7K1ViewModel()
+        public JpkV7M2ViewModel()
         {
             Jpk = new Jpk();
 
-            schemaFileName = @"Schemat_JPK_V7K(1)_v1-2E.xsd";
-            etdNamespace = @"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/03/11/eD/DefinicjeTypy/";
-            tnsNamespace = @"http://crd.gov.pl/wzor/2020/05/08/9394/";
+            schemaFileName = @"Schemat_JPK_V7M(2)_v1-0.xsd";
+            etdNamespace = @"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2021/06/08/eD/DefinicjeTypy/";
+            tnsNamespace = @"http://crd.gov.pl/wzor/2021/07/08/07081/";
 
-            jpkModelUpdater = new JpkV7K1ModelUpdater();
+            jpkModelUpdater = new JpkV7M2ModelUpdater();
         }
 
         public override ICommand ChangePodmiotType => new RelayCommand<string>(obj =>

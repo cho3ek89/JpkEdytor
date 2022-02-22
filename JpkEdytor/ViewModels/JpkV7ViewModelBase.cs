@@ -4,9 +4,9 @@
     using System.Windows.Input;
     using System.Xml.Serialization;
 
-    using Models.V71;
+    using Models;
 
-    public abstract class JpkV71ViewModelBase<T> : JpkViewModelBase<T> where T : IJpkV71
+    public abstract class JpkV7ViewModelBase<T> : JpkViewModelBase<T> where T : IJpkV7
     {
         protected string tnsNamespace;
 

@@ -426,6 +426,38 @@
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.V71.V7K.Jpk> && !IsBusy; });
 
+        public ICommand ImportJpkV7K2 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkV7K2ViewModel)?.ImportSprzedazFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkV7K2ViewModel)?.ImportZakupyFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.V72.V7K.Jpk> && !IsBusy; });
+
         public ICommand ImportJpkV7M1 => new RelayCommand<string>(async obj =>
         {
             var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
@@ -457,6 +489,38 @@
                 }
             }
         }, x => { return JpkViewModel is IJpkViewModel<Models.V71.V7M.Jpk> && !IsBusy; });
+
+        public ICommand ImportJpkV7M2 => new RelayCommand<string>(async obj =>
+        {
+            var openFileDialog = DialogHelper.GetOpenFileDialog(DialogHelper.FileType.Csv);
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    IsBusy = true;
+
+                    switch (obj)
+                    {
+                        case "0":
+                            await (JpkViewModel as JpkV7M2ViewModel)?.ImportSprzedazFromCsv(openFileDialog.FileName);
+                            break;
+                        case "1":
+                            await (JpkViewModel as JpkV7M2ViewModel)?.ImportZakupyFromCsv(openFileDialog.FileName);
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+
+                    IsBusy = false;
+                }
+                catch (Exception ex)
+                {
+                    IsBusy = false;
+                    DialogHelper.ShowExceptionWindow(ex);
+                }
+            }
+        }, x => { return JpkViewModel is IJpkViewModel<Models.V72.V7M.Jpk> && !IsBusy; });
 
         public ICommand ImportJpkWb1 => new RelayCommand(async obj =>
         {
@@ -555,8 +619,12 @@
                 case "9":
                     return new JpkV7K1ViewModel();
                 case "10":
-                    return new JpkV7M1ViewModel();
+                    return new JpkV7K2ViewModel();
                 case "11":
+                    return new JpkV7M1ViewModel();
+                case "12":
+                    return new JpkV7M2ViewModel();
+                case "13":
                     return new JpkWb1ViewModel();
                 default:
                     throw new NotImplementedException();

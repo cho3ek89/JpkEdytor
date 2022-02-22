@@ -1,6 +1,6 @@
 ﻿namespace JpkEdytor.Models.V71
 {
-    public interface IJpkV71 : IJpk
+    public interface IJpkV71 : IJpkV7
     {
     }
 }

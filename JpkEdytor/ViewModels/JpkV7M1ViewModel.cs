@@ -9,7 +9,7 @@
     using Helpers.JpkModelUpdater;
     using Models.V71.V7M;
 
-    public sealed class JpkV7M1ViewModel : JpkV71ViewModelBase<Jpk>
+    public sealed class JpkV7M1ViewModel : JpkV7ViewModelBase<Jpk>
     {
         public JpkV7M1ViewModel()
         {

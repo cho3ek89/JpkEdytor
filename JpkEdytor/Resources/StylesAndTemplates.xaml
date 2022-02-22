@@ -251,6 +251,11 @@
             <x:Type TypeName="models:KodUsV60"/>
         </ObjectDataProvider.MethodParameters>
     </ObjectDataProvider>
+    <ObjectDataProvider x:Key="KodUsV70Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="models:KodUsV70"/>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
     <ObjectDataProvider x:Key="KodWalutyV30Enum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
         <ObjectDataProvider.MethodParameters>
             <x:Type TypeName="models:KodWalutyV30"/>
@@ -807,6 +812,18 @@
                         <ComboBox Width="352"
                                   Style="{StaticResource ComboBoxDefaultStyle}"
                                   ItemsSource="{Binding Source={StaticResource KodUsV60Enum}}"
+                                  SelectedItem="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumValToDescConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type models:KodUsV70}">
+                        <ComboBox Width="352"
+                                  Style="{StaticResource ComboBoxDefaultStyle}"
+                                  ItemsSource="{Binding Source={StaticResource KodUsV70Enum}}"
                                   SelectedItem="{Binding Content, RelativeSource={RelativeSource AncestorType=ContentControl}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
