@@ -1,8 +1,8 @@
 # JPK Edytor
 **JPK Edytor** jest aplikacją umożliwiającą podgląd, tworzenie oraz edycję Jednolitych Plików Kontrolnych.
 Obsługiwane są następujące typy plików:
- - JPK_V7K *(wersja 1)*
- - JPK_V7M *(wersja 1)*
+ - JPK_V7K *(wersje 2, 1)*
+ - JPK_V7M *(wersje 2, 1)*
  - JPK_VAT *(wersja 3)*
  - JPK_EWP *(wersje: 2, 1)*
  - JPK_FA *(wersje: 3, 2)*
@@ -54,14 +54,14 @@ Aby zaimportować plik CSV do arkusza w aplikacji należy z głównego menu apli
 **Plik** &rightarrow; **Importuj CSV** &rightarrow; **Nazwa karty widoku pliku JPK, która zawiera arkusz**\
 W oknie *„Otwieranie”* najeży wybrać plik CSV oraz nacisnąć przycisk *„Otwórz”*.
 
-> Przykładowa zawartość pliku CSV, który może zostać zaimportowany do arkusza „*Sprzedaż*” pliku JPK_V7K *(wersja 1)* lub JPK_V7M *(wersja 1)*:
+> Przykładowa zawartość pliku CSV, który może zostać zaimportowany do arkusza „*Sprzedaż*” pliku JPK_V7K *(wersja 2)* lub JPK_V7M *(wersja 2)*:
 > 
->     ;1190217475;Magazyn s.c.;536/22346;2020-06-14;0001-01-01;;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;24352,17;596,09;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
->     PL;3796700710;Asfaltownia sp. z o.o.;426/88343;2020-06-14;2020-07-02;Ro;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;624562,08;63456,95;0;0;0;0;0;0;0;0;0;0;0;0;1230,55
-> Przykładowa zawartość pliku CSV, który może zostać zaimportowany do arkusza „*Zakupy*” pliku JPK_V7K *(wersja 1)* lub JPK_V7M *(wersja 1)*:
+>     ;1190217475;Magazyn s.c.;536/22346;2020-06-14;0001-01-01;;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;2022-02-03;DataZaplaty;0;0;0;0;0;0;0;0;0;0;24352,17;596,09;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8,01
+>     PL;3796700710;Asfaltownia sp. z o.o.;426/88343;2020-06-14;2020-07-02;Ro;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0001-01-01;DataZaplaty;0;0;0;0;0;0;0;0;0;0;0;0;0;0;624562,08;63456,95;0;0;0;0;0;0;0;0;0;0;0;1230,55
+> Przykładowa zawartość pliku CSV, który może zostać zaimportowany do arkusza „*Zakupy*” pliku JPK_V7K *(wersja 2)* lub JPK_V7M *(wersja 2)*:
 > 
->     ;8114066171;Firma s.a.;345/74433;2020-08-06;0001-01-01;;0;0;5252,51;662,20;0;0;0;0;0;0;0
->     PL;5692926146;Fabryka s.c.;216/63645;2020-09-06;2020-09-07;Wew;0;0;0;0;5843,36;986,49;0;0;0;0;127,91
+>     ;8114066171;Firma s.a.;345/74433;2020-08-06;0001-01-01;;0;5252,51;662,20;0;0;0;0;0;0;5,31
+>     PL;5692926146;Fabryka s.c.;216/63645;2020-09-06;2020-09-07;Wew;0;0;0;5843,36;986,49;0;0;0;0;127,91
 
 ### Walidacja pliku JPK
 Aby przeprowadzić walidację nowo utworzonego bądź otwartego pliku JPK pod kątem poprawności merytorycznej z głównego menu aplikacji należy wybrać kolejno:\
