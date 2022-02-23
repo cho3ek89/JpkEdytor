@@ -19,7 +19,7 @@ jobs:
         run: dotnet build JpkEdytor.sln -c 'Release' -v 'normal'
 
       - name: Run unit tests
-        run: dotnet test JpkEdytor.sln -c 'Release' -v 'normal' --no-build
+        run: dotnet test JpkEdytor.sln -c 'Release' -v 'normal' -l "console;verbosity=normal" --no-build
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2.3.1
