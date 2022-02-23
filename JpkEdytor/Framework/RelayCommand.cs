@@ -21,7 +21,7 @@ namespace JpkEdytor.Framework
 
         public virtual bool CanExecute(object parameter)
         {
-            return canExecute == null ? true : canExecute((T)parameter);
+            return canExecute == null || canExecute((T)parameter);
         }
 
         public virtual event EventHandler CanExecuteChanged

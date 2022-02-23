@@ -31,8 +31,7 @@
         }
         static void OnRegisterAddCommand(object sender, DependencyPropertyChangedEventArgs e)
         {
-            var dataGrid = sender as DataGrid;
-            if (dataGrid == null) return;
+            if (!(sender is DataGrid dataGrid)) return;
 
             if ((bool)e.NewValue)
                 dataGrid.CommandBindings.Add(new CommandBinding(AddCommand, AddCommandExecute, AddCommandCanExecute));
@@ -41,8 +40,7 @@
         public static readonly RoutedUICommand AddCommand = new RoutedUICommand("AddCommand", "AddCommand", typeof(DataGridExtensions));
         static void AddCommandExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            var dataGrid = sender as DataGrid;
-            if (dataGrid == null) return;
+            if (!(sender is DataGrid dataGrid)) return;
 
             var itemsSourceType = dataGrid.ItemsSource.GetType();
             var itemType = itemsSourceType.GetGenericArguments().Single();
@@ -75,8 +73,7 @@
         }
         static void OnRegisterDeleteCommand(object sender, DependencyPropertyChangedEventArgs e)
         {
-            var dataGrid = sender as DataGrid;
-            if (dataGrid == null) return;
+            if (!(sender is DataGrid dataGrid)) return;
 
             if ((bool)e.NewValue)
                 dataGrid.CommandBindings.Add(new CommandBinding(DeleteCommand, DeleteCommandExecute, DeleteCommandCanExecute));
@@ -85,8 +82,7 @@
         public static readonly RoutedUICommand DeleteCommand = new RoutedUICommand("DeleteCommand", "DeleteCommand", typeof(DataGridExtensions));
         static void DeleteCommandExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            var dataGrid = sender as DataGrid;
-            if (dataGrid == null) return;
+            if (!(sender is DataGrid dataGrid)) return;
 
             var items = dataGrid.ItemsSource as IList;
             var item = dataGrid.CurrentItem;

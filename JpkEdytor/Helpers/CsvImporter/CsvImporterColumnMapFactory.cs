@@ -60,8 +60,6 @@
 
             var typeName = type.FullName;
 
-            //TODO: Rewrite below to switch statement when C#7 with pattern matching is used.
-
             if (typeName == typeof(Models.Ewp1.EwpWiersz).FullName)
                 AddEwp1EwpWierszMapping(map);
             if (typeName == typeof(Models.Ewp2.EwpWiersz).FullName)

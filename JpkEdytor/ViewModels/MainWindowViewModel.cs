@@ -208,7 +208,7 @@
                     DialogHelper.ShowExceptionWindow(ex);
                 }
             }
-        }, x => { return JpkViewModel is JpkFa3ViewModel && !IsBusy && ((JpkFa3ViewModel)JpkViewModel).SelectedZamowienie != null; });
+        }, x => { return JpkViewModel is JpkFa3ViewModel vm && !IsBusy && vm.SelectedZamowienie != null; });
 
         public ICommand ImportJpkFa2 => new RelayCommand<string>(async obj =>
         {

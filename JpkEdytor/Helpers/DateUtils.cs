@@ -39,7 +39,7 @@
         /// <summary>
         /// Sets Jesus Christ's birth date to a given <see cref="Calendar"/> control.
         /// </summary>
-        public static ICommand Default => new RelayCommand<object>(obj => SetDateIfPossible(obj, default(DateTime)));
+        public static ICommand Default => new RelayCommand<object>(obj => SetDateIfPossible(obj, default));
 
         /// <summary>
         /// Sets a given date to a given object.

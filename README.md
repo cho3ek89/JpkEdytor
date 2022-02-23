@@ -14,7 +14,7 @@ Obsługiwane są następujące typy plików:
 
 ## Wymagania aplikacji
  - Microsoft Windows 7 lub nowszy
- - Microsoft .NET Framework 4.5 lub nowszy ([pobierz](https://dotnet.microsoft.com/download/dotnet-framework))
+ - Microsoft .NET Framework 4.8 ([pobierz](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48))
 
 ## Instrukcja obsługi
 
